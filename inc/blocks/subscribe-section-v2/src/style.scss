@@ -1,0 +1,200 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.subscribe {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            @include min-1400 {
+                font-size: 22px;
+                line-height: 32px;
+            }
+        }
+
+        &_text {
+            padding-top: 13px;
+            color: $color-black;
+            text-align: center;
+            font-family: $global-family;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            @include max-767 {
+                font-size: 10px;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    p.description-primary {
+        padding: 20px 0px 25px 0px;
+    }
+
+    h2,
+    p {
+        text-align: center;
+    }
+
+    .wpcf7 {
+    
+        .screen-reader-response {
+            display: none;
+        }
+
+        form {
+            .subscribe-form-box {
+                display: flex;
+
+                .wpcf7-email {
+                    padding: 12px 12px;
+                    font-size: 14px;
+                    line-height: 18px;
+                    font-weight: 400;
+                    color: #585858;
+                    font-family: $global-family;
+                    border: 1px solid $color-gray;
+                    margin-right: 20px;
+                    border-radius: 8px;
+                    width: 500px;
+                    min-height: 20px auto;
+                    @include max-991 {
+                        width: 400px;
+                    }
+                    @include max-767 {
+                        width: 350px;
+                        margin-right: 15px;
+                    }
+                    @include max-575 {
+                        width: 100%;
+                        padding: 8px;
+                    }
+                }
+
+                .wpcf7-email::placeholder {
+                    color: #585858;
+                }
+
+                .wpcf7-email::-ms-input-placeholder {
+                    /* Edge 12-18 */
+                    color: #585858;
+                }
+
+                .wpcf7-not-valid-tip {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 500;
+                    color: #dc3232;
+                    padding: 5px 10px;
+                    letter-spacing: .9px;
+                    font-family: $global-family;
+                    display: block;
+                    text-align: left;
+                }
+
+                .subscribe-form-box__button {
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 18px;
+                    font-weight: 600;
+                    font-style: normal;
+                    color: $color-white;
+                    display: block;
+                    width: fit-content;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(0, 0, 0, 0.83);
+                    background: rgba(0, 0, 0, 0.83);
+                    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+                    &:hover {
+                        transition: all 500ms;
+                        background-color: #000;
+                        color: $color-white;
+                    }
+
+                    @include max-767 {
+                        padding: 9px 18px;
+                        font-size: 14px;
+                    }
+                    @include max-575 {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .wpcf7-response-output {
+                font-size: 14px;
+                line-height: 22px;
+                padding: 5px 10px 0px 10px;
+                font-family: $global-family;
+                opacity: 0.7;
+                letter-spacing: 0.9px;
+            }
+        }
+    }
+
+    .wpcf7 {
+        form.sent .wpcf7-response-output {
+            color: #1a7422;
+        }
+        form.invalid{
+            .wpcf7-response-output{
+                color: #d81313;
+            }
+        }
+        form.spam .wpcf7-response-output{
+            color: #d81313;
+        }
+    }
+
+    @include max-767 {
+        .wpcf7 {
+            form {
+                .subscribe-form-box {
+                    .wpcf7-email {
+                        padding: 9px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-575 {
+        .wpcf7 {
+            form {
+                .subscribe-form-box {
+                    gap: 0px 10px;
+                }
+            }
+        }
+    }
+
+    @include max-425 {
+        .wpcf7 {
+            form {
+                .subscribe-form-box {
+                    .wpcf7-email {
+                        padding: 9px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

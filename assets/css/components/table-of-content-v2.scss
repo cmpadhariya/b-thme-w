@@ -1,0 +1,61 @@
+// Table Of Content Section CSS
+.qt-table-of-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(11, 16, 20, 0.2);
+    padding: 25px 30px;
+    @include max-991{
+        gap: 15px;
+        width: 100%
+    }
+    h3 {
+        @include min-1400 {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 18px;
+        @include max-991{
+            gap: 10px;
+        }
+
+        li {
+            a {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                color: $color-black;
+                @include min-1400 {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                @include max-575{
+                    font-size: 13px;
+                    line-height: 19px;
+                }
+            }
+
+            a.toc-active, a:hover {
+                color: #1474c8;
+            }
+        }
+        .qt-toc-heading-2, .qt-toc-heading-1{
+            list-style: disc;
+            a{
+                font-weight: 600;
+            }
+        }
+        .qt-toc-heading-3, .qt-toc-heading-4, .qt-toc-heading-5, .qt-toc-heading-6{
+            margin-left: 20px;
+            list-style: circle;
+        }
+    }
+}

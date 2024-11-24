@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/our-process-section",
+	"version": "0.1.0",
+	"title": "Our Process Section",
+	"category": "qrolic",
+	"icon": "  dashicons-networking",
+	"description": "This block shows the process of our Serve Better type of website, including the number, title and description.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "our-process-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"sectiontitle": {
+            "type": "string",
+            "default": "title"
+        },
+		"sectiontitlealignment": {
+            "type": "string",
+            "default": "left"
+        },
+		"number": {
+            "type": "string",
+            "default": "00"
+        },
+		"heading": {
+            "type": "string",
+            "default": "Heading"
+        },
+		"description":{
+            "type": "string",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+		"items": {
+            "type": "array",
+            "default": []
+        }
+	}
+}

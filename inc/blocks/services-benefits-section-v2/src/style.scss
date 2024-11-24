@@ -1,0 +1,152 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.services-benefits {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@include max-991 {
+			gap: 30px;
+		}
+
+		@include max-575 {
+			gap: 20px;
+		}
+
+		&_heading {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			text-align: center;
+
+			@include max-991 {
+				gap: 15px;
+			}
+
+			@include max-575 {
+				gap: 10px;
+			}
+		}
+
+		.row {
+			gap: 20px 0px;
+			--bs-gutter-x: 4.875rem;
+
+			@include max-1199 {
+				--bs-gutter-x: 1.5rem;
+			}
+
+			@include max-575 {
+				gap: 20px;
+			}
+		}
+
+		&_items {
+			height: 100%;
+			padding: 26px;
+			border-radius: 16px;
+			border: 1px solid #eaecf0;
+			background: $color-white;
+			box-shadow: 0px 256px 102px 0px rgba(0, 0, 0, 0.01);
+			display: flex;
+			gap: 22px;
+
+			@include max-991 {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 15px;
+			}
+
+			@include max-575 {
+				gap: 10px;
+			}
+
+			&--icon {
+				min-width: 52.582px;
+				height: 52.582px;
+				border-radius: 12px;
+				background: $color-light-gray;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				@include min-1400 {
+					min-width: 54.582px;
+					height: 54.582px;
+				}
+
+				@include max-575 {
+					min-width: 45px;
+					height: 45px;
+				}
+
+				span {
+					text-align: center;
+					font-size: 28px;
+					line-height: 32px;
+					font-weight: 600;
+					color: $description-text-color;
+					@include min-1400 {
+						font-size: 30px;
+						line-height: 34px;
+					}
+
+					@include max-575 {
+						font-size: 24px;
+						line-height: 24px;
+					}
+				}
+			}
+
+			&--text {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+
+				@include max-575 {
+					gap: 10px;
+				}
+
+				h3 {
+					font-size: 24px;
+					line-height: 28px;
+					font-weight: 600;
+
+					@include min-1400 {
+						font-size: 26px;
+						line-height: 30px;
+					}
+
+					@include max-991 {
+						font-size: 22px;
+						line-height: 26px;
+					}
+
+					@include max-575 {
+						font-size: 20px;
+						line-height: 24px;
+					}
+				}
+
+				p {
+					font-weight: 400;
+
+					b,
+					strong {
+						font-weight: 500;
+						color: $color-black;
+					}
+				}
+			}
+		}
+	}
+}

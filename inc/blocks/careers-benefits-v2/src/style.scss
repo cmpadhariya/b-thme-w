@@ -1,0 +1,168 @@
+@import "../../../../assets/css/variable/variable-v2";
+
+.careers-benefits {
+  &__inner {
+    &_heading {
+      display: flex;
+      margin-bottom: 40px;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      @include max-575 {
+        margin-bottom: 30px;
+      }
+      &-subheading {
+
+        p.benefits-subheading {
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 600;
+          color: #1474C8;
+
+          @include max-575 {
+            font-size: 14px;
+            line-height: 20px;
+            br {
+              display: none;
+            }
+          }
+
+          @include min-1400 {
+            font-size: 17px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      h2 {
+        padding: 20px 0 16px 0;
+      }
+
+      p {
+
+        @include min-1400 {
+          font-size: 22px;
+          line-height: 32px;
+        }
+
+        @include max-1199 {
+          br {
+            display: none;
+          }
+        }
+        @include max-767 {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        @include max-575 {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    &_item {
+      &-box {
+        padding: 0 20px;
+        height: 100%;
+        display: block;
+
+        @include max-425 {
+          padding: 5px 20px;
+        }
+
+        .icon {
+          .components-base-control {
+            padding: 0px;
+          }
+
+          i {
+            color: transparent;
+            font-size: 26px;
+            display: flex;
+            white-space: nowrap;
+
+            &::before {
+              color: $color-black;
+              margin: 0;
+            }
+
+            @include max-575 {
+              font-size: 24px;
+            }
+          }
+
+          img {
+            width: auto;
+            height: 100%;
+          }
+
+          h3 {
+            color: $color-black;
+            font-weight: 600;
+            padding: 12px 0;
+
+            @include max-767 {
+              font-weight: 600;
+              padding:5px 0;
+            }
+            @include max-425 {
+              font-size: 15px;
+              padding:10px 0 5px 0;
+            }
+
+            @include min-1400 {
+              font-size: 22px;
+              line-height: 28px;
+              padding: 16px 0 8px 0;
+            }
+          }
+        }
+
+        .content {
+          p {
+            color: rgba(107, 114, 128, 1);
+            line-height: 26px;
+
+            br {
+              display: none;
+            }
+            @include min-1400 {
+              font-size: 18px;
+              line-height: 26px;
+            }
+            @include max-991 {
+              line-height: 24px;
+            }
+
+            @include max-767 {
+              font-size: 13px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .row {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 3rem;
+
+    @include max-991 {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 1.5rem;
+    }
+
+    .col-12 {
+      @include max-575 {
+        width: 50%;
+      }
+
+      @include max-425 {
+        width: 100%;
+      }
+    }
+  }
+}

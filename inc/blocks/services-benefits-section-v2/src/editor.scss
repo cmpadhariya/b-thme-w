@@ -1,0 +1,23 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import "../../../../assets/css/variable/variable-v2";
+
+.services-benefits {
+  .remove-benefits-item-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: red;
+  }
+
+  .services-benefits__inner_items--icon{
+    span{
+      font-family: $global-family;
+    }
+  }
+}

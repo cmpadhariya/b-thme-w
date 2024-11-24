@@ -1,0 +1,98 @@
+//This scss is used for a pattern named author-post of the current author in a page of the author.
+
+.author-post{
+    padding: 0px 0px 70px 0px;
+    h2{
+        padding: 0 0 40px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            box-shadow: 0 1px 3px #ccc;
+            .content{
+                padding: 8px 20px 15px 20px;
+            }
+            figure{
+                margin: 0;
+                img{
+                    width: 100%;
+					height: 100%;
+					filter: grayscale(999);
+                }
+            }
+            time{
+                font-size: 14px;
+    			line-height: 22px;
+				font-weight: 400;
+    			color: $color-black;
+				font-family: $secondary-family;
+            }
+            .wp-block-post-title{
+                font-size: 18px;
+    			line-height: 24px;
+    			font-weight: 700;
+				color: $color-black;
+				font-family: $heading-family;
+				padding: 5px 0px 10px 0px;
+                a{
+                    color: $color-black;
+                }
+            }
+            p{
+                font-size: 14px;
+    			line-height: 22px;
+            }
+        }
+    }
+    nav{
+        padding: 30px 0px 0px 0px;
+        .blog__inner_previous, .blog__inner_next{
+            margin: 0;
+        }
+        .blog__inner_previous::before{
+            content: "\f100";
+            font-family: fontello;
+        }
+        .blog__inner_next::before{
+            content: "\f101";
+            font-family: fontello;
+        }
+    }
+    @include max-991{
+        .wp-block-post-template.is-flex-container.is-flex-container.columns-3>li{
+            width: 48%;
+        }
+    }
+    @include max-767{
+		padding: 0px 20px 50px 20px;
+		ul{
+			li{
+				time{
+					font-size: 13px;
+					line-height: 20px;
+				}
+				.wp-block-post-title{
+					font-size: 15px;
+					line-height: 23px;
+				}
+				p{
+					font-size: 12px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+    @include max-575{
+        .wp-block-post-template.is-flex-container.is-flex-container.columns-3>li{
+            width: 100%;
+        }
+    }
+}
+@include max-425{
+	.author-post{
+		h2{
+			padding: 0 0 30px;
+		}
+	}
+}

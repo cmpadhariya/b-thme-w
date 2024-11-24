@@ -1,0 +1,43 @@
+.common-button-pattern {
+    &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      &_btn--link {
+        div.wp-element-button {
+          font-family: $global-family;
+          text-align: center;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 600;
+          color: $color-white;
+          background-color: $btn-bg-dark;
+          display: block;
+          width: fit-content;
+          padding: 12px 20px;
+          border-radius: 8px;
+          &:hover {
+            transition: all 500ms;
+            background-color: $color-black;
+            color: $color-white;
+          }
+          @include max-767 {
+            padding: 10px 18px;
+          }
+        }
+      }
+    }
+  }
+  .button-color-gray {
+    div.wp-element-button {
+      background-color: $color-light-gray;
+      color: $color-black;
+      border: 1px solid #C9C9C9;
+      &:hover{
+        background-color: $btn-bg-dark;
+      }
+    }
+  }
+  

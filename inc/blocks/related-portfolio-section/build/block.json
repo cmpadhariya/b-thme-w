@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/related-portfolio-section",
+  "version": "0.1.0",
+  "title": "Related Portfolio Section",
+  "category": "qrolic",
+  "icon": "layout",
+  "description": "This block is used to display portfolio related posts of the main post in a releted section, display image,title and description in related posts.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "numberOfItems": {
+      "type": "number",
+      "default": 3
+    },
+    "displayDate": {
+      "type": "boolean",
+      "default": false
+    },
+    "displayExcerpt": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayAuthorInfo": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAvatar": {
+      "type": "boolean",
+      "default": true
+    },
+    "avatarSize": {
+      "type": "number",
+      "default": 48
+    },
+    "showBio": {
+      "type": "boolean",
+      "default": true
+    },
+    "selectedCategory": {
+      "type": "string",
+      "default": []
+    },
+    "Heading": {
+      "type": "string",
+      "default": ""
+    },
+    "ButtonText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonURL": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "related-portfolio-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

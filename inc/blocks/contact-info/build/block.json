@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/contact-info",
+  "version": "0.1.0",
+  "title": "Contact Info",
+  "category": "qrolic",
+  "icon": "  dashicons-phone ",
+  "description": "This block shows the contact details on the contact page.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "contact-info",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "contactform": {
+      "type": "string",
+      "default": "Add Your Shortcode"
+    },
+    "heading": {
+      "type": "string",
+      "default": "Contact info"
+    },
+    "email": {
+      "type": "string",
+      "default": "Email:"
+    },
+    "emailtext": {
+      "type": "string",
+      "default": "Email Text"
+    },
+    "emaillink": {
+      "type": "string",
+      "default": "Email link"
+    },
+    "skype": {
+      "type": "string",
+      "default": "Skype:"
+    },
+    "skypetext": {
+      "type": "string",
+      "default": "Qrolic Technologies:"
+    },
+    "number": {
+      "type": "string",
+      "default": "Number:"
+    },
+    "numbertext": {
+      "type": "string",
+      "default": "Number Text"
+    },
+    "numberlink": {
+      "type": "string",
+      "default": "Number link"
+    },
+    "message": {
+      "type": "string",
+      "default": "Message:"
+    },
+    "socialtext": {
+      "type": "string",
+      "default": "Social Media"
+    },
+    "twitter": {
+      "type": "string",
+      "default": "Twitter"
+    },
+    "facebook": {
+      "type": "string",
+      "default": "Facebook"
+    },
+    "instagram": {
+      "type": "string",
+      "default": "Instagram"
+    },
+    "linkedin": {
+      "type": "string",
+      "default": "Linkedin"
+    },
+    "whatsapp": {
+      "type": "string",
+      "default": "Whatsapp"
+    },
+    "addresstext": {
+      "type": "string",
+      "default": " 912, Wings Business Bay, Nr. Umiya Chowk, 150 Feet Ring Road, Rajkot (360002) – Gujarat"
+    },
+    "address": {
+      "type": "string",
+      "default": "Address:"
+    }
+  }
+}

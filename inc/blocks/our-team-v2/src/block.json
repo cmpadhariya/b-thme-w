@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/our-team-v2",
+	"version": "0.1.0",
+	"title": "Our Team V2",
+	"category": "qrolic",
+	"icon": " dashicons-groups",
+	"description": "This section shows data from our successful team at qrolic technologies. It includes the team member's name, photo and the position the team member works in the company.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "our-team-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"attributes": {
+		"title": {
+			"type": "string"
+		},
+		"subtitle": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		},
+		"buttonText": {
+			"type": "string"
+		},
+		"buttonURL": {
+			"type": "string",
+			"default": ""
+		},
+		"numberOfItems": {
+			"type": "number",
+			"default": 20
+		}
+	}
+}

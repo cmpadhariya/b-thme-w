@@ -1,0 +1,73 @@
+
+// colors 
+$color-black:#000000;
+$color-gray: #808080;
+$color-white: #ffffff;
+// font family
+$heading-family: 'Inter', sans-serif;
+$secondary-family: "Manrope-Regular", sans-serif;
+$primary-family: "OpenSans-Regular", sans-serif;
+
+// @font-face {
+//   font-family: "fontello";
+//   src: '/assets/fonts/fontello/font/fontello.woff2' format('woff2');
+//   font-display: swap;
+// }
+
+
+// responsive 
+
+@mixin min-1920 {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin min-1440 {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin min-1400 {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin max-1199 {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin max-991 {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin max-767 {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin max-575 {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin max-425 {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin max-375 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin max-360 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}

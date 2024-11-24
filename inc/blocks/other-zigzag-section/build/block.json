@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/other-zigzag-section",
+  "version": "0.1.0",
+  "title": "Other Zigzag Section",
+  "category": "qrolic",
+  "icon": "  dashicons-embed-photo",
+  "description": "This other zigzag section is used in the plugins archive page in our site. Title, description, image and two buttons have been added in this section.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "other-zigzag-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mediaID": {
+      "type": "number",
+      "default": null
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": null
+    },
+    "heading": {
+      "type": "string",
+      "default": "Heading"
+    },
+    "heading_url": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    },
+    "description": {
+      "type": "string",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "downloadbtn_text": {
+      "type": "string",
+      "default": ""
+    },
+    "downloadbtn_url": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    },
+    "docsbtn_text": {
+      "type": "string",
+      "default": ""
+    },
+    "docsbtn_url": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    }
+  }
+}

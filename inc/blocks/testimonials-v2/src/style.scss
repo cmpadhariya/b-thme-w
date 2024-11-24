@@ -1,0 +1,109 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable-v2.scss';
+
+.testimonials{
+    &__top{
+        .row{
+            margin: 12px 0px 48px 0px;
+            div.col-lg-6:first-child{
+                padding-left: 0;
+            }
+            div.col-lg-6:last-child{
+                padding-right: 0;
+            }
+        }
+        p.subtitle-heading{
+            padding: 4px 12px;
+            font-weight: 600;
+            border: 1px solid #a1a1aa;
+            color: $subheading-text-color;
+            width: fit-content;
+            border-radius: 12px;
+        }
+    }
+    &__inner{
+        &--content{
+            padding: 28px 24px 28px 24px;
+            border-radius: 12px;
+            background-color: $bg-color;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            ul{
+                display: flex;
+                li{
+                    color: #F4B905;
+                    &::before{
+                        width: unset;
+                        font-size: 20px;
+                        margin: 0 1px;
+                        @include min-1400 {
+                            font-size: 22px;
+                          }
+                    }
+                }
+            }
+            h3{
+                font-size: 16px;
+                line-height: 28px;
+                font-weight: 700;
+                color: $heading-color;
+                @include min-1400 {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
+            p.client-position{
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 400;
+                color: $subheading-text-color;
+                @include min-1400 {
+                    font-size: 16px;
+                    line-height: 28px;
+                  }
+            }
+        }
+    }
+
+    @include max-991{
+        &__inner{
+            div.m-bottom:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    @include max-767{
+        &__top{
+            .row{
+                margin: 12px 0px 35px 0px;
+                div.col-lg-6{
+                    padding: 0px;
+                }
+            }   
+            h2{
+                margin-bottom: 12px;
+            }
+        }
+    }
+    @include max-425{
+        &__inner{
+            &--content{
+                gap: 15px;
+                p.description-secondary{
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

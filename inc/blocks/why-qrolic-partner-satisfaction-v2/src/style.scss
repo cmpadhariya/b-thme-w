@@ -1,0 +1,163 @@
+//import variable scss file.
+@import "../../../../assets/css/variable/variable-v2";
+
+.why-qrolic-partner-satisfaction {
+	&__inner {
+		&_heading {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+
+			.qrolic-partner-satisfaction-title {
+				padding: 15px 0 0 0;
+			}
+
+			p {
+				font-weight: 400;
+				color: $description-text-color;
+
+				@include min-1400 {
+					font-size: 22px;
+					line-height: 32px;
+				}
+
+				@include max-767 {
+					br {
+						display: none;
+					}
+				}
+			}
+
+			&-subheading {
+				border: 1px solid #a1a1aa;
+				border-radius: 12px;
+				padding: 5px 8px;
+				display: flex;
+				align-items: baseline;
+
+				p {
+					padding-left: 5px;
+					font-weight: 600;
+					color: #344054;
+				}
+
+				i {
+					font-size: 18px;
+
+					@include max-767 {
+						font-size: 16px;
+						line-height: 20px;
+					}
+
+					@include max-425 {
+						font-size: 14px;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+
+		&_item {
+			padding: 0 30px;
+
+			@include max-767 {
+				padding: 0;
+			}
+
+			&-box {
+				display: flex;
+				position: relative;
+				height: 100%;
+				padding-top: 40px;
+
+				@include max-767 {
+					padding-top: 30px;
+				}
+
+				.icon {
+					display: flex;
+					justify-content: center;
+					align-items: start;
+
+					i {
+						font-size: 30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 32px;
+						height: 38px;
+						color: rgba(41, 204, 106, 1);
+
+						@include max-767 {
+							width: 40px;
+							height: 35px;
+							font-size: 28px;
+						}
+
+						@include max-425 {
+							width: 40px;
+							height: 30px;
+							font-size: 25px;
+						}
+					}
+
+				}
+
+				.box-heading {
+					padding-left: 12px;
+
+					@include max-767 {
+						font-size: 20px;
+						line-height: 26px;
+					}
+
+					h3 {
+						font-size: 22px;
+						line-height: 32px;
+						font-weight: 600;
+						padding-bottom: 15px;
+						color: $color-black;
+
+						@include min-1400 {
+							font-size: 26px;
+							line-height: 32px;
+						}
+
+						@include max-991 {
+							font-size: 22px;
+							line-height: 28px;
+						}
+
+						@include max-767 {
+							font-size: 20px;
+							line-height: 26px;
+							padding-bottom: 10px;
+							br {
+								display: none;
+							}
+						}
+
+						@include max-425 {
+							font-size: 18px;
+							line-height: 24px;
+							padding-bottom: 5px;
+						}
+					}
+
+					p {
+						padding: 0;
+						color: #6D6D6D;
+						font-weight: 500;
+
+						@include max-1199 {
+							br {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

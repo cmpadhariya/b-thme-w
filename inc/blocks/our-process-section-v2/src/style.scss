@@ -1,0 +1,162 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import "../../../../assets/css/variable/variable-v2";
+
+ .our-process {
+     &__inner {
+         display: flex;
+         flex-direction: column;
+         gap: 50px;
+ 
+         @include max-991 {
+             gap: 35px;
+         }
+ 
+         @include max-575 {
+             gap: 25px;
+         }
+ 
+         &_heading {
+             display: flex;
+             flex-direction: column;
+             gap: 12px;
+             text-align: center;
+ 
+             @include max-575 {
+                 gap: 10px;
+             }
+         }
+ 
+         .row {
+             --bs-gutter-x: 5.5rem;
+ 
+             @include max-1199 {
+                 --bs-gutter-x: 3.5rem;
+             }
+ 
+             @include max-991 {
+                 --bs-gutter-x: 1.5rem;
+                 gap: 30px 0px;
+             }
+ 
+             @include max-575 {
+                 gap: 20px 0px;
+             }
+ 
+             .our-process_col:nth-child(odd) {
+                 position: relative;
+ 
+                 &::after {
+                     content: "";
+                     background: url("../../../../assets/images/our-process-dashup.webp");
+                     position: absolute;
+                     top: 35px;
+                     right: -80px;
+                     width: 160px;
+                     height: 35px;
+                     background-position: center;
+                     background-size: contain;
+                     background-repeat: no-repeat;
+ 
+                     @include max-991 {
+                         content: unset;
+                     }
+                 }
+             }
+ 
+             .our-process_col:nth-child(even) {
+                 position: relative;
+ 
+                 &::after {
+                     content: "";
+                     background: url("../../../../assets/images/our-process-dashdown.webp");
+                     position: absolute;
+                     top: 0px;
+                     right: -80px;
+                     width: 160px;
+                     height: 35px;
+                     background-position: center;
+                     background-size: 100%;
+                     background-repeat: no-repeat;
+ 
+                     @include max-991 {
+                         content: unset;
+                     }
+                 }
+             }
+ 
+             .our-process_col:last-child {
+                 &::after {
+                     content: unset;
+                 }
+             }
+         }
+ 
+         &_items {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             text-align: center;
+             gap: 16px;
+ 
+             @include max-991 {
+                 gap: 10px 0px;
+             }
+ 
+             @include max-575 {
+                 gap: 5px 0px;
+             }
+ 
+             img {
+                 width: 60px;
+                 height: 60px;
+ 
+                 @include max-991 {
+                     width: 50px;
+                     height: 50px;
+                 }
+ 
+                 @include max-575 {
+                     width: 40px;
+                     height: 40px;
+                 }
+             }
+ 
+             i {
+                 &::before {
+                     font-size: 60px;
+                     vertical-align: middle;
+                     margin: 0;
+                     padding: 0;
+                     color:$btn-bg-dark;
+ 
+                     @include max-991 {
+                         font-size: 50px;
+                     }
+ 
+                     @include max-575 {
+                         font-size: 40px;
+                     }
+                 }
+             }
+ 
+             h3 {
+                 margin-top: 10px;
+ 
+                 @include min-1400{
+                     font-size: 22px;
+                     line-height: 30px;
+                 }
+ 
+                 @include max-991 {
+                     margin-top: 5px;
+                 }
+             }
+         }
+     }
+ }

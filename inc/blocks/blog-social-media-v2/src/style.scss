@@ -1,0 +1,96 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/variable-v2';
+
+.blog-social-media-block {
+	&__inner {
+		display: flex;
+		background: linear-gradient(90deg, #434343, #18181b, #18181b);
+		width: 63%;
+		padding: 20px 20px 20px 20px;
+		border-radius: 10px;
+		justify-content: space-between;
+
+		@include max-991 {
+			width: 100%;
+		}
+
+		@include max-575 {
+			display: block;
+			text-align: center;
+		}
+
+		&_heading {
+			display: flex;
+			align-items: center;
+
+			@include max-575 {
+				justify-content: center;
+				padding-bottom: 15px;
+			}
+
+			p.heading-color {
+				font-weight: 600;
+				color: $color-white;
+
+				@include max-575 {
+					font-size: 15px;
+					line-height: 20px;
+				}
+			}
+		}
+
+		&_icon {
+			ul {
+				display: flex;
+				justify-content: center;
+				list-style: none;
+				gap: 15px;
+
+				@include min-1400 {
+					gap: 20px;
+				}
+
+				li {
+					border-radius: 5px;
+					background-color: $color-white;
+
+					&:hover {
+						transform: none;
+					}
+
+					a {
+						font-size: 13px;
+						line-height: 20px;
+						font-weight: 600;
+						color: $color-white;
+						padding: 6px 0px 5px 0px;
+						display: flex;
+						align-items: center;
+						text-decoration: none;
+
+						@include max-575 {
+							padding: 5px 0 5px 0;
+						}
+
+						i {
+							color: $color-black;
+							font-size: 25px;
+							font-family: "fontello";
+							width: fit-content;
+
+							@include max-575 {
+								font-size: 23px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

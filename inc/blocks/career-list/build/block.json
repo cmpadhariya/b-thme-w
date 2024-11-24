@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/career-list",
+  "version": "0.1.0",
+  "title": "Career List",
+  "category": "qrolic",
+  "icon": "  dashicons-chart-bar",
+  "description": "This block stores the All post of the career custom post type in the career single page.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "career-list",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "numberOfItems": {
+      "type": "number",
+      "default": 4
+    },
+    "category": {
+      "type": "string",
+      "default": "fulltime"
+    },
+    "location": {
+      "type": "string",
+      "default": "Rajkot, Gujarat"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": " View Posting"
+    }
+  }
+}

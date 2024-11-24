@@ -1,0 +1,484 @@
+//Blog single page css start
+
+.single-post{
+    .text-indent {
+        text-indent: 20px;
+    }
+
+    .text-indent-10 {
+        text-indent: 10px;
+    }
+
+    .text-indent-20 {
+        text-indent: 20px;
+    }
+
+    .text-indent-30 {
+        text-indent: 30px;
+    }
+
+    .text-indent-40 {
+        text-indent: 40px;
+    }
+
+    .text-indent-50 {
+        text-indent: 50px;
+    }
+
+    ul {
+        list-style: disc;
+        margin-left: 20px;
+    }
+
+    .sub-text {
+        padding-left: 30px;
+    }
+    &__inner{   
+        .wp-block-post-title{
+            color: $color-black;
+        }
+        &_left{
+            .wp-block-post-featured-image{
+                margin: 0px;
+                img{
+                    box-shadow: 0 23px 40px rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    -webkit-filter: grayscale(100%);
+                }
+            }
+            .blog-meta{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 20px 0px;
+                &__inner{
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    .taxonomy-blog-category{
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+                p{
+                    font-size: 17px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    color: #333;
+                }
+                time{
+                    font-size: 17px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    color: $color-black;
+                    display: block;
+                }
+                .taxonomy-blog-category{
+                    a{
+                        @extend time;
+                    }
+                }
+            }
+            .wp-block-post-content{
+                p{
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 400;
+                    letter-spacing: .5px;
+                    padding: 0px 0px 10px 0px;
+                }
+                h2{
+                    font-size: 30px;
+                    line-height: 36px;
+                    font-weight: 500;
+                    padding: 20px 0px 10px 0px;
+                    a{
+                        color: $color-black;
+                    }
+                    strong{
+                        display: block;
+                        color: #333;
+                    }
+                }
+                h3{
+                    font-size: 26px;
+                    line-height: 32px;
+                    font-weight: 400;
+                    padding: 10px 0px 10px 0px;
+                }
+                ul,ol{
+                    padding: 10px 0 0px 0px;
+                    li{
+                        font-size: 17px;
+                        line-height: 22px;
+                        font-weight: 400;
+                        ul,ol{
+                            padding: 5px 0px 5px 0px;
+                        }
+                    }
+                    li:not(:last-child){
+                        padding: 0px 0px 5px 0px;
+                    }
+                }
+                
+            }
+            .post-comment{
+                h3{
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    color: $color-gray;
+                }
+                .wp-block-post-comments-form{
+                    padding: 40px 0px 40px 0px;
+                    h3{
+                        font-size: 26px;
+                        line-height: 32px;
+                        font-weight: 500;
+                        color: $color-black;       
+                    }
+                    .comment-form{
+                        .logged-in-as{
+                            font-size: 16px;
+                            line-height: 22px;
+                            font-weight: 500;
+                            color: $color-gray;
+                            margin: 10px 0px 0px 0px;
+                            a{
+                                color: $color-black;
+                                text-decoration: underline;
+                            }
+                        }
+                        .comment-notes{
+                            display: none;
+                            font-size: 16px;
+                            line-height: 22px;
+                            font-weight: 400;
+                            color: $color-gray;
+                            padding-top: 5px;
+                            .required-field-message{
+                                color: $color-black;
+                                font-weight: 600;
+                            }
+                        }
+                        &-comment{
+                            margin: 10px 0px 20px 0px;
+                            width: 100%;
+                            label{
+                                font-size: 14px;
+                                line-height: 21px;
+                                font-weight: 400;
+                                color: $color-black;
+                                opacity: .8;
+                            }
+                            textarea{
+                                border: 1px solid hsla(0,0%,50%,.2);
+                                border-radius: 4px;
+                                font-size: 15px;
+                                line-height: 21px;
+                                font-weight: 500;
+                                color: $color-gray;
+                                margin-top: 5px;
+                                resize: none;
+                            }
+                        }
+                        .comment-form-author, .comment-form-email, .comment-form-url{
+                            width: 32%;
+                            float: left;
+                            label{
+                                font-size: 15px;
+                                line-height: 16px;
+                                font-weight: 400;
+                                color: $color-black;
+                                opacity: .8;
+                            }
+                            input{
+                                border: 1px solid rgba(128,128,128,.2);
+                                border-radius: 3px;
+                                font-size: 15px;
+                                line-height: 15px;
+                                font-weight: 500;
+                                padding: 10px 10px;
+                            }
+                        }
+                        .comment-form-email{
+                            margin: 0 16px;
+                        }
+                        &-cookies-consent{
+                            order: 3;
+                            width: 100%;
+                            margin: 20px 0px;
+                            align-items: center;
+                            label{
+                                font-size: 12px;
+                                line-height: 20px;
+                                font-weight: 400;
+                            }
+                        }
+                        .form-submit{
+                            order: 4;
+                            input{
+                                font-size: 14px;
+                                line-height: 20px;
+                                font-weight: 400;
+                                color: $color-white;
+                                background: $color-black;
+                                display: block;
+                                width: fit-content;
+                                padding: 12px 28px;
+                                border-radius: unset;
+                                &:hover{
+                                    transition: all 500ms;
+                                }
+                            }
+                        }
+                    }
+                }
+                .wp-block-latest-comments{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        margin-bottom: 0;
+                        img{
+                            float: unset;
+                            height: 100%;
+                            margin: 0 0 10px 0;
+                        }
+                        .wp-block-latest-comments__comment-meta{
+                            font-size: 17px;
+                            line-height: 24px;
+                            font-weight: 500;
+                            margin: 0;
+                            a{
+                                font-size: 17px;
+                                line-height: 24px;
+                                font-weight: 500;
+                                color: $color-black;
+                                &:hover{
+                                    transition: all 500ms;
+                                }
+                            }
+                        }
+                        .wp-block-latest-comments__comment-date{
+                            font-size: 14px;
+                            line-height: 14px;
+                            font-weight: 500;
+                            padding: 7px 0px 7px 0px;
+                        }
+                        .wp-block-latest-comments__comment-excerpt{
+                            margin: 0;
+                            p{
+                                font-size: 16px;
+                                line-height: 26px;
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .wp-block-latest-comments__comment:not(:last-child){
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+        @include max-1199{
+            &_left{
+                .post-comment{
+                    .wp-block-post-comments-form{
+                        .comment-form{
+                            .comment-form-email{
+                                margin: 0 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include max-991{
+            &_left{
+                .blog-meta{
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .wp-block-post-content{
+                    p{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    h2{
+                        font-size: 26px;
+                        line-height: 34px;
+                    }
+                }
+                .post-comment{
+                    .wp-block-post-comments-form{
+                        .comment-form{
+                            .logged-in-as{
+                                font-size: 15px;
+                                line-height: 24px;
+                            }
+                            .comment-form-author, .comment-form-email, .comment-form-url{
+                                width: 100%;
+                                margin-bottom: 10px;
+                            }
+                            .comment-form-email{
+                                margin: 0px 0px 10px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include max-767{
+            &_left{
+                .wp-block-post-content{
+                    p{
+                        font-size: 17px;
+                        line-height: 26px;
+                    }
+                    h2{
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+                    h3{
+                        font-size: 23px;
+                        line-height: 30px;
+                    }
+                }
+                .post-comment{
+                    .wp-block-post-comments-form{
+                        margin: 0;
+                        padding: 20px 0 30px;
+                        .comment-form{
+                            .form-submit{
+                                input{
+                                    padding: 10px 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &_sidebar{
+                padding-top: 40px;
+            }
+        }
+        @include max-575{
+            &_left{
+                padding-top: 30px;
+                .post-sociallink{
+                    ul{
+                        li{
+                            padding: 8px 15px 8px 35px;
+                        }
+                    }
+                }
+                .post-comment{
+                    .wp-block-comments{
+                        .wp-block-post-comments-form{
+                            .comment-form{
+                                display: unset;
+                                .logged-in-as{
+                                    font-size: 13px;
+                                    line-height: 20px;
+                                }
+                                .comment-notes{
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                }
+                                .comment-form-author, .comment-form-email, .comment-form-url{
+                                    width: 100%;
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+        @include max-425{
+            &_left{
+                .blog-meta{
+                    time{
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    .taxonomy-blog-category{
+                        a{
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+                .wp-block-post-content{
+                    p{
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                    h2{
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    h3{
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    ul,ol{
+                        li{
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+                .post-sociallink{
+                    ul{
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        li{
+                            width: 100%;
+                        }
+                    }
+                }
+                .post-comment{
+                    .wp-block-comments{
+                        padding: 30px 0px 0px 0px;
+                        h3{
+                            font-size: 20px;
+                            line-height: 26px;
+                        }
+                        .wp-block-post-comments-form{
+                            margin: 10px 0px;
+                            h3{
+                                font-size: 22px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                    .wp-block-latest-comments{
+                        li{
+                            .wp-block-latest-comments__comment-meta{
+                                font-size: 16px;
+                                line-height: 22px;
+                                a{
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                }
+                            }
+                            .wp-block-latest-comments__comment-date{
+                                font-size: 14px;
+                                line-height: 14px;
+                                padding: 10px 0;
+                            }
+                            .wp-block-latest-comments__comment-excerpt{
+                                p{
+                                    font-size: 15px;
+                                    line-height: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

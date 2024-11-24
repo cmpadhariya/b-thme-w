@@ -1,0 +1,71 @@
+
+
+.subscribe-form__sidebar{
+    h4{
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 12px;
+    }
+    .wpcf7{
+        .screen-reader-response{
+            display: none;
+        }
+        form{
+            .wpcf7-email{
+                width: 100%;
+                font-size: 13px;
+                line-height: 13px;
+                font-weight: 400;
+                color: #585858;
+                font-family: $primary-family;
+                border: 1px solid $color-gray;
+                padding: 10px 10px;
+                margin: 12px 0px 12px 0px;
+            }
+            .wpcf7-email::placeholder {
+                color: #585858;
+            }
+            .wpcf7-email::-ms-input-placeholder {
+                color: #585858;
+            }
+            .wpcf7-submit{
+                padding: 10px;
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 400;
+                color: $color-white;
+                font-family:$secondary-family;
+                background: $color-black;
+                width: fit-content;
+                display: block;
+                border: unset;
+                cursor: pointer;
+                &:hover{
+                    transition: all .5s;
+                    background-color: #555;
+                    color: $color-white;
+                }
+            }
+            .wpcf7-response-output{
+                font-size: 13px;
+                line-height: 22px;
+                font-family: $primary-family;
+                padding: 8px 0px 0;
+                opacity: .7;
+                letter-spacing: .9px;
+            }
+        }
+    }
+    @include max-425{
+        h4{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}

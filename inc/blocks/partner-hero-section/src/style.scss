@@ -1,0 +1,161 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/_variable.scss";
+
+.wp-block-create-block-partner-hero-section{
+    background: $color-black;
+}   
+.partner-hero{
+    &__text{
+        h1.title{
+            font-size: 44px;
+            line-height: 60px;
+            color: $color-white;
+        }
+        p.description{
+            padding: 20px 0 0px 0;
+            font-size: 19px;
+            line-height: 30px;
+            color: $color-white;
+        }
+    }
+    &__form{
+        .screen-reader-response{
+            display: none;
+        }
+        form{
+            .wpcf7-response-output{
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 10px;
+                font-family: $primary-family;
+                color: #fff;
+                opacity: 0.7;
+                letter-spacing: 0.9px;
+            }
+            .form-group{
+                margin-bottom: 10px;
+                label{
+                    font-size: 14px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    font-family: "OpenSans-Regular",sans-serif;
+                    color: $color-white;
+                }
+                input,textarea{
+                    font-size: 13px;
+                    line-height: 15px;
+                    font-weight: 400;
+                    color: gray;
+                    font-family: "OpenSans-Regular",sans-serif;
+                    width: 100%;
+                    padding: 12px 15px;
+                    border: unset;
+                    border-radius: 2px;
+                    background: $color-white;
+                }
+                span.wpcf7-not-valid-tip{
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    font-family: "OpenSans-Regular", sans-serif;
+                    padding: 8px 0px 0px 0px;
+                    display: block;
+                    opacity: .7;
+                    letter-spacing: .9px;
+                }
+            }
+            .form-submit{
+                input{
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    color: $color-black;
+                    font-family: "Manrope-Regular",sans-serif;
+                    background: $color-white;
+                    padding: 8px 20px;
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    margin-top: 5px;
+                    &:hover{
+                        transition: all 500ms;
+                        color: #fff;
+                        background: #555;
+                    }
+                }
+            }
+        }
+    }
+    @include max-991{
+        &__text{
+            h1.title{
+                font-size: 38px;
+    			line-height: 48px;
+            }
+            p.description{
+                font-size: 17px;
+    			line-height: 25px;
+            }
+        }
+        &__form{
+            form{
+                .wpcf7-response-output{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    @include max-767{
+        &__text{
+            margin-bottom: 30px;
+            h1.title{
+                font-size: 34px;
+    			line-height: 44px;
+            }
+            p.description{
+                font-size: 16px;
+    			line-height: 24px;
+            }
+        }
+    }
+    @include max-575{
+        &__text{
+            h1.title{
+                font-size: 30px;
+                line-height: 40px;
+            }
+            p.description{
+                font-size: 15px;
+            }
+        }
+    }
+    @include max-425{
+        &__form{
+            form{
+                .wpcf7-response-output{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                .form-group{
+                    label{
+                        font-size: 12px;
+                    }
+                    input,textarea{
+                        font-size: 12px;
+                        line-height: 13px;
+                    }
+                    span.wpcf7-not-valid-tip{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

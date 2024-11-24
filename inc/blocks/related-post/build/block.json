@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/related-post",
+  "version": "0.1.0",
+  "title": "Related Blogs",
+  "category": "qrolic",
+  "icon": "layout",
+  "description": "This block is used to display services related blogs in service single page. In this block you can display blogs by selecting a category.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "related-post",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": ""
+    },
+    "SectionPadding": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonURL": {
+      "type": "string",
+      "default": 0
+    },
+    "selectedCategory": {
+      "type": "string",
+      "default": []
+    },
+    "numberOfItems": {
+      "type": "number",
+      "default": "4"
+    },
+    "displayThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayDate": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayExcerpt": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

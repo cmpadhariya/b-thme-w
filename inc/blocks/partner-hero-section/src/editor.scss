@@ -1,0 +1,16 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+@import '../../../../assets/css/variable/_variable.scss';
+
+.partner-hero{
+    @include max-767{
+        &__text{
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/follow-us",
+  "version": "0.1.0",
+  "title": "Follow Us",
+  "category": "qrolic",
+  "icon": "  dashicons-share",
+  "description": "Social icons have been added to this block, the purpose of this block is to allow people to follow our social accounts with these icons.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "follow-us",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "FOLLOW US"
+    },
+    "subheading": {
+      "type": "string",
+      "default": "ON SOCIAL MEDIA!"
+    },
+    "twitter": {
+      "type": "string",
+      "default": "Twitter"
+    },
+    "facebook": {
+      "type": "string",
+      "default": "Facebook"
+    },
+    "instagram": {
+      "type": "string",
+      "default": "Instagram"
+    },
+    "linkedin": {
+      "type": "string",
+      "default": "Linkedin"
+    },
+    "whatsapp": {
+      "type": "string",
+      "default": "whatsapp"
+    },
+    "twittertext": {
+      "type": "string",
+      "default": "Twitter"
+    },
+    "facebooktext": {
+      "type": "string",
+      "default": "Facebook"
+    },
+    "instagramtext": {
+      "type": "string",
+      "default": "Instagram"
+    },
+    "linkedintext": {
+      "type": "string",
+      "default": "Linkedin"
+    },
+    "whatsapptext": {
+      "type": "string",
+      "default": "WhatsApp"
+    }
+  }
+}

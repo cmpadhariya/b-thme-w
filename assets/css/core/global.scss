@@ -1,0 +1,201 @@
+@import "../variable/_variable.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/************************************/
+/***** 	   01. General css		 ****/
+/************************************/
+html,body {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+html {
+  font-family: $primary-family;
+}
+body{
+  overflow-x: hidden;
+}
+body.scrolled{
+  overflow-x: visible;
+}
+html.has-modal-open{
+  overflow: visible;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family:$heading-family;
+}
+img {
+  max-width: 100%;
+}
+a:hover,
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a{
+  font-family: $heading-family;
+}
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+button:focus,
+input:focus,
+img:focus,
+.slick-slide:focus,
+textarea:focus,
+input:focus {
+  outline: none;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: #696969;
+  font-family: $primary-family;
+}
+.description-primary{
+  font-size: 16px;
+  line-height: 24px;
+  @include max-991{
+    font-size: 15px;
+  }
+  @include max-575{
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.description-secondary{
+  font-size: 14px;
+  line-height: 22px;
+  @include max-991{
+    font-size: 13px;
+    line-height: 21px;
+  }
+  @include max-425{
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.button-general{
+  text-align:center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-white;
+  background: $color-black;
+  display: block;
+  width: fit-content;
+  padding: 12px 28px;
+  &:hover{
+    transition: all 500ms;
+    background-color: #555;
+    color: $color-white;
+  }
+  @include max-767{
+    padding: 10px 24px;
+  }
+}
+body h1 {
+  font-size: 44px;
+  line-height: 60px;
+  font-family: $heading-family;
+  font-style: normal;
+  font-weight: 600;
+  color: $color-black;
+  @include max-1199 {
+    font-size: 42px;
+  }
+  @include max-991 {
+    font-size: 35px;
+    line-height: 52px;
+  }
+  @include max-767 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  @include max-425{
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+h2 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 54px;
+  color: $color-black;
+  @include max-991{
+    font-size: 36px;
+    line-height: 46px;
+  }
+  @include max-575{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @include max-425{
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+h4, h3, h6 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: $color-black;
+  @include max-991{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @include max-425{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.section-padding{
+  padding: 70px 0px;
+  @include max-767{
+    padding: 50px 20px;
+  }
+  @include max-425{
+    padding: 40px 20px;
+  }
+}
+.coman-padding{
+  padding: 40px 0px;
+  @include max-767{
+    padding: 40px 20px;
+  }
+}
+.section-padding-rl-0{
+  padding-right: 0;
+  padding-left: 0;
+}
+.section-pt-0{
+  padding-top: 0;
+}
+.section-pb-0{
+  padding-bottom: 0;
+}
+.section-bg{
+  background-color: rgba(128,128,128,.1);
+}
+
+

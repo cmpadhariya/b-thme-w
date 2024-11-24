@@ -1,0 +1,63 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import "../../../../assets/css/variable/variable";
+
+.top-bar-section {
+	background-color: dimgray;
+
+	&__inner {
+		display: flex;
+		padding: 15px 0;
+		align-items: center;
+		@include max-575 {
+			padding: 15px 20px;
+		}
+	}
+}
+
+.top-bar-section__inner_heading {
+	a {
+		text-decoration: none;
+
+		p {
+			text-transform: capitalize;
+			font-size: 14px;
+			line-height: 20px;
+			color: $color-white;
+			padding-right: 10px;
+
+			@include max-575 {
+				font-size: 12px;
+			}
+			@include max-425 {
+				font-size: 11px;
+			}
+		}
+	}
+}
+
+.top-bar-section__inner_content {
+	a {
+		text-decoration: none;
+
+		p {
+			border-left: 2px solid white;
+			padding-left: 15px;
+			text-transform: capitalize;
+			font-size: 14px;
+			line-height: 20px;
+			color: $color-white;
+
+			@include max-575 {
+				font-size: 12px;
+			}
+			@include max-425 {
+				font-size: 11px;
+			}
+		}
+	}
+}

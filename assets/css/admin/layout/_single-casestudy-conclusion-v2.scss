@@ -1,0 +1,159 @@
+// This CSS For single casestudy conclusion v2 Pattern.
+
+.single-casestudy-conclusion-v2 {
+    &__inner {
+        padding: 64px 20px;
+        box-shadow: 35px 41px 89px 0px #4A4A4A40;
+        background-color: $color-white;
+        border: 1px solid #D3D3D3;
+        border-radius: 12px;
+
+        @include max-991 {
+            padding: 50px 0px;
+        }
+
+        @include max-767 {
+            padding: 35px 25px;
+        }
+
+        &_title {
+            position: relative;
+
+            h2 {
+                @include max-575 {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+            }
+
+            &::after {
+                content: "\F06D";
+                font-family: "fontello";
+                position: absolute;
+                padding: 0;
+                margin-left: 10px;
+                font-weight: 100;
+                top: 0;
+                vertical-align: middle;
+                font-size: 35px;
+                color: #1DA1F2;
+                transform: translateY(6%);
+
+                @include min-1400 {
+                    transform: translateY(16%);
+                }
+
+                @include max-767 {
+                    font-size: 28px;
+                    transform: translateY(20%);
+                }
+
+                @include max-575 {
+                    transform: translateY(10%);
+                }
+
+                @include max-575 {
+                    font-size: 24px;
+                    transform: translateY(9%);
+                }
+            }
+
+            h2 {
+                display: inline-block;
+            }
+        }
+
+        &_contant {
+            padding: 35px 0 55px 0;
+            width: 80%;
+
+            @include max-1199 {
+                width: 100%;
+
+            }
+
+            @include max-991 {
+                padding: 30px 25px;
+            }
+
+            @include max-767 {
+                padding: 25px 35px;
+            }
+        }
+
+        &_list {
+            width: 71%;
+
+            @include max-1199 {
+                width: 85%;
+            }
+
+            @include max-991 {
+                width: 100%;
+            }
+
+            p {
+                position: relative;
+                padding-left: 70px;
+
+                &:not(:last-child) {
+                    padding-bottom: 30px;
+                }
+
+                &::after {
+                    content: "\F06D";
+                    left: 0;
+                    font-family: "fontello";
+                    position: absolute;
+                    padding: 0;
+                    font-weight: 100;
+                    top: 0;
+                    vertical-align: middle;
+                    font-size: 28px;
+                    color: #47CA5C;
+                    transform: translateY(6%);
+                    padding: 9px 11px 9px 11px;
+                    border-radius: 50px;
+                    background-color: #D6F1DA;
+
+                    @include min-1400 {
+                        padding: 9px 12px 9px 12px;
+                    }
+
+                    @include max-767 {
+                        padding: 7px 12px 8px 11px;
+                    }
+
+                    @include max-575 {
+                        padding: 8px 12px 9px 11px;
+                    }
+
+                    @include max-575 {
+                        padding: 6px 10px 7px 9px;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: #525665;
+            font-weight: 500;
+
+            @include min-1400 {
+                font-size: 22px;
+                line-height: 32px;
+            }
+
+            strong {
+                font-weight: 600;
+                color: #7390F9;
+            }
+
+            a {
+                font-weight: 700;
+                color: #242F65;
+            }
+        }
+    }
+}

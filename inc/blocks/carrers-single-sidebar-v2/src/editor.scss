@@ -1,0 +1,52 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.careers-single-sidebar {
+  .components-base-control, .components-base-control__field {
+    margin: 0;
+    padding: 0;
+  }
+
+  .careers-single-sidebar_summary, .careers-single-sidebar_benefits {
+    ul {
+      li {
+        flex-direction: column;
+
+        .summary-items-editor {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px 20px;
+
+          div {
+            font-family: $global-family;
+          }
+        }
+      }
+    }
+  }
+
+  .careers-single-sidebar_btn {
+    div {
+      font-family: $global-family;
+    }
+  }
+
+  .careers-single-sidebar_share {
+    ul {
+      flex-direction: column;
+      li{
+        .components-button{
+          width: unset;
+          height: unset;
+        }
+      }
+    }
+  }
+}

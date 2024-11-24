@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/latest-blog-posts",
+	"version": "0.1.0",
+	"title": "Latest Blog Posts",
+	"category": "qrolic",
+	"icon": "  dashicons-list-view",
+	"description": "This block is used to display the author latest post in a single blog post.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"innerBlocks": true
+	},
+	"textdomain": "latest-blog-posts",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"attributes": {
+        "postType": {
+            "type": "string",
+            "default": "post"
+        },
+		"Title": {
+            "type": "string",
+            "default": ""
+        },
+		"numberOfItems": {
+			"type": "number",
+			"default": 2
+		},
+		"columns": {
+			"type": "number",
+			"default": 1
+		},
+		"displayDate": {
+			"type": "boolean",
+			"default": false
+		},
+		"displayExcerpt": {
+			"type": "boolean",
+			"default": true
+		},
+		"displayThumbnail": {
+			"type": "boolean",
+			"default": true
+		}
+    }
+}

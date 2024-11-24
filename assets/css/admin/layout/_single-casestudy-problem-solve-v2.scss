@@ -1,0 +1,105 @@
+// This CSS For Single Case Study Problem Solve Pattern.
+.casestudy-problem-solve {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include max-991 {
+            gap: 20px 0px;
+        }
+
+        @include max-575 {
+            gap: 15px 0px;
+        }
+
+        &_items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            @include max-575 {
+                gap: 10px;
+            }
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 32px;
+
+            @include min-1400 {
+                font-size: 26px;
+                line-height: 34px;
+            }
+
+            @include max-991 {
+                font-size: 22px;
+                line-height: 30px;
+            }
+
+            @include max-575 {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include max-575 {
+                gap: 5px;
+            }
+
+            li {
+                color: #101828;
+                font-family: Inter, sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+
+                @include min-1400 {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+
+                @include max-991 {
+                    font-size: 16px;
+                }
+
+                @include max-575 {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        p {
+            font-weight: 500;
+
+            @include min-1400 {
+                font-size: 22px;
+                line-height: 32px;
+            }
+        }
+
+        span {
+            color: $color-black;
+            font-weight: 600;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}

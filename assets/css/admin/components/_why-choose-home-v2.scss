@@ -1,0 +1,269 @@
+.why-choose-home {
+  p,
+  li,
+  h5 {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+}
+.why-choose-home__inner_heading {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  &--title {
+    h2 {
+      background: linear-gradient(to right, #434343, #18181b, #18181b);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  }
+  &--description {
+    p {
+      @include min-1400 {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+.why-choose-home__inner--cards {
+  .row {
+    @include max-767 {
+      gap: 50px 0px;
+    }
+    .why-choose__custom-col{
+      @include max-575{
+        width: 75%;
+      }
+      @include max-425{
+        width: 100%;
+      }
+    }
+  }
+  .why-choose__cards {
+    border-radius: 24px;
+    box-shadow: 0px 2px 12px 0px rgba(20, 20, 43, 0.08);
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    &_heading {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .why-choose__cards_heading--img {
+        padding: 12px;
+        border-radius: 16px;
+        figure {
+          margin: 0;
+          div.components-resizable-box__container {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+      &--text {
+        h3 {
+          font-weight: 700;
+          margin: 0 0 0 0 ;
+        } 
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+    &_discription {
+      padding-right: 20px;
+      p {
+        font-weight: 400;
+      }
+    }
+    &_list {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: auto;
+      p {
+        font-weight: 600;
+      }
+      ul {
+        text-decoration: none;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li {
+          display: flex;
+          align-items: center;
+          position: relative;
+          &::before {
+            font-family: "fontello";
+            margin-right: 12px;
+            font-size: 20px;
+            line-height: 0px;
+          }
+          div {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 500;
+            font-family: $global-family;
+          }
+        }
+      }
+    }
+    &_btn {
+      margin-top: 10px;
+      .wp-block-button {
+        width: 100%;
+      }
+      .wp-element-button {
+        font-family: $global-family;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 600;
+        display: block;
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 8px;
+        @include max-425 {
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+  .cards-before{
+    border: 1px solid $text-color-red;
+    background: $color-white;
+    .why-choose__cards_heading {
+      .why-choose__cards_heading--img {
+        background-color: $color-light-gray;
+      }
+      &--text {
+        h3 {
+          color: $description-text-color;
+        }
+        p {
+          color: $description-text-color;
+        }
+      }
+    }
+  
+  .why-choose__cards_discription {
+    p {
+      color: $subheading-text-color;
+    }
+  }
+  .why-choose__cards_list {
+    p {
+      color: $description-text-color;
+    }
+    ul {
+      li {
+        &::before {
+          content: "\2757";
+          color: $text-color-red;
+        }
+        div {
+          color: $description-text-color;
+        }
+      }
+    }
+  }
+  .why-choose__cards_btn {
+    .wp-element-button {
+      background-color: $btn-bg-dark;
+      color: $color-white;
+      &:hover {
+        background-color: $color-black;
+        transition: all 500ms;
+      }
+    }
+  }
+}
+.cards-after {
+  position: relative;
+  border: 1px solid #2bd9a0;
+  background: $btn-bg-dark;
+  .why-choose__cards_heading {
+    &--img {
+      background-color: $color-light-gray;
+    }
+    &--text {
+      h3 {
+        color: $color-white;
+      }
+      p {
+        color: $color-light-gray;
+      }
+    }
+  }
+    .why-choose__cards_discription {
+      p {
+        color: $color-light-gray;
+      }
+    }
+    .why-choose__cards_list {
+      p {
+        color: $color-white;
+      }
+      ul {
+        li {
+          div {
+            color: $color-light-gray;
+          }
+          &::before {
+            content: "\f06d";
+            color: #2bd9a0;
+          }
+        }
+      }
+    }
+    .why-choose__cards_btn {
+      .wp-element-button{
+        background-color: $color-white;
+        color: $btn-bg-dark;
+        &:hover {
+          background-color: $color-black;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .cards-after__label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    .cards-after__label_inner {
+      position: absolute;
+      top: 0px;
+      display: flex;
+      align-items: center;
+      transform: translate(0%, -50%);
+      p {
+        font-size: 14px;
+        line-height: 22px;
+        border-radius: 20px;
+        font-weight: 600;
+        border: 1px solid #a1a1aa;
+        background-color: $color-white;
+        color: $description-text-color;
+        box-shadow: 0px 0px 1px 0px rgba(44, 58, 114, 0.05);
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &::before {
+          content: "\e809";
+          font-family: "fontello";
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

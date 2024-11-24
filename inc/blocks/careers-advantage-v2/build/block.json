@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/careers-advantage-v2",
+  "version": "0.1.0",
+  "title": "Careers Advantage V2",
+  "category": "qrolic",
+  "icon": "  dashicons-chart-area",
+  "description": "In this block, you add an image or icon, title, and description that shows the career benefit.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "careers-advantage-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mainHeading": {
+      "type": "string"
+    },
+    "mainDescription": {
+      "type": "string"
+    },
+    "boxes": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "imageUrl": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/zigzag-section",
+	"version": "0.1.0",
+	"title": "Zigzag Section",
+	"category": "qrolic",
+	"icon": "  dashicons-embed-photo",
+	"description": "This block is a zigzag section block, with left side image and right side description.",
+	"supports": {
+		"html": false,
+		"color":{
+			"text": true,
+			"link": true,
+			"background": true
+		}
+	},
+	"textdomain": "zigzag-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"mediaID": {
+			"type": "number",
+			"default": null
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": null
+		},
+		"content": {
+            "type": "string",
+            "default": "Heading"
+        },
+		"description":{
+            "type": "string",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+		"alignment": {
+		  "type": "string",
+		  "default": "left"
+		},
+		"textButton": {
+            "type": "string",
+            "default": ""
+        },
+		"altText" :{
+			"type": "string",
+			"default": ""
+		},
+		"button_url": {
+			"type": "string",
+			"selector": "a",  
+			"source": "attribute", 
+			"attribute": "href"
+		}
+	}
+}

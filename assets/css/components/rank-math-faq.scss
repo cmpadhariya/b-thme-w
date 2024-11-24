@@ -1,0 +1,59 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .rank-math-faq {
+  &-heading {
+    padding-bottom: 50px;
+    @include max-575 {
+      padding-bottom: 40px;
+    }
+    @include max-425 {
+      padding-bottom: 30px;
+    }
+  }
+ 
+ .rank-math-list-item {
+   height: fit-content;
+   padding: 20px 20px;
+   margin-bottom: 15px;
+   background: $color-white;
+   border-radius: 3px;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   p {
+     font-size: 16px;
+     line-height: 24px;
+     font-weight: 500;
+     @include max-767{
+       font-size: 14px;
+       line-height: 20px;
+     }
+   } 
+   .rank-math-question {
+     font-weight: 500;
+     color: $color-black;
+     font-family: $heading-family;
+   }
+   .rank-math-answer p {
+     padding: 8px 0 0 0;
+     font-weight: 400;
+     color: $color-gray;
+     font-family: $primary-family;
+     @include max-1199{
+       line-height: 24px;
+     }
+     @include max-767{
+       font-size: 14px;
+       line-height: 22px;
+     }
+     @include max-425{
+      padding: 5px 0 0 0;
+       font-size: 12px;
+       line-height: 20px;
+     }
+   }
+ }
+}

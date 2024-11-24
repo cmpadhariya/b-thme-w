@@ -1,0 +1,57 @@
+.page-header-section {
+    &__inner {
+        &--subtitle {
+            display: flex;
+            justify-content: center;
+
+            p {
+                margin-bottom: 10px;
+                width: fit-content;
+                padding: 5px 15px;
+                border-radius: 50px;
+            }
+        }
+        .taxonomy-blog-category-heading {
+            pointer-events: none;
+            cursor:none;
+            text-align: center;
+            font-size: 48px;
+            line-height: 62px;
+            font-style: normal;
+            font-weight: 600;
+            background: linear-gradient(to right, #434343, #18181B, #18181B);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            @include max-1199 {
+              font-size: 42px;
+              line-height: 56px;
+            }
+            @include max-991 {
+              font-size: 35px;
+              line-height: 52px;
+            }
+            @include max-767 {
+              font-size: 33px;
+              line-height: 50px;
+            }
+            @include max-575 {
+              font-size: 30px;
+              line-height: 40px;
+            }
+            @include max-425 {
+              font-size: 28px;
+              line-height: 38px;
+            }
+        }
+
+        &--text {
+            margin-top: 16px;
+            p {
+                @include min-1400 {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/casestudy-related-section-v2",
+  "version": "0.1.0",
+  "title": "Casestudy Related Section V2",
+  "category": "qrolic",
+  "icon": "layout",
+  "description": "A dynamic block to display related Case Study articles within a some category of Case Study posts.",
+  "example": {},
+  "attributes": {
+    "numberOfItems": {
+      "type": "number",
+      "default": 2
+    },
+    "columns": {
+      "type": "number",
+      "default": 1
+    },
+    "displayThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "Title": {
+      "type": "string",
+      "default": ""
+    },
+    "readMore": {
+      "type": "string",
+      "default": "Read Case Study"
+    },
+    "selectedPostID": {
+      "type": "string",
+      "default": ""
+    },
+    "SectionPadding": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "casestudy-related-section-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

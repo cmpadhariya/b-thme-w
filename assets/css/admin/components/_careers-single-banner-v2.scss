@@ -1,0 +1,133 @@
+// This Style for the banner section in the single careers page.
+.careers-single-banner {
+  &__inner {
+    &_text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px 0px;
+
+      h1.careers-single-banner__inner_text--title {
+        color: $color-white;
+        background: unset;
+        -webkit-text-fill-color: unset;
+        @include min-1400 {
+          font-size: 56px;
+          line-height: 70px;
+        }
+      }
+
+      p.careers-single-banner__inner_text--discription {
+        color: $color-white;
+        padding-right: 70px;
+        @include max-1199{
+          padding-right: 0px;
+        }
+      }
+
+      &--buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+
+        .wp-element-button {
+          font-size: 14px;
+          line-height: 17px;
+          font-weight: 700;
+          padding: 14px 28px;
+          border-radius: 8px;
+          text-decoration: none;
+        }
+
+        .white-button .wp-element-button {
+          background: $color-white;
+          color: $color-black;
+          border: 1px solid transparent;
+          font-family: $global-family;
+        }
+
+        .black-button .wp-element-button {
+          background: transparent;
+          color: $color-white;
+          border: 1px solid $color-white;
+          font-family: $global-family;
+
+          &:hover {
+            transition: all 500ms;
+            background-color: $color-black;
+          }
+        }
+      }
+    }
+
+    &_img {
+      height: 100%;
+
+      figure {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    }
+  }
+
+  @include min-1400 {
+    &__inner {
+      &_text {
+        p.careers-single-banner__inner_text--discription {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  @include max-1199 {
+    &__inner {
+      &_img {
+        figure {
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @include max-991 {
+    &__inner {
+      &_text {
+        p.careers-single-banner__inner_text--discription {
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+
+  @include max-767 {
+    padding: 0 20px;
+
+    &__inner {
+      &_text {
+        &--buttons {
+          margin-top: 10px;
+
+          .wp-element-button {
+            padding: 12px 24px;
+          }
+        }
+      }
+    }
+  }
+
+  @include max-425 {
+    &__inner {
+      &_text {
+        &--buttons {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

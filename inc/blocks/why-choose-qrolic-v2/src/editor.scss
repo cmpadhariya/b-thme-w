@@ -1,0 +1,32 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import "../../../../assets/css/variable/variable-v2";
+
+ .editor-styles-wrapper {
+ .why-choose-qrolic {
+    &__inner {
+        &_top {
+            &--our-expertise {
+                .expertise-tags {
+                    span {
+                        a {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_bottom {
+            .row {
+                @include max-1199 {
+                    --bs-gutter-y: 1.5rem;
+                }
+            }
+        }
+    }
+}
+ }

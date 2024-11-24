@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/careers-activities-v2",
+  "version": "0.1.0",
+  "title": "Careers Activities V2",
+  "category": "qrolic",
+  "icon": "  dashicons-buddicons-activity",
+  "description": "This section shows the activities of our qrolic technologies company. Which includes activity title, short description and multiple images.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "careers-activities-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionDescription": {
+      "type": "string"
+    },
+    "activities": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "images": {
+            "type": "array",
+            "default": [],
+            "items": {
+              "type": "string"
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

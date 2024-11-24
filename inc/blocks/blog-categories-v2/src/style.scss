@@ -1,0 +1,124 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+//variable file add.
+@import "../../../../assets/css/variable/variable-v2";
+
+.blogpost-categories {
+    &__list {
+        padding: 12px 12px;
+        background: $color-white;
+        border-radius: 8px;
+        border: 1px solid rgba(17, 17, 17, 0.08);
+        box-shadow: 0px 4px 10px 0px rgba(17, 17, 17, 0.02);
+
+        ul,
+        .blogpost-categories__list_items {
+            display: flex;
+            align-items: center;
+            gap: 10px 20px;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+
+            li {
+                a {
+                    text-decoration: none;
+                    display: block;
+                    padding: 8px 16px;
+                    font-weight: 400;
+                    color: $description-text-color;
+                    border-radius: 8px;
+                    text-align: center;
+                    transition: all 500ms;
+                    border: 1px solid #c9c9c9;
+
+                    @include max-991 {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+
+                    &:hover {
+                        border: 1px solid transparent;
+                        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
+                        color: $color-white;
+                        background: rgba(0, 0, 0, 0.75);
+                    }
+
+                    @include max-425 {
+                        padding: 6px 12px;
+                    }
+                }
+
+                .active-categories {
+                    border: none;
+                    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
+                    color: $color-white;
+                    background: rgba(0, 0, 0, 0.75);
+                }
+            }
+
+            .hidden-category {
+                display: none;
+            }
+        }
+
+        .blogpost-categories__list_items {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 10px 20px;
+            justify-content: unset;
+        }
+
+        ul,
+        .blogpost-categories__list_items {
+            @include max-1199 {
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                gap: 10px 10px;
+                justify-content: unset;
+            }
+
+            @include max-767 {
+                grid-template-columns: repeat(3, auto);
+            }
+
+            @include max-575 {
+                gap: 5px 5px;
+                grid-template-columns: repeat(2, auto);
+            }
+
+            @include max-360 {
+                grid-template-columns: repeat(1, auto);
+            }
+        }
+
+        button {
+            border: none;
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
+            padding: 8px 0px;
+            min-width: 120px;
+            cursor: pointer;
+            line-height: 25px;
+            background-color: $color-black;
+
+            @include max-991 {
+                padding: 8px 16px;
+                min-width: unset;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 500;
+            }
+
+            @include max-425 {
+                padding: 6px 12px;
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/_variable.scss";
+
+.internship-types__inner {
+  .row {
+    div.m-bottom:not(:last-child) {
+      @include max-767 {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &_top {
+    padding: 0px 0px 50px 0px;
+  }
+
+  &_box {
+    padding: 40px 20px 30px 20px;
+    position: relative;
+    border: 1px solid $color-gray;
+    border-radius: 5px;
+    @include max-425{
+        padding: 25px 20px 20px 20px;
+    }
+
+    span {
+      font-weight: 600;
+      position: absolute;
+      background:#595959;;
+      top: -15px;
+      padding: 8px 15px;
+      margin-left: 15px;
+      color: $color-white;
+      border-radius: 0 0 2px 2px;
+
+      @include max-991 {
+        padding: 5px 15px;
+      }
+
+      @include max-425 {
+        padding: 3px 12px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 15px solid #595959;
+        border-left: 15px solid transparent;
+      }
+    }
+
+    .content {
+      padding: 20px 0px 0px 0px;
+      @include max-991 {
+        padding: 15px 0px 0px 0px;
+      }
+
+      h3 {
+        padding-bottom: 5px;
+      }
+
+      p {
+        padding: 5px 0px 0px 0px;
+        @include max-991 {
+          padding: 0px 0px 0px 0px;
+        }
+      }
+    }
+  }
+}

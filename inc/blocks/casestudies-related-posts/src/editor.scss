@@ -1,0 +1,25 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+@import '../../../../assets/css/variable/_variable.scss';
+
+.casestudies-related-posts{
+    h2{
+        padding: 0px 0px 40px 0px;
+    }
+    h3,h5,p{
+        margin: 0;
+    }
+    .wp-block-author-box-author-plugin__post-excerpt{
+        padding: 10px 0px;
+    }
+    @include max-425{
+        h2{
+            padding: 0px 0px 30px 0px;
+        }
+    }
+}

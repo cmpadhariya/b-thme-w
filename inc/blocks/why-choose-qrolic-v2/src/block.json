@@ -1,0 +1,111 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/why-choose-qrolic-v2",
+	"version": "0.1.0",
+	"title": "Why Choose Qrolic V2",
+	"category": "qrolic",
+	"icon": "admin-multisite",
+	"description": "This section shows why you choose our company qrolic technology. This section shows our success, expertise, WordPress complexity etc.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"items": {
+			"type": "object",
+			"properties": {
+				"icon": {
+					"type": "string",
+					"default": ""
+				},
+				"expertise": {
+					"type": "string",
+					"default": ""
+				}
+			}
+		},
+		"SectionPadding": {
+			"type": "string",
+			"default": ""
+		},
+		"ourExpertiseTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"ourExpertiseDescription": {
+			"type": "string",
+			"default": ""
+		},
+		"ourExpertise": {
+			"type": "array",
+			"default": []
+		},
+		"workWithLoveTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"workWithLoveDescription": {
+			"type": "string",
+			"default": ""
+		},
+		"workWithLoveText": {
+			"type": "string",
+			"default": ""
+		},
+		"wordpressComplexitiesTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"wordpressComplexitiesDescription": {
+			"type": "string",
+			"default": ""
+		},
+		"wordpressComplexitiesgifUrl": {
+			"type": "object",
+			"default": {
+				"url": "",
+				"alt": "",
+				"width": "",
+				"height": ""
+			}
+		},
+		"provenSuccessTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"provenSuccessDescription": {
+			"type": "string",
+			"default": ""
+		},
+		"provenSuccessLogos": {
+			"type": "array",
+			"default": []
+		},
+		"moreCompaniesText": {
+			"type": "string",
+			"default": ""
+		},
+		"ongoingSupportTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"ongoingSupportDescription": {
+			"type": "string",
+			"default": ""
+		},
+		"ongoingSupportgifUrl": {
+			"type": "object",
+			"default": {
+				"gifUrl": "",
+				"gifAlt": "",
+				"gifWidth": "",
+				"gifHeight": ""
+			}
+		}
+	},
+	"textdomain": "why-choose-qrolic-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

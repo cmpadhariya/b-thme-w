@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/maintenance-package-block",
+  "version": "0.1.0",
+  "title": "Maintenance Package Block",
+  "category": "qrolic",
+  "icon": "  dashicons-money-alt",
+  "description": "Packages for WordPress Maintenance Services are designed in this block with price text title description and list of package features..",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "maintenance-package-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Your Pack"
+    },
+    "heading": {
+      "type": "string",
+      "default": "$100/mo"
+    },
+    "discription": {
+      "type": "string",
+      "default": "Pack Discription..."
+    },
+    "items": {
+      "type": "array",
+      "default": []
+    },
+    "buttonText": {
+      "type": "string",
+      "source": "text",
+      "selector": ".button-text"
+    },
+    "buttonURL": {
+      "type": "string",
+      "default": ""
+    },
+    "list": {
+      "type": "string",
+      "default": ""
+    },
+    "mostpopular": {
+      "type": "string",
+      "default": "Popular"
+    },
+    "discount": {
+      "type": "string",
+      "default": "Discount 15%"
+    }
+  }
+}

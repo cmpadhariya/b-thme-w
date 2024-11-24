@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/single-case-study",
+  "version": "0.1.0",
+  "title": "Single Case Study",
+  "category": "qrolic",
+  "icon": "layout",
+  "description": "This block is used to display a single case study post. In which the post is selected from the editor side and the data of that post is displayed.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "single-case-study",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "selectedPost": {
+      "type": "string",
+      "default": 0
+    },
+    "Linktext": {
+      "type": "string",
+      "default": "Read More"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "showCustomExcerpt": {
+      "type": "boolean",
+      "default": false
+    },
+    "customExcerpt": {
+      "type": "string",
+      "default": "add custom excerpt"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/call-to-action-section",
+	"version": "0.1.0",
+	"title": "Call To Action Section",
+	"category": "qrolic",
+	"icon": "services",
+	"description": "This block is a call to action section block, user use qrolic services.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+	  "Heading": {
+		"type": "string",
+		"selector": "h2"
+	  },
+	  "content": {
+		"type": "string",
+		"source": "html",
+		"selector": "p"
+	  },
+	  "buttonText": {
+		"type": "string",
+		"source": "text",
+		"selector": ".button-text"
+	  },
+	  "buttonURL": {
+		"type": "string",
+		"default": ""
+	  }
+	},
+	"textdomain": "call-to-action-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

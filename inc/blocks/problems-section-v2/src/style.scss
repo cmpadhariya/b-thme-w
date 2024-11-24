@@ -1,0 +1,155 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.problem-section__block-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  border: 1px solid $text-bg-red;
+  border-radius: 20px;
+  @include min-1400 {
+    padding: 25px 25px;
+  }
+  &_inner {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    @include max-1199 {
+      flex-direction: column;
+      gap: 15px;
+    }
+    @include max-991 {
+      flex-direction: row;
+    }
+    @include max-425 {
+      flex-direction: column;
+    }
+
+    &--img {
+      width: 20%;
+      @include max-1199 {
+        width: auto;
+      }
+      @include max-991 {
+        width: 20%;
+      }
+      @include max-425 {
+        width: auto;
+      }
+      .img-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        .img-add{
+          margin: 0px 10px;
+          &::before{
+            margin: 0px;
+          }
+        }
+      }
+      &-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $text-bg-red;
+        border-radius: 50%;
+        i {
+          margin: 0;
+          color: $text-color-red;
+          &::before {
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            @include max-767 {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+    &--list {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @include max-1199 {
+        width: auto;
+      }
+      @include max-991 {
+        width: 80%;
+      }
+      @include max-425 {
+        width: auto;
+      }
+      h3 {
+        font-size: 18px;
+        line-height: 26px;
+        @include min-1400 {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #344054;
+        @include min-1400 {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+      ul {
+        list-style: disc;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        li {
+          font-size: 15px;
+          line-height: 19px;
+          font-weight: 400;
+          color: $description-text-color;
+          &::marker {
+            color: $description-text-color;
+          }
+          @include min-1400 {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+        li.list-flex-item{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  span.add-items{
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    top: -20px;
+    left: -8px;
+    z-index: 1;
+    color: $color-black;
+  }
+  button.icon-doc-add{
+    position: relative;
+    &:hover{
+      span.add-items{
+        visibility: visible;
+      }
+    }
+  }
+}

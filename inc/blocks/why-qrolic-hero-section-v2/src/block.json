@@ -1,0 +1,133 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/why-qrolic-hero-section",
+  "version": "0.1.0",
+  "title": "Why Qrolic Hero Section V2",
+  "category": "qrolic",
+  "icon": "  dashicons-clipboard",
+  "description": "This block shows the banner section on the Why Qrolic Technologies page and this block shows a subtitle, title, description and two buttons and image or video.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "why-qrolic-hero-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mediaID": {
+      "type": "number",
+      "default": null
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": null
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaType": {
+      "type": "string",
+      "default": "image"
+    },
+    "videoControls": {
+      "type": "object",
+      "default": {
+        "autoplay": false,
+        "loop": false,
+        "muted": false,
+        "controls": true
+      }
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "imagetoptext": {
+      "type": "string",
+      "default": ""
+    },
+    "imagetopicon": {
+      "type": "string",
+      "default": ""
+    },
+    "imagebuttontext": {
+      "type": "string",
+      "default": ""
+    },
+    "imagebuttonicon": {
+      "type": "string",
+      "default": ""
+    },
+    "imagebuttonurl": {
+      "type": "string",
+      "default": ""
+    },
+    "blackBtnText": {
+      "type": "string",
+      "default": ""
+    },
+    "blackBtnUrl": {
+      "type": "string",
+      "selector": "a"
+    },
+    "grayBtnText": {
+      "type": "string",
+      "default": ""
+    },
+    "grayBtnUrl": {
+      "type": "string",
+      "selector": "a"
+    },
+    "srcSet": {
+      "type": "object",
+      "properties": {
+        "full": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          }
+        },
+        "large": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          }
+        },
+        "medium": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          }
+        },
+        "thumbnail": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "height": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    }
+  }
+}

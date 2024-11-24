@@ -1,0 +1,142 @@
+.services-faq-v2 {
+    .page-header-section {
+        p {
+            @include max-991 {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__inner {
+        .services-rank-math-v2 {
+            .rank-math-list-item {
+                border-bottom: 1px solid #ECEEF4;
+                
+                h3 {
+                    position: relative;
+                    cursor: pointer;
+                    align-items: baseline;
+                    margin: 24px 25px;
+                    transition: margin-bottom 0.3s ease;
+                    display: flex;
+                    padding-right: 20px;
+                    @include min-1400 {
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                    @include max-991 {
+                        margin: 16px 30px;
+                    }
+                    @include max-575{
+                        margin: 16px 25px;
+                    }
+                    @include max-425{
+                        margin: 16px 20px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        left: -25px;
+                        width: 5px;
+                        border-radius: 10px;
+                        top: 3px;
+                        height: 20px;
+                        background: #000;
+                        @include max-425 {
+                            top: 5px;
+                            height: 15px;
+                            width: 4px;
+                            left: -20px;
+                        }
+                    }
+                    &::after {
+                        content: '\e824'; 
+                        font-family: 'fontello';
+                        position: absolute;
+                        right: -25px;
+                        color: #79829F;
+                        font-size: 30px;
+                        font-weight: 100;
+                        transition: transform 0.3s ease; 
+                        @include max-575 {
+                            font-size: 27px;
+                            right: -26px;
+                        }
+                    }
+                }
+                .services-answer {
+                    max-height: 0; 
+                    overflow: hidden; 
+                    transition: max-height 0.3s ease; 
+                    p {
+                        margin-bottom: 20px;
+                        opacity: 0;
+                        transition: opacity 0.3s ease; 
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        color: rgba(75, 81, 98, 1);
+                        @include min-1400 {
+                            font-size: 18px;
+                            line-height: 24px;
+                          }
+                        @include max-991 {
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+                        a{
+                            color: #1474c8;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                &.active {
+                    h3::after {
+                        transform: rotate(180deg); 
+                    }
+                    .services-answer {
+                        max-height: 1000px;
+                    }
+                    .services-answer > p {
+                        opacity: 1; 
+                    }
+                }
+            }
+        }
+        .services-faq-card {
+            background-color: #F4F4F5;
+            padding: 35px 41px;
+            position: sticky;
+            top: 70px;
+            border-radius: 12px;
+            h3{
+                @include min-1400 {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+            @include max-991 {
+                margin-top: 25px;
+                padding: 25px;
+            }
+            @include max-575{
+                h3{
+                    font-size: 18px;
+                }
+            }
+            p {
+                margin: 14px 0 23px 0;
+                font-weight: 400;
+                color: #4D4D4D;
+                @include max-767 {
+                    margin-top: 10px;
+                }
+                @include max-425 {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

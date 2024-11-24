@@ -1,0 +1,547 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.contact-info-v2 {
+	.wpcf7-spinner {
+		position: absolute;
+	}
+
+	&__heading {
+		text-align: center;
+		padding-bottom: 48px;
+		@include max-575 {
+			padding-bottom: 40px;
+		}
+
+		h1 {
+			-webkit-text-fill-color: unset;
+			@include min-1400 {
+				font-size: 56px;
+        		line-height: 70px;
+			}
+
+			span.clipped {
+				width: unset;
+				height: unset;
+				padding: 15px;
+				background-color: transparent;
+				clip-path: polygon(-42% -20%, 75% -300%, 104% 100%, 10% 98%);
+				border: solid 6px #e4e7ec;
+				border-radius: 100%;
+				display: inline-block;
+
+				@include max-991 {
+					padding: 8px;
+					clip-path: polygon(-42% -20%, 75% -300%, 104% 100%, 10% 98%);
+				}
+
+				@include max-767 {
+					width: 280px;
+					height: 58px;
+					padding: 0px;
+					border: solid 4px #e4e7ec;
+				}
+				@include max-575{
+					height: 57px;
+					padding: 4px;
+					border: solid 4px #e4e7ec;
+				}
+			}
+		}
+
+		p {
+			padding-top: 16px;
+			@include min-1400 {
+				font-size: 22px;
+				line-height: 30px;
+			}
+		}
+	}
+
+	&__inner {
+		background-color: $color-light-gray;
+		border-radius: 24px;
+
+		&_information {
+			padding-left: 49px;
+			background-color: rgba(39, 39, 42, 1);
+			border-radius: 0px 24px 24px 0px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+
+			@include max-425 {
+				padding-left: 20px;
+				align-items: center;
+			}
+
+			.changecolor {
+				color: #fff;
+				opacity: 1;
+			}
+
+			p {
+				color: rgba(255, 255, 255, 1);
+				opacity: 0.5;
+				font-weight: 300;
+				margin: 0px 4px 4px 0px;
+
+				@include max-425 {
+					br {
+						display: none;
+					}
+
+					font-size: 14px;
+					line-height: 20px;
+					padding-top: 15px;
+				}
+			}
+
+			a {
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 300;
+				margin-right: 4px;
+				color: rgba(255, 255, 255, 1);
+			}
+
+			i {
+				width: 60px;
+				height: 60px;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				border-radius: 100%;
+				margin-right: 16px;
+				background-color: rgba(255, 255, 255, 0.08);
+
+				@include max-575 {
+					width: 45px;
+					height: 45px;
+				}
+				@include max-425{
+					margin-right: 0px;
+				}
+
+				&::before {
+					font-size: 28px;
+					color: #fff;
+
+					@include max-767 {
+						font-size: 25px;
+					}
+
+					@include max-575 {
+						font-size: 22px;
+					}
+				}
+			}
+
+			@include max-991 {
+				padding: 40px 50px 40px 50px;
+				border-radius: 0 0 24px 24px;
+			}
+
+			@include max-575 {
+				padding: 40px 25px 40px 25px;
+			}
+
+			&-email {
+				display: flex;
+				align-items: center;
+
+				@include max-425 {
+					flex-direction: column;
+					text-align: center;
+				}
+			}
+
+			&-phone {
+				padding: 24px 0;
+				display: flex;
+				align-items: center;
+
+				@include max-425 {
+					flex-direction: column;
+					text-align: center;
+				}
+			}
+
+			&-address {
+				display: flex;
+				align-items: center;
+
+				@include max-425 {
+					flex-direction: column;
+					text-align: center;
+				}
+
+				p {
+					opacity: 1;
+					@include max-991 {
+						br:nth-of-type(1) {
+							display: none;
+						  }						
+					}
+					@include max-767 {
+						br:nth-of-type(1) {
+							display: block;
+						  }	
+					}
+				}
+			}
+
+			h2.contact-change-heading {
+				margin-bottom: 40px;
+				color: rgba(255, 255, 255, 1);
+				-webkit-text-fill-color: unset;
+
+				@include max-991 {
+					margin-bottom: 30px;
+				}
+			}
+
+			div.contact-info__inner_information--icons {
+				padding-top: 40px;
+
+				@include max-575 {
+					padding-top: 30px;
+				}
+
+				h3 {
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: normal;
+					color: rgba(255, 255, 255, 1);
+				}
+
+				ul {
+					list-style: none;
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+					margin-top: 20px;
+					gap: 10px;
+					@include max-360 {
+						gap: 10px 10px;
+					}
+
+					li {
+
+						a {
+							padding: 0;
+							color: rgba(255, 255, 255, 1);
+							text-decoration: none;
+							display: block;
+
+							&::before {
+								margin: 0;
+								font-family: "fontello";
+								color: $color-white;
+								background-color: rgba(255, 255, 255, 0.08);
+								border-radius: 10%;
+								font-size: 20px;
+								height: 40px;
+								width: 40px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								line-height: 25px;
+
+								@include max-991 {
+									font-size: 16px;
+								}
+							}
+						}
+
+						a:hover::before {
+							transition: all 500ms;
+						}
+					}
+
+					.facebook-contactus {
+						a:hover::before {
+							background-color: #3b5998;
+						}
+					}
+
+					.instagram-contactus {
+						a:hover::before {
+							background-color: #e52765;
+						}
+					}
+
+					.linkedin-contactus {
+						a:hover::before {
+							background-color: #007bb5;
+						}
+					}
+
+					.twitter-contactus {
+						a:hover::before {
+							background-color: #1da1f2;
+						}
+					}
+
+					.whatsapp-contactus {
+						a:hover::before {
+							background-color: #075e54;
+						}
+					}
+				}
+			}
+		}
+
+		&_form {
+			padding: 72px 25px 72px 35px;
+
+			@include max-991 {
+				padding: 50px 25px 40px 25px;
+			}
+			@include max-425 {
+				padding: 30px 25px 30px 25px;
+			}
+		}
+	}
+
+	&__bookcall {
+		text-align: center;
+		margin-top: 40px;
+		@include max-767 {
+			margin-top: 35px;
+		}
+
+		p.line-description {
+			position: relative;
+			color: #535965;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				width: 46%;
+				border-top: 1px solid #4F4F4F;
+				opacity: 0.5;
+			}
+
+			&::before {
+				left: 0;
+			}
+
+			&::after {
+				right: 0;
+			}
+		}
+
+		h2, .contact-second-heading {
+			padding: 40px 0;
+			-webkit-text-fill-color: unset;
+
+			span {
+				color: #454545;
+				-webkit-text-fill-color: unset;
+			}
+			@include max-991 {
+				font-size: 25px;
+				line-height: 32px;
+			}
+			@include max-767 {
+				padding: 30px 0 35px 0;
+			}
+			@include max-425 {
+				font-size: 23px;
+				line-height: 31px;
+			}
+		}
+		.contact-second-heading {
+			padding: 40px 0;
+			-webkit-text-fill-color: unset;
+			font-size: 30px;
+			line-height: 35px;
+			span {
+				color: #454545;
+				-webkit-text-fill-color: unset;
+			}
+			@include min-1400 {
+				font-size: 32px;
+				line-height: 37px;
+			}
+			@include max-1199 {
+				font-size: 28px;
+				line-height: 32px;
+			}
+			@include max-991 {
+				font-size: 24px;
+				line-height: 32px;
+			}
+			@include max-767 {
+				padding: 30px 0 35px 0;
+			}
+			@include max-425 {
+				font-size: 22px;
+				line-height: 31px;
+			}
+		}
+         &_jumpcall {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		 }
+		&_box {
+			background: linear-gradient(to right, #131212, #18181b, #18181b);
+			padding: 34px 25px;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			border-radius: 24px;
+			width: 90%;
+			flex-wrap: wrap;
+			position: relative;
+			z-index: 2;
+			@include max-1199 {
+				padding: 34px 45px;
+			}
+			@include max-991 {
+				padding: 35px 50px;
+				width: 100%;
+				gap: 70px;
+				justify-content: center;
+			}
+			@include max-767 {
+				gap: 0px;
+			}
+			@include max-425 {
+				padding: 35px 10px;
+			}
+            .background-img {
+				background-image: url('../../../../assets/images/contact-jumpcall-background-image.webp');
+				position: absolute;
+				top: 0;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				pointer-events: none;
+				z-index: 1;
+				border-radius: 24px;
+				@include max-1199 {
+					display: none;
+				}
+			}
+			&-content {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 110px;
+				@include max-1199 {
+					gap: 30px;
+				}
+				@include max-991 {
+					display: block;
+					text-align: start;
+				}
+				@include max-767 {
+					text-align: center;
+				}
+			}
+			&-heading {
+				text-align: start;
+				@include max-767 {
+					text-align: center;
+					padding: 30px 35px 20px 35px;
+				}
+				@include max-425 {
+					text-align: center;
+					padding: 30px 10px 20px 10px;
+				}
+
+				h2.contact-call-heading {
+					padding: 0;
+					color: #ffffff;
+					-webkit-text-fill-color: unset;
+				}
+
+				p.contact-call-description {
+					color: #D1D1D1;
+					padding-top: 6px;
+				}
+			}
+
+			&-button {
+				border-radius: 8px;
+				background-color: #E7E7E7;
+				display: flex;
+				align-items: center;
+				z-index: 3;
+				position: relative;
+				@include max-991 {
+					margin: 20px 0 0px 0px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+				}
+				@include max-767 {
+					margin: 0;
+				}
+
+				a {
+					color:$color-black;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 24px;
+					padding: 15px 60px 15px 25px;
+					@include max-991 {
+						padding: 12px 60px 12px 25px;
+					}
+					@include max-575 {
+						font-size: 14px;
+						line-height: 22px;
+						padding: 12px 50px 12px 25px;
+					}
+				}
+				i {
+					width: 30px;
+   					height: 30px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					border: 1px solid;
+					border-radius: 100%;
+					position: absolute;
+					right: 22px;
+					&::before {
+						font-size: 25px;
+						font-weight: 500;
+						@include max-575 {
+							font-size: 22px;
+						}
+					}
+					@include max-575 {
+						width: 25px;
+    					height: 25px;
+						right: 18px;
+					}
+				}
+				&:hover {
+					cursor: pointer;
+					i {
+						background-color: $color-black;
+						color: #fff;
+						transition: all 0.5s;
+					}
+				}
+			}
+		}
+	}
+}

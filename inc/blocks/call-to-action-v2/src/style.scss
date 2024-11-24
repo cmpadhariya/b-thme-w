@@ -1,0 +1,152 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+//variable add
+@import "../../../../assets/css/variable/variable-v2";
+
+.callto-action {
+  &__inner {
+    background-color: $color-black;
+    padding: 60px 8%;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include max-575 {
+      padding: 40px 8%;
+    }
+
+    &::before {
+      content: "";
+      background-image: radial-gradient(#d1e9f6 -20%, #d1e9f6 -80%, black 60%);
+      opacity: 0.4;
+      display: block;
+      height: 400px;
+      position: absolute;
+      top: -100px;
+      left: -20px;
+      width: 600px;
+      z-index: -1;
+      transform: rotate3d(3, 2, 0, 50deg);
+
+      @include max-991 {
+        left: -100px;
+      }
+    }
+
+    @include max-1199 {
+      br {
+        display: none;
+      }
+    }
+
+    .row {
+      @include max-767 {
+        gap: 20px 0px;
+      }
+    }
+  }
+}
+
+.callto-action__inner_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+
+  @include max-767 {
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--title {
+    h2 {
+      color: $color-white;
+      background: none;
+      -webkit-text-fill-color: unset;
+      -webkit-background-clip: unset;
+
+      br {
+        @include max-1199 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--discription {
+    p {
+      font-weight: 400;
+      color: $color-white;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.callto-action__inner_btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: end;
+  flex-wrap: wrap;
+
+  @include max-767 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $color-white;
+    color: $color-black;
+    border: 1px solid transparent;
+
+    @include min-1400 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    @include max-991 {
+      padding: 16px 32px;
+    }
+
+    @include max-767 {
+      padding: 10px 28px;
+    }
+
+    &::after {
+      content: "\e01b";
+      font-family: "fontello";
+      font-size: 24px;
+      margin-left: 18px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-bottom: -1px;
+
+      @include max-767 {
+        margin-bottom: -1px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        transition: all 500ms;
+        transform: translateX(5px);
+      }
+    }
+  }
+}

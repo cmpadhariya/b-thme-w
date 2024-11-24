@@ -1,0 +1,110 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import'../../../../assets/css/variable/variable';
+
+ .testimonial-block {
+     .testimonial__heading {
+         h2 {
+             text-align: center;
+         }
+     }
+ }
+ 
+ .testimonial__inner {
+     p {
+         margin: 0 !important;
+     }
+ 
+     &_heading {
+         .post-number {
+             font-family: $primary-family;
+             color: $color-black;
+             font-size: 12px;
+             font-weight: 700;
+             padding-bottom: 10px;
+             display: block;
+         }
+ 
+         p {
+             justify-content: center;
+             display: flex;
+             text-align: center;
+             flex-wrap: wrap;
+ 
+             @include max-425 {
+                 padding: 0;
+             }
+         }
+     }
+ 
+     &_name {
+         a {
+             padding: 10px 0 0 0;
+             justify-content: center;
+             display: flex;
+             text-align: center;
+             text-decoration: none !important;
+ 
+             div {
+                 font-weight: 600;
+             }
+         }
+     }
+ 
+     &_location {
+        padding: 0;
+             p {
+                 justify-content: center;
+                 display: flex;
+                 text-align: center;
+                padding-bottom: 20px;
+ 
+                 @include max-767 {
+                    padding-bottom: 15px;
+                 }
+ 
+                 @include max-575 {
+                    padding-bottom: 10px;
+                 }
+             }
+     }
+ }
+ 
+ .testimonial__inner_name-back-end {
+     a {
+         padding: 10px 0;
+         text-align: center;
+         display: block;
+         text-decoration: none !important;
+ 
+         div {
+             font-weight: 600;
+             font-size: 22px;
+             line-height: 28px;
+             color: $color-black;
+             font-weight: 600;
+             font-family: $secondary-family;
+ 
+             @include max-1199 {
+                 font-size: 20px;
+                 line-height: 28px;
+                 padding: 12px 0;
+             }
+ 
+             @include max-767 {
+                 font-size: 18px;
+                 line-height: 24px;
+             }
+ 
+             @include max-575 {
+                 font-size: 16px;
+                 line-height: 21px;
+             }
+         }
+     }
+ }
+ 

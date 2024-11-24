@@ -1,0 +1,23 @@
+// *** Faq Section patterns CSS *** //
+.faq-section{
+	padding: 70px 0;
+    background-color: rgba(128, 128, 128, 0.1);
+	@include max-767 {
+		padding: 70px 20px;
+	}
+    @include max-425 {
+		padding: 60px 20px;
+	}
+    .faq-section__inner_heading{
+        margin-bottom: 40px;
+        text-align: center;
+        h2{
+            @include max-767{
+                font-size: 30px;
+            }
+            @include max-575{
+                font-size: 28px;
+            }
+        }
+    }
+}

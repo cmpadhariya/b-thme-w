@@ -1,0 +1,56 @@
+//Custom Project Details pattern css
+
+.project-details {
+  .project-type{
+    @include max-767 {
+      margin-bottom: 20px;
+    }
+  }
+  .project-Technogelogies{
+    @include max-767{
+      order: 3;
+    }
+    @include max-575{
+      margin-top: 20px;
+    }
+  }
+  .project-details__inner_box {
+    &:not(:first-child) {
+      margin-top: 30px;
+      @include max-767 {
+        margin-top: 20px;
+      }
+    }
+
+    p,
+    li {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    p{
+      line-height: 24px;
+    }
+  }
+  .project-details__inner_box {
+    p {
+      a {
+        color: $color-gray;
+        text-decoration: underline;
+        transition: all 500ms;
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+    h4{
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style: square;
+      padding-left: 18px;
+      li {
+        color: $color-gray;
+      }
+    }
+  }
+}

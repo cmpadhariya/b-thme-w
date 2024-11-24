@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/what-drivesus",
+	"version": "0.1.0",
+	"title": "What Drivesus",
+	"category": "qrolic",
+	"icon": "smiley",
+	"description": "This block is a What Drivesus section block, And it has one heading three subheadings and a description.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "what-drivesus",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"heading": {
+            "type": "string",
+            "default": "Heading"
+        },
+		"subheading": {
+            "type": "string",
+            "default": "Sub Heading"
+        },
+		"discription": {
+            "type": "string",
+            "default": "Discription"
+        },
+		"subheading2": {
+            "type": "string",
+            "default": "Sub Heading"
+        },
+		"discription2": {
+            "type": "string",
+            "default": "Discription"
+        },
+		"subheading3": {
+            "type": "string",
+            "default": "Sub Heading"
+        },
+		"discription3": {
+            "type": "string",
+            "default": "Discription"
+        }
+	}
+}

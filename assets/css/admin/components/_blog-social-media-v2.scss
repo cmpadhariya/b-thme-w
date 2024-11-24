@@ -1,0 +1,101 @@
+// ***** blog social media admin v2 css ***** //
+.blog-social-media {
+    &__inner {
+        padding: 20px 0;
+        background: linear-gradient(to right, #434343, #18181b, #18181b);
+        border-radius: 10px;
+        width: 695px;
+
+        @include max-767 {
+            width: 100%;
+        }
+
+        p {
+            color: $color-white;
+            padding: 0 0 0 10px;
+            font-size: 16px;
+            line-height: 24px;
+            @include min-1400 {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .row {
+            align-items: center;
+            justify-content: center;
+
+            .col-12 {
+                @include max-767 {
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+
+        &_icon {
+            @include max-767 {
+                padding-top: 20px;
+            }
+
+            nav {
+                .wp-block-navigation__container {
+                    a {
+                        padding: 5px 5px 4px 5px;
+                        background-color: $color-white;
+                        border-radius: 5px;
+
+                        .rich-text {
+                            display: none;
+                        }
+                    }
+
+                    .icon-facebook-1 {
+                        a {
+                            &::before {
+                                content: '\e818';
+                                font-family: 'fontello';
+                                font-size: 25px;
+
+                                @include max-575 {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .icon-twitter-2 {
+                        a {
+                            &::before {
+                                content: '\e819';
+                                font-family: 'fontello';
+                                font-size: 25px;
+
+                                @include max-575 {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .icon-linkedin-3 {
+                        a {
+                            &::before {
+                                content: '\e816';
+                                font-family: 'fontello';
+                                font-size: 25px;
+
+                                @include max-575 {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

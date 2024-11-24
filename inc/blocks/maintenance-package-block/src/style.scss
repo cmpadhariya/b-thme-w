@@ -1,0 +1,187 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/_variable.scss";
+
+.maintenance-packages {
+  .col-12:not(:last-child) {
+    @include max-767 {
+      margin-bottom: 30px;
+    }
+  }
+}
+.maintenance-packages .maintenance-packages__inner_box {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px inset;
+  padding: 20px;
+  &--heading {
+    text-align: center;
+    margin-top: 10px;
+  }
+  &--content {
+    margin-bottom: 30px;
+    padding: 0px 10px;
+    text-align: center;
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap-reverse;
+      padding: 5px 0px;
+      h4 {
+        font-weight: 600;
+      }
+      span {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        color: gray;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: "Inter", sans-serif;
+        margin-left: 10px;
+        text-decoration: line-through;
+        text-decoration-thickness: 2px;
+        @include max-1199 {
+          font-size: 15px;
+        }
+        @include max-425 {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+    &-discription {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+
+        @include max-991 {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  hr {
+    margin: 0;
+    padding: 0;
+    border: 1px solid gray;
+  }
+
+  .maintenance-packages__inner_box--list {
+    padding: 25px 0px;
+    ul {
+      li {
+        display: flex;
+        padding: 5px 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 400;
+        color: #696969;
+        font-family: $primary-family;
+        font-size: 16px;
+        line-height: 24px;
+
+        @include max-991 {
+          font-size: 14px;
+          line-height: 22px;
+        }
+        &:before {
+          content: "\e01a";
+          font-family: "fontello";
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+  .maintenance-packages__inner_box--button {
+    a {
+      width: 100%;
+      background-color: $color-black;
+      &:hover {
+        background-color: $color-gray;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+      }
+    }
+  }
+}
+.maintenance-packages {
+  .most-popular__text {
+    display: none;
+  }
+  .most-popular {
+    position: relative;
+    overflow: hidden;
+    .most-popular__text {
+      display: block;
+      position: absolute;
+      font-weight: 700;
+      top: 31px;
+      right: -19px;
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 11px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 1px;
+      padding: 6px 36px;
+      text-transform: uppercase;
+      transform: rotate(45deg);
+      @include max-1199 {
+        top: 25px;
+        right: -20px;
+        font-size: 10px;
+        line-height: 16px;
+        padding: 6px 24px;
+      }
+      @include max-991 {
+        top: 18px;
+        right: -15px;
+        line-height: 13px;
+        padding: 4px 24px;
+        text-transform: capitalize;
+        letter-spacing: 0px;
+      }
+      @include max-767 {
+        top: 25px;
+        right: -17px;
+        padding: 6px 26px;
+        text-transform: uppercase;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -17px;
+        top: -15px;
+        width: 60px;
+        height: 35px;
+        transform: rotate(45deg);
+        background: #ffffff;
+        @include max-1199 {
+          right: -32px;
+          top: -10px;
+        }
+        @include max-991 {
+          right: -35px;
+          top: -13px;
+        }
+        @include max-767 {
+          right: -34px;
+          top: -14px;
+        }
+      }
+    }
+  }
+
+  .row {
+    --bs-gutter-x: 3rem;
+    @include max-1199 {
+      --bs-gutter-x: unset;
+    }
+  }
+}

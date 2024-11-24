@@ -1,0 +1,92 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '../../../../assets/css/variable/_variable-v2.scss';
+
+.our-review-section {
+	&__top {
+		h2 {
+			text-align: center;
+		}
+	}
+
+	&__inner {
+		&--content {
+			padding: 30px 24px 0 24px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			ul {
+				display: flex;
+				justify-content: center;
+
+				li {
+					color: #F4B905;
+					&::before {
+						width: unset;
+						font-size: 20px;
+   	 					margin-right: 1px;
+						margin-left: 1px;
+					}
+				}
+			}
+
+			p.description-secondary {
+				padding: 17px 0;
+				text-align: center;
+			}
+
+			h3 {
+				font-weight: 700;
+				color: $heading-color;
+				text-align: center;
+			}
+		}
+	}
+
+	@include max-991 {
+		&__inner {
+			div.m-bottom:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	@include max-767 {
+		&__top {
+			.row {
+				margin: 12px 0 35px;
+
+				div.col-lg-6 {
+					padding: 0;
+				}
+			}
+
+		}
+
+		&__inner {
+			&--content {
+				p.description-secondary {
+					padding: 14px 0;
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		&__inner {
+			&--content {
+				p.description-secondary {
+					font-size: 13px;
+					line-height: 22px;
+					padding: 8px 0;
+				}
+			}
+		}
+	}
+}

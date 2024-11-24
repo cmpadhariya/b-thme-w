@@ -1,0 +1,47 @@
+//Custom Page headers pattern css
+.page-headers {
+  .page-headers__discription {
+    padding: 30px 0px 0px 0px;
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #696969;
+      letter-spacing: 0.375px;
+      margin: 0 100px;
+
+      @include max-1199 {
+        margin: 0 70px;
+      }
+      @include max-991 {
+      font-size: 15px;
+      line-height: 22px;
+      margin: 0 50px;
+      }
+
+      @include max-767 {
+        margin: 0;
+      }
+
+      @include max-575 {
+        font-size: 14px;
+        line-height: 20px;
+        br{
+          display: none;
+        }
+      }
+    }
+    @include max-767 {
+      padding: 20px 0px 0px 0px;
+    }
+  }
+}
+.page-headers__discription_padding {
+  padding-top: 15px ;
+  @include max-767 {
+    padding: 10px ;
+  }
+  @include max-575 {
+    padding: 7px ;
+  }
+}

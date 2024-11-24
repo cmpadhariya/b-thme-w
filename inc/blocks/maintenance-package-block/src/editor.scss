@@ -1,0 +1,55 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/_variable.scss";
+
+.maintenance-packages * {
+	padding: 0;
+	margin: 0;
+}
+.maintenance-packages .maintenance-packages__inner_box {
+	.maintenance-packages__inner_box--list {
+		ul {
+			li {
+				flex-direction: column;
+				span {
+					display: block;
+				}
+				button {
+					display: inline-block;
+					width: auto;
+				}
+			}
+			button {
+				padding: 5px 10px;
+				margin: 5px 0px;
+				height: auto;
+				background: gray;
+				display: block;
+				color: white;
+				line-height: 12px;
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	.maintenance-packages__inner_box--button {
+		a {
+			text-decoration: none;
+		}
+		.components-base-control {
+			margin-top: 10px;
+		}
+	}
+}
+

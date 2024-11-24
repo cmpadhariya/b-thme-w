@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/problems-section-v2",
+  "version": "0.1.0",
+  "title": "Problems Section V2",
+  "category": "qrolic",
+  "icon": "buddicons-pm",
+  "description": "This problem section is block. It has an image and a list of what we serve you.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "processes": {
+      "type": "array",
+      "default": []
+    },
+    "showList": {
+      "type": "boolean",
+      "default": false
+    },
+    "useParagraph": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "problems-section-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

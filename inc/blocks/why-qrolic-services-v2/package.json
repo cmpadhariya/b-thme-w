@@ -1,0 +1,20 @@
+{
+	"name": "why-qrolic-services-v2",
+	"version": "0.1.0",
+	"description": "This section (block) highlights Qrolic Technology as your one-stop-shop for comprehensive digital services, and the icon, services title and description have been added within this services block.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.9.0"
+	}
+}

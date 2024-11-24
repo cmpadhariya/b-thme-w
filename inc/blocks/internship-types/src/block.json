@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/internship-types",
+	"version": "0.1.0",
+	"title": "Internship Types",
+	"category": "qrolic",
+	"icon": "  dashicons-screenoptions",
+	"description": "This block is used to show the internship types that the company provides, including the internship heading and content.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "internship-types",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"heading": {
+            "type": "string",
+            "default": "",
+			"selector": "span"
+        },
+		"items": {
+			"type": "array",
+			"default": []
+		}
+	}
+}

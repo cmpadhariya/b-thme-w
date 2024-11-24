@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/we-contributing-section",
+	"version": "0.1.0",
+	"title": "We Contributing Section",
+	"category": "qrolic",
+	"icon": "star",
+	"description": "This block is a How are we contributing, this block display services list title, sub title and description",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+		  "type": "string",
+		  "default": "Block Title"
+		},
+		"sections": {
+		  "type": "array",
+		  "default": [],
+		  "items": {
+			"type": "object",
+			"properties": {
+			  "image": {
+				"type": "object",
+				"default": null
+			  },
+			  "altText": {
+				"type": "string",
+				"default": ""
+			  },
+			  "content": {
+				"type": "string",
+				"default": ""
+			  },
+			  "description": {
+				"type": "string",
+				"default": ""
+			  },
+			  "textButton": {
+				"type": "string",
+				"default": ""
+			  },
+			  "button_url": {
+				"type": "string",
+				"default": ""
+			  }
+			}
+		  }
+		},
+		"itemsPerRow": {
+		  "type": "number",
+		  "default": 2
+		}
+	  },
+	"textdomain": "we-contributing-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

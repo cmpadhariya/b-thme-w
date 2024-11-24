@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/services-section-home",
+  "version": "0.1.0",
+  "title": "Services Types",
+  "category": "qrolic",
+  "icon": "layout",
+  "description": "This block is a services list block, this block display services list title, sub title and description",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "selector": "h2"
+    },
+    "subheading": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "subheading": "Item 1",
+          "description": ""
+        },
+        {
+          "subheading": "Item 2",
+          "description": ""
+        },
+        {
+          "subheading": "Item 3",
+          "description": ""
+        }
+      ]
+    },
+    "linkURL": {
+      "type": "string"
+    },
+    "button_text": {
+      "type": "string",
+      "default": ""
+    },
+    "button_url": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    }
+  },
+  "textdomain": "services-section-home",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

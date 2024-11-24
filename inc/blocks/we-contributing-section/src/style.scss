@@ -1,0 +1,109 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+
+.we-contributing-section {
+    &__heading {
+        h2 {
+            text-align: center;
+            margin: 0!important;
+            font-weight: 600;
+            font-size: 42px!important;
+            line-height: 54px;
+            @include max-991{
+              font-size: 36px!important;
+              line-height: 46px;
+            }
+            @include max-575{
+              font-size: 30px!important;
+              line-height: 40px;
+            }
+            @include max-425{
+              font-size: 28px!important;
+              line-height: 38px;
+            }
+        }
+    }
+
+    &__inner {
+        padding-top: 45px;
+
+        @include max-1199 {
+            padding-top: 40px;
+        }
+
+        @include max-991 {
+            padding-top: 30px;
+        }
+
+        @include max-575 {
+            padding-top: 20px;
+        }
+        &_image {
+            img {
+                max-width: 350px;
+                max-height: 250px;
+
+                @include max-1199 {
+                    max-width: 300px;
+                    max-height: 200px;
+                }
+
+                @include max-991 {
+                    max-width: 230px;
+                    max-height: 175px;
+                }
+
+                @include max-575 {
+                    max-width: 200px;
+                    max-height: 150px;
+                }
+            }
+        }
+    }
+
+    &__inner_details {
+        &--heading {
+            margin: 20px 0 10px 0px;
+
+            @include max-991 {
+
+                padding: 10px 0 7px 0px;
+            }
+
+            h3 {
+                a {
+
+                    text-transform: capitalize;
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    color: $color-black;
+                    font-family: $heading-family;
+
+
+                    @include max-991 {
+                        font-size: 18px;
+                        line-height: 28px;
+                        padding: 10px 0 7px 0px;
+                    }
+
+                    @include max-425 {
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+
+                }
+            }
+        }
+
+        &--description {
+            padding-bottom: 10px;
+        }
+    }
+}

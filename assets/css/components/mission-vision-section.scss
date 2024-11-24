@@ -1,0 +1,33 @@
+//Mission and Vision section frontend css.
+.mission-vision{
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 40px;
+        background-color: rgba(128,128,128,.1);
+        border: 1px solid rgba(128,128,128,.1);
+        figure{
+            margin: 0;
+        }
+        h3{
+            font-weight: 600;
+            padding: 15px 0px;
+        }
+        p{
+            text-align: center;
+        }
+    }
+    @include max-767{
+        .row{
+            .m-bottom:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @include max-425{
+        &__content{
+            padding: 40px 20px;
+        }
+    }
+}

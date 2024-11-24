@@ -1,0 +1,203 @@
+@import "../../../../assets/css/variable/variable-v2";
+
+.our-expertise {
+  &__inner {
+    &_heading {
+      display: flex;
+      margin-bottom: 40px;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      @include max-575 {
+        margin-bottom: 30px;
+      }
+
+      .main-heading {
+        padding: 14px 0 16px 0 !important;
+        // -webkit-text-fill-color: rgba(0, 0, 0, 10);
+        -webkit-text-fill-color: #18181b;
+
+        span.clipped {
+          width: unset;
+          height: unset;
+          padding: 10px;
+          background-color: transparent;
+          clip-path: polygon(-42% -20%, 75% -300%, 104% 100%, 10% 98%);
+          border: solid 6px #e4e7ec;
+          border-radius: 100%;
+          display: inline-block;
+
+          @include max-991 {
+            padding: 8px;
+            clip-path: polygon(-42% -20%, 75% -300%, 104% 100%, 10% 98%);
+          }
+
+          @include max-767 {
+            width: 275px;
+            height: 65px;
+            padding: 6px;
+          }
+        }
+      }
+
+      p {
+        @include min-1400 {
+          font-size: 22px;
+          line-height: 32px;
+        }
+
+        @include max-767 {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      &-subheading {
+        border: 1px solid #a1a1aa;
+        border-radius: 50px;
+        padding: 5px 8px;
+        display: flex;
+        align-items: baseline;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          padding-left: 5px;
+          font-weight: 600;
+          @include min-1400 {
+            font-size: 17px;
+            line-height: 24px;
+          }
+        }
+        i {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &_item {
+      @include max-991{
+        .row div.m-bottom:not(:last-child){
+          margin-bottom: 20px;
+        }
+      }
+      &-box {
+        position: relative;
+        padding: 16px 20px;
+
+        .icon {
+          display: flex;
+          margin-bottom: 10px;
+          align-items: baseline;
+
+          i {
+            padding: 0 7px 0 0;
+            color: black;
+            font-size: 20px;
+
+            @include max-1199 {
+              padding: 0 5px 0 0;
+            }
+          }
+
+          h3 {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+            color: $description-text-color;
+
+            @include min-1400 {
+              font-size: 20px;
+              line-height: 26px;
+            }
+          }
+        }
+
+        .content {
+          p {
+            // color: #18181B;
+
+            @include min-1400 {
+              font-size: 18px;
+              line-height: 26px;
+            }
+
+            @include max-767 {
+              font-size: 13px;
+              line-height: 20px;
+            }
+          }
+          .box-link{
+            margin-top: 10px;
+          }
+        }
+
+        &:hover {
+          &::after {
+            content: "\e809";
+            position: absolute;
+            top: 18px;
+            left: 22px;
+            z-index: 1;
+            font-family: "fontello";
+            color: #27272a;
+            font-size: 20px;
+          }
+
+          &::before {
+            content: "\e01b";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-family: "fontello";
+            color: #232526;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            background-color: #e4e4e7;
+            font-size: 25px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include max-1199 {
+              right: 15px;
+            }
+
+            @include max-991 {
+              right: 25px;
+            }
+            @include max-575 {
+              font-size: 24px;
+            }
+          }
+
+          i {
+            opacity: 0;
+          }
+        }
+      }
+
+      .anchor {
+        box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        display: block;
+        background-color: #f2f4f7;
+        border-radius: 15px;
+      }
+    }
+
+    .row {
+      --bs-gutter-x: 2.5rem;
+
+      @include max-991 {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+      }
+    }
+  }
+}

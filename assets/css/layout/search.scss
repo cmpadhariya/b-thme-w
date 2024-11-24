@@ -1,0 +1,81 @@
+.search {
+  .search__inner_heading {
+   .wp-block-query-title{
+    margin-bottom: 20px;
+   }
+    form {
+      label {
+        font-family: $heading-family;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        color: $color-black;
+      }
+      .wp-block-search__inside-wrapper {
+        input{
+          font-size: 14px;
+          line-height: 22px;
+          color: #696969;
+          font-family: $primary-family;
+          flex-grow: unset;
+          width: 400px;
+        }
+        button{
+          font-size: 14px;
+          line-height: 22px;
+          background-color: $color-black;
+          padding: 7px 20px;
+          color: $color-white;
+          font-family: $primary-family;
+          margin: 0;
+
+        }
+     
+      }
+    }
+    .wp-block-separator{
+      width: 200px;
+      margin: 40px auto;
+    }
+  }
+  .search__inner_loop {
+    .wp-block-post {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    .search__inner_loop--title {
+      a {
+        color: $color-black;
+      }
+    }
+    .search__inner_loop--content {
+      padding-bottom: 5px;
+      .wp-block-post-date time {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 400;
+        color: $color-gray;
+        font-family: $primary-family;
+      }
+      .taxonomy-category {
+        a {
+          color: $color-black;
+        }
+      }
+    }
+    p,
+    .wp-block-post-excerpt p.wp-block-post-excerpt__excerpt,
+    p.wp-block-post-author__name,
+    .wp-block-post-date time,
+    .taxonomy-category a {
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-black;
+      @include max-575 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

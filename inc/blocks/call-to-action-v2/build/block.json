@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/call-to-action-v2",
+  "version": "0.1.0",
+  "title": "Call To Action V2",
+  "category": "qrolic",
+  "icon": "  dashicons-phone ",
+  "description": "This block is a Call To Action Section block, to user get qrolic service.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "call-to-action",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "selector": "h2"
+    },
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    },
+    "buttonText1": {
+      "type": "string",
+      "source": "text",
+      "selector": ".button-text1"
+    },
+    "buttonURL1": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText2": {
+      "type": "string",
+      "source": "text",
+      "selector": ".button-text2"
+    },
+    "buttonURL2": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTarget": {
+      "type": "string",
+      "default": "_self"
+    }
+  }
+}

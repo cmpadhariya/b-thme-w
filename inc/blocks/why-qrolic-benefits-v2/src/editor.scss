@@ -1,0 +1,38 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.why-qt-benefits div.why-qt-benefits__inner_box {
+    position: unset;
+    top: 0px;
+    height: unset;
+}
+
+.why-qt-benefits__inner_box .row {
+    height: unset;
+}
+
+.why-qt-benefits__inner_text {
+
+    h2.rich-text,
+    p.rich-text {
+        color: $color-white;
+        background: unset;
+        -webkit-text-fill-color: unset;
+        -webkit-background-clip: unset;
+    }
+}
+
+.why-qt-benefits__inner_image {
+    position: relative;
+
+    .components-button {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+    }
+}

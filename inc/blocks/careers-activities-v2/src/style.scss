@@ -1,0 +1,235 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable-v2.scss';
+
+.careers-activities{
+	&__inner{
+		&--top{
+			text-align: center;
+			display: flex;
+    		flex-direction: column;
+    		gap: 20px 0px;
+    		margin-bottom: 40px;
+		}
+		div.row:nth-child(2){
+			--bs-gutter-x: 7rem;
+			--bs-gutter-y: 40px;
+		}
+		div.height-increase{
+			height: 100%;
+		}
+		&--activity{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			.activity-slider, .splide__track, .splide__list, splide__slide{
+				width: 100%;
+				height: 100%;
+				border-radius: 12px;
+			}
+			img{
+				border-radius: 12px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			span.add-items{
+				visibility: hidden;
+				text-align: center;
+				position: absolute;
+				top: -20px;
+				left: -8px;
+				z-index: 1;
+				color: $color-black;
+			}
+			button.icon-doc-add{
+				position: relative;
+				&:hover{
+					span.add-items{
+						visibility: visible;
+					}
+				}
+			}
+			.splide__arrows{
+				button{
+					background: $color-white;
+					opacity: 1;
+					height: 40px;
+					width: 40px;
+					svg{
+						display: none;
+					}
+				}
+				.splide__arrow:disabled{
+					opacity: 0;
+				}
+				.splide__arrow--next{
+					right: 12px;
+					&::after{
+						content: '\E01A';
+						position: absolute;
+						font-family: 'fontello';
+						font-size: 16px;
+					}
+				}
+				.splide__arrow--prev{
+					left: 12px;
+					&::after{
+						content: '\E01A';
+						position: absolute;
+						font-family: 'fontello';
+						transform: rotate(180deg);
+						font-size: 16px;
+					}
+				}
+			}
+			.careers-slider-progress{
+				height: 8px;
+				background: #475467;
+				z-index: 99;
+				width: 40%;
+				margin: 16px auto;
+				border-radius: 5px;
+				position:relative;
+				transform: translateY(-40px);
+				&-bar{
+					height: 100%;
+      				background: #F6F6F6;
+      				transition: width 0.2s ease;
+					position: relative;
+					width: 0;
+					border-radius: 5px;
+				}
+			}
+			.activity-overlay-wrapper{
+				position: absolute;
+				bottom: 0px;
+    			padding: 0 16px 26px 16px;
+				border-radius: 12px;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+				height: 100%;
+    			display: flex;
+    			align-items: end;
+			}
+			.activity-overlay{
+				h3,p{
+					color: $color-light-gray;
+					text-align: center;
+				}
+				h3{
+					font-weight: 700;
+				}
+				p{
+					font-size: 14px;
+					line-height: 22px;
+					padding: 10px 0px 15px 0px;
+					letter-spacing: 0.5px;
+					font-weight: 300;	
+				}
+			}
+			.editor-overlay{
+				position: unset;
+			}
+		}
+	}
+	@include min-1400{
+		&__inner{
+			&--top{
+				p {
+					font-size: 22px;
+					line-height: 32px;
+				}
+			}
+			&--activity{
+				.activity-overlay{
+					p{
+						font-size: 16px;
+    					line-height: 26px;
+					}
+				}
+			}
+		}
+	}
+	@include max-1199{
+		&__inner{
+			div.row:nth-child(2){
+				--bs-gutter-x: 4rem;
+			}
+			&--activity{
+				.activity-overlay-wrapper{
+					padding: 0 16px 28px;
+				}
+			}
+		}
+	}
+	@include max-991{
+		&__inner{
+			&--activity{
+				.activity-overlay{
+					h3{
+						font-size: 16px;
+    					line-height: 24px;
+					}
+				}
+			}
+		}
+	}
+	@include max-767{
+		&__inner{
+			div.row:nth-child(2){
+				--bs-gutter-x: 2rem;
+    			--bs-gutter-y: 30px;
+			}
+			&--activity{
+				.activity-overlay-wrapper{
+					padding: 0 10px 26px;
+				}
+				.splide__arrows{
+					button{
+						height: 30px;
+    					width: 30px;
+					}
+					.splide__arrow--next{
+						&::after{
+							font-size: 14px;
+							line-height: 14px;
+						}
+					}
+					.splide__arrow--prev{
+						&::after{
+							font-size: 14px;
+							line-height: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include max-575{
+		&__inner{
+			&--activity{
+				.careers-slider-progress{
+					transform: translateY(-39px);
+				}
+				.activity-overlay-wrapper{
+					padding: 0 16px 26px;
+				}
+			}
+		}
+	}
+	@include max-425{
+		&__inner{
+			&--activity{
+				.careers-slider-progress{
+					height: 6px;
+					transform: translateY(-38px);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+.contact-info {
+  .wpcf7-spinner {
+    position: absolute;
+  }
+}
+.contact-info .contact-info__inner_information {
+	@include max-991{
+		margin-top: 30px;
+	}
+  h2 {
+    margin-bottom: 30px;
+	@include max-1199{
+		margin-bottom: 25px;
+	}
+  }
+  ul {
+    list-style: none;
+    padding: 4px 0px;
+    @include max-1199{
+      padding: 3px 0px;
+    }
+    li {
+      display: flex;
+      align-items: baseline;
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-right: 4px;
+      }
+      a {
+        color: $color-black;
+        &:hover {
+          color: $color-gray;
+        }
+      }
+    }
+  }
+  .contact-info__address{
+    li{
+      flex-direction:column;
+    }
+  }
+  .contact-info__inner_information--message {
+    padding: 28px 0px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+	@include max-1199{
+		padding: 20px 0px;
+	}
+  }
+  div.contact-info__inner_information--icons {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      li {
+        margin-right: 10px;
+        a {
+          padding: 0;
+          text-decoration: none;
+          &::before {
+            margin: 0;
+            font-family: "fontello";
+            color: $color-white;
+            background-color: $color-black;
+            border-radius: 10%;
+            font-size: 14px;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 25px;
+            @include max-1199 {
+              line-height: 24px;
+            }
+            @include max-991 {
+              font-size: 12px;
+              height: 26px;
+              width: 25px;
+            }
+          }
+        }
+        a:hover::before {
+          transition: all 500ms;
+        }
+      }
+      .facebook-contactus {
+        a:hover::before {
+          background-color: #3b5998;
+        }
+      }
+
+      .instagram-contactus {
+        a:hover::before {
+          background-color: #e52765;
+        }
+      }
+
+      .linkedin-contactus {
+        a:hover::before {
+          background-color: #007bb5;
+        }
+      }
+
+      .twitter-contactus {
+        a:hover::before {
+          background-color: #1da1f2;
+        }
+      }
+
+      .whatsapp-contactus {
+        a:hover::before {
+          background-color: #075e54;
+        }
+      }
+    }
+  }
+}

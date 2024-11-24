@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/services-hero-section",
+  "version": "0.1.0",
+  "title": "Services Hero Section",
+  "category": "qrolic",
+  "icon": "  dashicons-clipboard",
+  "description": "This block is the Hero section of Services which provides some information related to the Services, including title, description, contact button and image.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "services-hero-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mediaID": {
+      "type": "number",
+      "default": null
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": null
+    },
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "source": "text",
+      "selector": ".button-text"
+    },
+    "buttonURL": {
+      "type": "string",
+      "default": ""
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

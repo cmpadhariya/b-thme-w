@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/careers-images-slider-v2",
+  "version": "0.1.0",
+  "title": "Careers Images Slider V2",
+  "category": "qrolic",
+  "icon": "slides",
+  "description": "This section is shown in the careers page of our qrolic site. In this section, multiple images are added with a slider.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "careers-images-slider-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "careerSlides": {
+      "type": "array",
+      "default": []
+    }
+  }
+}

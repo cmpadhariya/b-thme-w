@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/our-journey-v2",
+  "version": "0.1.0",
+  "title": "Our Journey V2",
+  "category": "qrolic",
+  "icon": "  dashicons-embed-photo",
+  "description": "We use this section in the about page. This section provides information about the journey of our company qrolic technologies. Which includes subtitle, title, description, button and two images.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "our-journey-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mediaID": {
+      "type": "number",
+      "default": null
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": null
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaIDSecond": {
+      "type": "number",
+      "default": null
+    },
+    "mediaURLSecond": {
+      "type": "string",
+      "default": null
+    },
+    "SecondAltText": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "grayBtnText": {
+      "type": "string",
+      "default": ""
+    },
+    "grayBtnUrl": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    },
+    "FirstImageHeight": {
+      "type": "string"
+    },
+    "FirstImageWidth": {
+      "type": "string"
+    },
+    "SecondImageHeight": {
+      "type": "string"
+    },
+    "SecondImageWidth": {
+      "type": "string"
+    }
+  }
+}

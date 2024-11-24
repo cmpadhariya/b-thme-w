@@ -1,0 +1,117 @@
+//This file is used to design the site all pagination of post archive (list) page in the frontend side.
+nav.wp-block-query-pagination{
+    justify-content: center;
+    .wp-block-query-pagination-numbers{
+        display: flex;
+        margin: 0;
+        .page-numbers{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $subheading-text-color;
+            border-radius: 2px;
+        }
+        .current{
+            color: $color-black;
+            background-color: #E7E7E7;
+        }
+    }
+    a.wp-block-query-pagination-next, a.wp-block-query-pagination-previous{
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: $subheading-text-color;
+    }
+    a.wp-block-query-pagination-next::after, a.wp-block-query-pagination-previous::before{
+        position: absolute;
+        font-family: "fontello";
+        font-size: 20px;
+        line-height: 20px;
+    }
+    a.wp-block-query-pagination-next{
+        text-decoration: none;
+        &::after{
+            content: "\E01B";
+            padding-left: 8px;
+        }
+    }
+    a.wp-block-query-pagination-previous{
+        position: relative;
+        text-decoration: none;
+        &::before{
+            content: "\E01B";
+            top: -1px;
+            left: -22px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@include min-1400 {
+    nav.wp-block-query-pagination{
+        .wp-block-query-pagination-numbers{
+            .page-numbers{
+                width: 45px;
+                height: 45px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        a.wp-block-query-pagination-next, a.wp-block-query-pagination-previous{
+            font-size: 16px;
+            line-height: 22px;
+        }
+        a.wp-block-query-pagination-next::after, a.wp-block-query-pagination-previous::before{
+            font-size: 22px;
+            line-height: 22px;
+        }
+        a.wp-block-query-pagination-previous{
+            &::before{
+                top: 2px;
+            }
+        }
+    }
+}
+
+@include max-575 {
+    nav.wp-block-query-pagination{
+        .wp-block-query-pagination-numbers{
+            .page-numbers{  
+                width: 30px;
+                height: 30px;
+                font-size: 13px;
+                line-height: 19px;
+            }
+        }
+        a.wp-block-query-pagination-next, a.wp-block-query-pagination-previous{
+            font-size: 12px;
+            line-height: 18px;
+        }
+        a.wp-block-query-pagination-next::after, a.wp-block-query-pagination-previous::before{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        a.wp-block-query-pagination-previous{
+            &::before{
+                top: 0px;
+            }
+        }
+    }
+}
+
+@include max-425 {
+    nav.wp-block-query-pagination{
+        .wp-block-query-pagination-numbers{
+            .page-numbers{  
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}

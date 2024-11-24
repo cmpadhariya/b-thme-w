@@ -1,0 +1,103 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/_variable.scss";
+
+.subscribe{
+    *{
+        margin: 0;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        margin-bottom: 20px;
+    }
+    p.description-primary{
+        padding: 20px 0px 25px 0px;
+    }
+    h2,p{
+        text-align: center;
+    }
+    .wpcf7{
+        .screen-reader-response{
+            display: none;
+        }
+        form{
+            .subscribe-form-box{
+                display: flex;
+                .wpcf7-email{
+                    padding: 12px 10px;
+                    font-size: 14px;
+                    line-height: 18px;
+                    font-weight: 400;
+                    color: #585858;
+                    font-family: $primary-family;
+                    border: 1px solid $color-gray;
+                }
+                .wpcf7-email::placeholder {
+                    color: #585858;
+                }
+                .wpcf7-email::-ms-input-placeholder { /* Edge 12-18 */
+                    color: #585858;
+                }
+                .wpcf7-not-valid-tip{
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 500;
+                    color: #dc3232;
+                    padding: 5px 10px 5px 10px;
+                    letter-spacing: .9px;
+                    font-family: $primary-family;
+                    display: block;
+                    text-align: left;
+                }
+                .button-general{
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+            .wpcf7-response-output{
+                font-size: 14px;
+                line-height: 22px;
+                padding: 5px 10px 0px 10px;
+                font-family: $primary-family;
+                opacity: 0.7;
+                letter-spacing: 0.9px;
+            }
+        }
+    }
+    .wpcf7 form.sent .wpcf7-response-output{
+        border-color: #46b450;
+    }
+    @include max-767{
+        .wpcf7{
+            form{
+                .subscribe-form-box{
+                    .wpcf7-email{
+                        padding: 10px 10px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include max-425{
+        .wpcf7{
+            form{
+                .subscribe-form-box{
+                    .wpcf7-email{
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

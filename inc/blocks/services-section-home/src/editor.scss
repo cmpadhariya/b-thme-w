@@ -1,0 +1,51 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+// Import your custom variables
+@import '../../../../assets/css/variable/_variable.scss';
+
+.services-home {
+  &__inner {
+    &_content {
+      height: 260px;
+      padding: 20px 0px;
+	
+      // Media Queries
+      @include max-767 {
+        height: 285px;
+      }
+
+      @include max-575 {
+        height: auto;
+      }
+      // Media Queries
+      @include max-991 {
+        &_content {
+          p {
+            min-height: 60px;
+          }
+        }
+      }
+
+  
+      @include max-425 {
+        padding: 0;
+  
+        &_content {
+          width: 100%;
+        }
+      }
+    }
+    @include max-575{
+      &_content{
+        padding: 0px 0px 20px 0px;
+      }
+    }
+  }
+}
+// editor side link settings css
+.components-base-control{
+  padding: 10px 0px;
+}  

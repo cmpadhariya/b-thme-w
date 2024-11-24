@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/career-testimonials-section-v2",
+	"version": "0.1.0",
+	"title": "Career Testimonials Section V2",
+	"category": "qrolic",
+	"icon": "awards",
+	"description": "This block is a career page Testimonials section block, this blog get data qrolic service to client best satisaction and happy to our team with work.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	  "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "SectionPadding": {
+            "type": "string",
+            "default": ""
+        },
+        "numberOfItems": {
+            "type": "number",
+            "default": 3
+        },
+        "sectionDescription": {
+			"type": "string"
+		},	
+		"icon": {
+			"type": "string"
+		},	
+        "selectedPostIds": {
+            "type": "array",
+            "default": []
+        }
+    },
+	"textdomain": "career-testimonials-section-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

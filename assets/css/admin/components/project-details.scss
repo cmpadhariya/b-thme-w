@@ -1,0 +1,50 @@
+//Custom Project Details pattern css
+
+.project-details {
+  padding: 40px 0px;
+  @include max-767 {
+    padding: 20px 20px;
+  }
+  &__inner {
+    &_box {
+      margin-bottom: 20px;
+    }
+  }
+}
+.project-details__inner_box {
+  p,
+  li {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  h4{
+    padding-bottom: 5px;
+  }
+  p{
+    line-height: 24px;
+  }
+}
+.project-details__inner_box {
+  h5 {
+    color: $color-black;
+    text-transform: uppercase;
+  }
+  p {
+    a {
+      color: $color-gray;
+      font-weight: 700;
+      text-decoration: underline;
+      transition: all 500ms;
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+  ul {
+    list-style: square;
+    padding-left: 18px;
+    li {
+      color: $color-gray;
+    }
+  }
+}

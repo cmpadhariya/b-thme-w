@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "create-block/single-service-section-v2",
+    "version": "0.1.0",
+    "title": "Single Service Section V2",
+    "category": "qrolic",
+    "icon": "category",
+    "description": "This block shows which inner services we provide in our qrolic company services in single services page in our site.Which includes services icon, title and short description.",
+    "example": {},
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "subtitle": {
+            "type": "string",
+            "source": "html",
+            "selector": ".top-subheading"
+        },
+        "icontop": {
+            "type": "string",
+            "default": ""
+        },
+        "h2heading": {
+            "type": "string",
+            "source": "html",
+            "selector": ".main-heading"
+        },
+        "description": {
+            "type": "string",
+            "source": "html",
+            "selector": ".description-primary"
+        },
+        "items": {
+            "type": "array",
+            "default": [],
+            "source": "query",
+            "selector": ".single-service-section-v2__inner_item .col-lg-4",
+            "query": {
+                "icon": {
+                    "type": "string",
+                    "source": "attribute",
+                    "attribute": "class",
+                    "selector": ".icon i"
+                },
+                "heading": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": ".heading h3"
+                },
+                "description": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": ".description"
+                }
+            }
+        }
+    },
+    "textdomain": "single-service-section-v2",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

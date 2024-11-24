@@ -1,0 +1,119 @@
+//This scss is used editor side for the pattern named schedule for call.
+.schedule-for-call {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #131212, #18181b, #18181b);
+        padding: 34px 25px;
+        border-radius: 24px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+
+        @include max-767 {
+            display: block;
+            text-align: center;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        &_content {
+            h2 {
+                color: $color-white;
+                -webkit-text-fill-color: unset;
+            }
+
+            p {
+                color: #d1d1d1;
+                padding-top: 10px;
+            }
+
+            @include max-991 {
+                padding: 0 50px 0 0;
+            }
+
+            @include max-767 {
+                text-align: center;
+                padding: 25px 0px 20px 0px;
+            }
+        }
+
+        &_btn {
+            @include max-767 {
+                text-align: center;
+                justify-content: center;
+            }
+          .block-editor-block-list__block {
+            .wp-block-button__link {
+                border-radius: 8px;
+                background-color: #E7E7E7;
+                display: flex;
+                align-items: center;
+                z-index: 3;
+                position: relative;
+                color: $color-black;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 700;
+                padding: 15px 60px 15px 25px;
+
+                @include max-767 {
+                    padding: 12px 53px 12px 25px;
+                }
+
+                @include max-575 {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                &::after {
+                    content: '\e80e';
+                    position: absolute;
+                    right: 22px;
+                    font-family: 'fontello';
+                    font-size: 25px;
+                    border: 1px solid;
+                    height: 30px;
+                    width: 30px;
+                    font-weight: 500;
+                    padding-top: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+
+                    @include max-767 {
+                        right: 20px;
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+                &:hover {
+                    &::after {
+                        background-color: $color-black;
+                        color: $color-white;
+                        transition: all 600ms;
+                    }
+                }
+            }
+        }
+    }
+        .background-image {
+            background-image: url(./../../images/contact-jumpcall-background-image.webp);
+            background-size: cover;
+            height: 100%;
+            left: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+//variable add
+@import "../../../../assets/css/variable/_variable.scss";
+
+.call-to-action {
+  background: url(../../../../assets/images/ContactUs-26Apr.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  &__inner {
+    width: 100%;
+    padding: 40px 0 40px 0;
+    background: rgba(255, 255, 255, 0.5);
+    @include max-991{
+      padding: 40px 20px 40px 20px;
+    }
+    @include max-575 {
+      padding: 30px 20px 30px 20px;
+    }
+  }
+}
+
+.call-to-action__inner_heading {
+  h2 {
+    text-align: center;
+  }
+}
+
+.call-to-action__inner_text {
+  p {
+    text-align: center;
+    color: $color-black !important;
+    letter-spacing: 0.0375em;
+    padding: 25px 0;
+    @include max-767 {
+      padding: 20px 0;
+    }
+
+    br {
+      @include max-991 {
+        display: none;
+      }
+    }
+  }
+}
+
+.call-to-action__inner_button {
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-transform: uppercase;
+    letter-spacing: 0.0375em;
+    cursor: pointer;
+  }
+}
+

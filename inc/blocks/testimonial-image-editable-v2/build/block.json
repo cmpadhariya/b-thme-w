@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/testimonial-image-editable-v2",
+  "version": "0.1.0",
+  "title": "Testimonial Image Editable V2",
+  "category": "qrolic",
+  "icon": "format-quote",
+  "description": "This block is a testimonial image editable block, It's a simple section that highlights the editable testimonial.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "logoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "quote": {
+      "type": "string",
+      "default": ""
+    },
+    "authorName": {
+      "type": "string",
+      "default": ""
+    },
+    "authorPosition": {
+      "type": "string",
+      "default": ""
+    },
+    "authorImageUrl": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "testimonial-image-editable-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,181 @@
+// ** Portfolio Post CSS
+.portfolio-post {
+  ul.portfolio-post__inner_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    li {
+      width: 32%;
+      height: 100%;
+      padding: 20px 20px;
+      margin-bottom: 30px;
+      box-shadow: rgba(128, 128, 128, 0.1) 0px 30px 60px -12px inset,
+        rgba(128, 128, 128, 0.1) 0px 18px 36px -18px inset;
+      border-radius: 10px;
+      transition: all 500ms;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      @include max-991 {
+        width: 48%;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+      @include max-575 {
+        width: 100%;
+      }
+    }
+  }
+  .portfolio-post__inner_box--img {
+    width: 100%;
+    figure {
+      margin-bottom: 10px;
+
+      img {
+        height: 350px;
+        border-radius: 10px;
+        @include min-1440 {
+          height: 380px;
+        }
+        @include max-1199 {
+          height: 300px;
+        }
+        @include max-767 {
+          height: 250px;
+        }
+        @include max-575 {
+          height: 100%;
+        }
+      }
+    }
+  }
+  .portfolio-post__inner_box--content {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    h3 {
+      margin-bottom: 5px;
+      a {
+        color: $color-black;
+      }
+    }
+    div time {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $color-gray;
+    }
+  }
+}
+// ** Portfolio Post Pagination CSS
+
+.portfolio-post .post-pagination {
+  justify-content: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  a.wp-block-query-pagination-previous,
+  a.wp-block-query-pagination-next,
+  div.wp-block-query-pagination-numbers {
+    margin: 0;
+    text-decoration: none;
+  }
+  a,
+  span {
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 400;
+    color: $color-white;
+    background: $color-black;
+    display: block;
+    width: fit-content;
+    margin: 0 5px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      transition: all 500ms;
+      background-color: #555;
+      color: $color-white;
+    }
+    @include max-425 {
+      margin: 0 4px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+  a {
+    background-color: $color-black;
+    color: $color-white;
+  }
+  span {
+    background-color: #555;
+    color: $color-white;
+  }
+
+  div.wp-block-query-pagination-numbers {
+    display: flex;
+  }
+  .page-numbers.dots {
+    display: none;
+  }
+  a.wp-block-query-pagination-previous,
+  a.wp-block-query-pagination-next {
+    position: relative;
+    text-decoration: none;
+    margin: 0 3px;
+    &::before {
+      content: "\f100";
+      text-decoration: none;
+      font-family: fontello;
+      position: absolute;
+      top: 0;
+      font-size: 16px;
+      line-height: 18px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @include max-575 {
+        font-size: 14px;
+        line-height: 16px;
+      }
+      @include max-425 {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+  a.wp-block-query-pagination-next {
+    &::before {
+      content: "\f101";
+    }
+  }
+}
+.portfolio-post .portfolio-post__inner_btn {
+  .wp-block-button {
+    a.wp-block-button__link {
+      color: $color-white;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      background: $color-black;
+      display: block;
+      width: -moz-fit-content;
+      width: fit-content;
+      padding: 12px 28px;
+      text-align: center;
+      border-radius: 0px;
+      &:hover {
+        transition: all 0.5s;
+        background-color: $color-gray;
+      }
+    }
+  }
+}

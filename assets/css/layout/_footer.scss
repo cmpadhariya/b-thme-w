@@ -1,0 +1,425 @@
+// Footer Frontend CSS
+.footer {
+  &__inner {
+    border-top: 1px solid #0b101433;
+
+    .row {
+      @include max-991 {
+        gap: 35px 0;
+        --bs-gutter-x: 3rem;
+      }
+
+      @include max-767 {
+        --bs-gutter-x: 1.5rem;
+      }
+
+      .col {
+        @include max-1199 {
+          br {
+            display: none;
+          }
+        }
+
+        @include max-991 {
+          &:nth-child(2) {
+            order: 3;
+          }
+
+          &:nth-child(3) {
+            order: 2;
+          }
+        }
+
+        @include max-767 {
+
+          &:nth-child(1), &:nth-child(4) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .wp-block-navigation .wp-block-navigation-item__content {
+      display: flex;
+    }
+  }
+
+  &__inner_column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+
+    @include max-991 {
+      gap: 20px;
+      padding: 0;
+    }
+    @include max-767{
+      gap: 15px;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    a, span {
+      font-size: 15px;
+      line-height: 23px;
+      font-weight: 500;
+      color: $description-text-color;
+
+      @include min-1400 {
+        font-size: 17px;
+        line-height: 25px;
+      }
+
+      @include max-991 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    strong {
+      color: $color-black;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-weight: 700;
+
+      @include min-1400 {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      @include max-991 {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__inner_details {
+    .wp-block-site-logo img {
+      width: 150px;
+      height: auto;
+
+      @include max-991 {
+        width: 138px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    p.heart-with-border {
+      border: 1px solid #888;
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-size: 13px;
+      line-height: 23px;
+      width: fit-content;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+
+      @include min-1400 {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      @include max-1199 {
+        padding: 8px 16px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      @include max-575 {
+        padding: 6px 12px;
+      }
+
+      &::before {
+        content: "\e820";
+        font-family: "fontello";
+        color: #fc1878;
+        vertical-align: middle;
+        font-size: 18px;
+        margin-right: 10px;
+        margin-bottom: -2px;
+
+        @include max-1199 {
+          font-size: 13px;
+          margin-right: 6px;
+        }
+      }
+
+      strong {
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__inner_details--social-icons {
+    span {
+      display: none;
+    }
+
+    ul, ul.wp-block-navigation__container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      @include max-991 {
+        gap: 5px;
+      }
+
+      li {
+        a {
+          width: 35px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          border: 1.5px solid #888;
+          transition: box-shadow 0.3s ease;
+
+          &::before {
+            font-family: "fontello";
+            font-size: 17px;
+            line-height: 21px;
+            vertical-align: middle;
+            padding: 2px 0 0 1px;
+          }
+
+          &:hover {
+            text-decoration: none;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+
+          &:hover::before {
+            color: currentColor;
+          }
+        }
+      }
+    }
+
+    .footer-icon-wordpress a::before {
+      content: "\e821";
+    }
+
+    .footer-icon-github a::before {
+      content: "\f09b";
+    }
+
+    .footer-icon-linked-in a::before {
+      content: "\e816";
+    }
+
+    .footer-icon-twitter-v2 a::before {
+      content: "\e819";
+    }
+
+    .footer-icon-facebook-v2 a::before {
+      content: "\e818";
+    }
+
+    .footer-icon-instagram a::before {
+      content: "\f16d";
+    }
+
+    .footer-icon-youtube-play a::before {
+      content: "\f16a";
+    }
+
+    .footer-icon-linked-in a:hover {
+      color: #007bb5;
+    }
+
+    .footer-icon-facebook-v2 a:hover {
+      color: #3b5998;
+    }
+
+    .footer-icon-instagram a:hover {
+      color: #e52765;
+    }
+
+    .footer-icon-youtube-play a:hover {
+      color: #e1002d;
+    }
+  }
+
+  &__inner_services ul, &__inner_services ul.wp-block-navigation__container {
+    gap: 10px;
+
+    @include max-991 {
+      gap: 5px;
+    }
+  }
+
+  &__inner_contect-details--contect-us {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include max-991 {
+      gap: 20px;
+    }
+
+    @include max-991 {
+      gap: 15px;
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px 30px;
+
+      @include max-991 {
+        gap: 5px 30px;
+      }
+
+      @include max-767 {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .footer-icon-phone::before {
+        content: "\1f4de";
+        font-family: "fontello";
+        font-size: 18px;
+        margin-right: 10px;
+      }
+
+      .footer-icon-mail::before {
+        content: "\f0e0";
+        font-family: "fontello";
+        font-size: 18px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__inner_contect-details--visit-us {
+    @include max-991 {
+      margin-top: 10px;
+    }
+
+    @include max-767 {
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 600;
+
+      @include min-1400 {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      @include max-991 {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    p {
+      padding-left: 25px;
+    }
+
+    .footer-icon-map {
+      position: relative;
+
+      &::before {
+        content: "\e81c";
+        position: absolute;
+        left: 0;
+        font-family: "fontello";
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__inner_bottom {
+    border-top: 1px solid #0b101433;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 40px;
+
+    @include max-1199 {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    @include max-767 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p, a {
+      font-size: 14px;
+      line-height: 18px;
+      color: $subheading-text-color;
+      text-align: center;
+
+      @include min-1400 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @include max-575 {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    &--text {
+      display: flex;
+      align-items: center;
+      gap: 11px 30px;
+      justify-content: space-between;
+      width: 67%;
+
+      @include max-1199 {
+        width: 100%;
+      }
+
+      @include max-767 {
+        flex-direction: column;
+      }
+    }
+
+    &--pages-link {
+      display: flex;
+      align-items: center;
+      gap: 2px 20px;
+      flex-wrap: wrap;
+
+      @include max-1199 {
+        justify-content: flex-start;
+      }
+
+      @include max-767 {
+        width: 100%;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

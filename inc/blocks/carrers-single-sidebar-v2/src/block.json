@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/careers-single-sidebar-v2",
+  "version": "0.1.0",
+  "title": "Careers Single Sidebar V2",
+  "category": "qrolic",
+  "icon": " dashicons-chart-bar",
+  "description": "This section is featured as a sidebar in the Single position page of our Qrolic site. In this section, a job summary, list of benefits, and share buttons are included.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "summaryItems": {
+      "type": "array",
+      "default": []
+    },
+    "benefitsItems": {
+      "type": "array",
+      "default": []
+    },
+    "shareItems": {
+      "type": "array",
+      "default": []
+    },
+    "summaryTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "benefitTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonLink": {
+      "type": "string",
+      "default": ""
+    },
+    "shareTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "shareItemsCopy": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "careers-single-sidebar-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

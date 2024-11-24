@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/map-section",
+  "version": "0.1.0",
+  "title": "Map Section",
+  "category": "qrolic",
+  "icon": "smiley",
+  "description": "This block is showing a map for the company location in the contact page.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "map-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "src": {
+      "type": "string",
+      "default": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29541.422489725737!2d70.796393!3d22.2523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb940df750c9%3A0x8586ee4af39fc3ac!2sQrolic%20Technologies%20%7C%20Best%20Web%20Development%2C%20Web%20Design%2C%20WordPress%20Development%20Company!5e0!3m2!1sen!2sus!4v1690781597583!5m2!1sen!2sus"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    }
+  }
+}

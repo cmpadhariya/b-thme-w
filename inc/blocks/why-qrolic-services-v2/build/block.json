@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/why-qrolic-services-v2",
+  "version": "0.1.0",
+  "title": "Why Qrolic Services V2",
+  "category": "qrolic",
+  "icon": "buddicons-pm",
+  "description": "This section (block) highlights Qrolic Technology as your one-stop-shop for comprehensive digital services, and the icon, services title and description have been added within this services block.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "textdomain": "why-qrolic-services-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

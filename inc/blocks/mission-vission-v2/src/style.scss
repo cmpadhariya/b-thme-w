@@ -1,0 +1,92 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '../../../../assets/css/variable/variable-v2';
+.mission-vission {
+    &__inner {
+		&_box {
+			border: 1px solid transparent;
+			border-radius: 15px;
+			padding: 24px;
+			height: 100%;
+			background-color: #3D3D3D;
+			&-heading {
+				display: flex;
+				align-items: center;
+				.components-base-control{
+					width: 50%;
+					padding: 0px;
+				}
+				i {
+					color: #FAFAFA;
+					background: linear-gradient(to top,#C7C7C7, #ffffff);
+					-webkit-text-fill-color: transparent;
+					-webkit-background-clip: text;
+					padding-right: 24px;
+					font-size: 58px;
+					@include max-767 {
+						padding-right: 20px;
+						font-size: 50px;
+					}
+					@include max-425 {
+						padding-right: 15px;
+						font-size: 40px;
+					}
+					&::before {
+						margin: 0;
+						width: unset;
+					}
+				}
+				h3 {
+					font-size: 22px;
+					line-height: 30px;
+					font-weight: 700;
+					color: #FAFAFA;
+					br {
+						@include max-767 {
+							display: none;
+						}
+					}
+					@include max-1199 {
+						font-size: 21px;
+						line-height: 26px;
+					}
+					@include max-767 {
+						font-size: 20px;
+						line-height: 26px;
+					}
+					@include max-425 {
+						font-size: 18px;
+						line-height: 24px;
+					}
+
+				}
+			}
+			&-description {
+				p {
+					color:#FAFAFA;
+					padding-top: 20px;
+					padding-left: 0px;
+					font-weight: 400;
+					@include max-575 {
+						padding-top: 15px;
+					}
+				}
+			}
+			.mission-textcolor {
+				color: #FAFAFA;
+			}
+		}
+		.row {
+			--bs-gutter-x: 2rem;
+			--bs-gutter-y: 2rem;
+			@include max-991 {
+				--bs-gutter-x: 1.5rem;
+				--bs-gutter-y: 1.5rem !important;
+			}
+		}
+	}
+}

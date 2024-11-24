@@ -1,0 +1,159 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+
+.follow-us__inner_heading {
+  text-align: center;
+  @include max-991 {
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $color-black;
+    @include max-991 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    @include max-575 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+.follow-us__inner_social-icon {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include max-425 {
+      justify-content: center;
+    }
+    li {
+      margin-top: 40px;
+      width: 210px;
+      @include max-991 {
+        width: 23%;
+        margin-top: 20px;
+      }
+      @include max-767 {
+        width: 46%;
+      }
+      @include max-575 {
+        width: 47%;
+      }
+      @include max-425 {
+        width: 100%;
+        margin-top: 10px;
+      }
+      a {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        transition: all 500ms ease-in-out;
+        @include max-991 {
+          padding: 15px;
+        }
+        @include max-425 {
+          padding: 10px;
+        }
+        &:hover {
+          transform: translate(0px, -5px);
+          @include max-1199{
+            transform: translate(0px, 0px);
+          }
+        }
+        span {
+          margin-top: 0;
+          margin-bottom: 0;
+          font-weight: 400;
+          color: $color-white;
+          font-family: $primary-family;
+          font-size: 20px;
+          line-height: 30px;
+          padding-left: 20px;
+          text-align: center;
+
+          @include max-991 {
+            font-size: 18px;
+            line-height: 28px;
+            padding-left: 15px;
+          }
+          @include max-425 {
+            padding-left: 10px;
+          }
+        }
+        &::before {
+          margin: 0;
+          font-family: "fontello";
+          background-color: $color-white;
+          border-radius: 10%;
+          font-size: 20px;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 25px;
+          @include max-991 {
+            font-size: 18px;
+            height: 35px;
+            width: 35px;
+            line-height: 24px;
+          }
+          @include max-425 {
+          }
+        }
+      }
+      .icon-linkedin {
+        background-color: #0a66c2;
+      }
+      .icon-twitter {
+        background-color: #1da1f2;
+      }
+      .icon-facebook {
+        background: linear-gradient(to bottom, #3a5795 0%, #2b4886 100%);
+      }
+      .icon-whatsapp {
+        background: linear-gradient(#25d366, #25d366) 14% 84%/16% 16%;
+      }
+      .icon-instagram {
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+      }
+
+      .icon-linkedin::before {
+        color: #007bb5;
+      }
+      .icon-twitter::before {
+        color: #1da1f2;
+      }
+      .icon-facebook::before {
+        color: #3b5998;
+      }
+      .icon-whatsapp::before {
+        color: #075e54;
+      }
+      .icon-instagram::before {
+        color: #e52765;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import "../../../../assets/css/variable/variable";
+ 
+ .career-list {
+	padding: 10px 0px 40px 0px;
+	@include max-767{
+	  padding: 10px 20px 40px 20px;
+	}
+	@include max-575{
+	  padding: 0px 20px 30px 20px;
+	}
+ }
+ .career-list .career-list__inner_content {
+	 position: relative;
+	 border-radius: 6px;
+	 padding: 30px;
+	 margin-top: 30px;
+	 min-height: 180px;
+	 border: 1px solid rgba(128, 128, 128, 0.1);
+     a{
+		text-decoration: none;
+	 }
+	 h3{
+		a{
+			font-family:$heading-family;
+			color: $color-black;
+		}
+	 }
+
+	 .button-view-post-service {
+		font-size: 11px;
+		line-height: 16px;
+		letter-spacing: 1px;
+		padding: 8px 16px;
+		border-radius: 6px;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		background: #000000;
+		color: #ffffff;
+		font-weight: 600;
+		display: inline-block;
+		transition: all 500ms;
+		text-decoration: none;
+		 &:hover{
+			transition: all 500ms;
+			background-color: #555;
+			color: $color-white;
+		  }
+	 }
+	 p {
+		 font-size: 16px;
+		 line-height: 30px;
+		 padding: 3px 0px;
+	 }
+	 span {
+		 font-size: 12px;
+		 line-height: 22px;
+		 color: $color-black;
+		 font-weight: 700;
+		 font-family: $primary-family;
+		 text-transform: uppercase;
+		 letter-spacing: 1px;
+	 }
+ }
+ 

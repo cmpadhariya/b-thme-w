@@ -1,0 +1,132 @@
+// Careers Single Post Content CSS.
+.single-careers-content {
+    .row {
+        --bs-gutter-x: 5.5rem;
+
+        @include max-1199 {
+            --bs-gutter-x: 1.5rem;
+        }
+
+        @include max-991 {
+            gap: 40px;
+        }
+
+        @include max-575 {
+            gap: 30px;
+        }
+    }
+}
+
+.single-careers-content__inner_content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include max-575 {
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 600;
+        color: $description-text-color;
+        background: unset;
+        -webkit-text-fill-color: unset;
+
+        @include min-1400 {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        @include max-991 {
+            font-size: 18px;
+        }
+
+        @include max-575 {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    p, li div {
+        font-size: 16px;
+        line-height: 24px;
+
+        @include min-1400 {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        @include max-991 {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        @include max-425 {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    li div {
+        font-weight: 400;
+        color: $description-text-color;
+        font-family: $global-family;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    ol, ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    ol {
+        gap: 15px;
+        padding-left: 26px;
+        list-style: none;
+
+        @include max-575 {
+            gap: 10px;
+        }
+
+        li {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "\E01B";
+                font-family: "fontello";
+                top: 0;
+                left: -25px;
+                font-size: 24px;
+                color: $description-text-color;
+            }
+        }
+    }
+
+    ul {
+        gap: 5px;
+        list-style: disc;
+        padding-left: 18px;
+        list-style: disc;
+
+        @include max-575 {
+            gap: 3px;
+        }
+    }
+
+    &--box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include max-575 {
+            gap: 10px;
+        }
+    }
+}

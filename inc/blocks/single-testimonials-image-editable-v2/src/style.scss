@@ -1,0 +1,230 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import "../../../../assets/css/variable/variable-v2";
+
+ .single-testimonial-img-editable {
+ 
+	&__inner {
+		padding: 50px 20px 0px 0px;
+		border-radius: 24px;
+		box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+ 
+		@include max-1199 {
+			padding: 30px 20px;
+		}
+ 
+		@include max-767 {
+			padding: 25px;
+		}
+ 
+		.content-center {
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+			justify-content: space-evenly;
+ 
+			@include max-767 {
+				align-items: center;
+				text-align: center;
+				padding: 0;
+			}
+		}
+ 
+		&_thumbnail {
+			img {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				bottom: -4px;
+				left: 0px;
+ 
+				@include max-1199 {
+					bottom: 0px;
+					left: 0;
+				}
+			}
+		}
+ 
+		&_heading {
+			h2 {
+				font-weight: 500;
+				color: #050505;
+				-webkit-text-fill-color: unset;
+ 
+				@include max-767 {
+					padding: 20px 0px 10px 0;
+				}
+			}
+		}
+ 
+		&_content {
+			@include max-767{
+				padding: 0 5px;
+			}
+			p.single-testimonial-description {
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 40px;
+				color: #475467;
+ 
+				@include max-1199 {
+					padding: 25px 0;
+					font-size: 22px;
+					line-height: 35px;
+				}
+ 
+				@include max-991 {
+					font-size: 20px;
+					line-height: 30px;
+					padding: 16px 0;
+				}
+ 
+				@include max-767 {
+					font-size: 16px;
+					line-height: 24px;
+					padding: 0;
+				}
+ 
+				@include max-575 {
+					font-size: 14px;
+					line-height: 22px;
+				}
+			}
+		}
+ 
+		&_title {
+			display: flex;
+			align-items: center;
+
+			@include max-767{
+				padding: 16px 0px 0px 0px;
+			}
+
+			@include max-425{
+				padding: 10px 0px 0px 0px;
+				flex-direction: column-reverse;
+			}
+
+			h3.single-testimonial-position {
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 24px;
+				color: #050505;
+ 
+				@include max-991 {
+					font-size: 22px;
+				}
+ 
+				@include max-767 {
+					padding: 0px 0 10px 0;
+					text-align: left;
+				}
+ 
+				@include max-575 {
+					font-size: 20px;
+					line-height: 24px;
+				}
+
+				@include max-425 {
+					text-align: center;
+				}
+			}
+			hr{
+				margin: 0 59px;
+				border: 1px solid $color-gray;
+				height: 100%;
+
+				@include max-991 {
+					margin: 0 30px;
+				}
+
+				@include max-575 {
+					margin: 0 20px;
+				}
+
+				@include max-425 {
+					margin: 10px 0px;
+					width: 50%;
+				}
+			}
+			&-position {
+				display: flex;
+				align-items: baseline;
+ 
+				@include max-767 {
+					justify-content: center;
+				}
+ 
+				p.single-testimonial-subdescription {
+					font-weight: 500;
+					font-size: 18px;
+					padding-top: 16px;
+					line-height: 18px;
+					color: #344054;
+ 
+					@include max-1199 {
+						padding-top: 12px;
+					}
+ 
+					@include max-991 {
+						font-size: 16px;
+						line-height: 24px;
+						padding-top: 10px;
+					}
+ 
+					@include max-767 {
+						padding: 0;
+					}
+ 
+					@include max-575 {
+						font-size: 14px;
+						line-height: 20px;
+					}
+				 }
+ 
+				i {
+					font-size: 21px;
+					padding-left: 5px;
+ 
+					@include max-991 {
+						font-size: 19px;
+					}
+ 
+					@include max-767 {
+						font-size: 18px;
+					}
+				}
+			}
+			div.single-testimonial-google-review{
+				br{
+					display: none;
+					@include max-425{
+						display: block;
+					}
+				}
+				span.add-items{
+					visibility: hidden;
+					text-align: center;
+					position: absolute;
+					top: -20px;
+					left: -8px;
+					z-index: 1;
+					color: $color-black;
+				}
+				button.icon-doc-add{
+					position: relative;
+					&:hover{
+						span.add-items{
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+	}
+}

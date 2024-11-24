@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/we-are-hiring-v2",
+  "version": "0.1.0",
+  "title": "We Are Hiring V2",
+  "category": "qrolic",
+  "icon": "dashicons-chart-bar",
+  "description": "This block allows you to dynamically select and display posts from the 'Career' custom post type with customizable attributes like subtitle, heading, description, button text and icon. It provides an intuitive interface to add, remove and rearrange selected posts, ensuring tailored performance on the front end.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "SectionPadding": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "selectedPosts": {
+      "type": "array",
+      "default": []
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "View Posting"
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "we-are-hiring-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

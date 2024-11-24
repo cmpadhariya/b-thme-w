@@ -1,0 +1,73 @@
+// Why Choose Qrolic as Your WordPress Agency section CSS
+.qt-wordpress-agency {
+  &__inner {
+    border-radius: 12px;
+    background-color: $color-black;
+
+    &_heading, &_video {
+      margin: 0px 40px;
+
+      @include max-767 {
+        margin: 0px 0px;
+      }
+    }
+
+    &_heading {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @include max-767 {
+        gap: 20px;
+      }
+
+      @include max-425 {
+        gap: 15px;
+      }
+
+      h2, p {
+        color: $color-white;
+
+        @include max-1199 {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      h2 {
+        font-weight: 400;
+        background: none;
+        -webkit-text-fill-color: unset;
+        -webkit-background-clip: unset;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+
+      p {
+        font-weight: 700;
+        @include min-1400 {
+          font-size: 22px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &_video {
+      figure {
+        margin: 0;
+        padding: 0;
+
+        video, img {
+          box-shadow: 0px 12px 26px 0px #406ea414;
+          border-radius: 12px;
+          max-height: 500px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

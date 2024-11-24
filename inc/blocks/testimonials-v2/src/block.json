@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/testimonials-v2",
+	"version": "0.1.0",
+	"title": "Testimonials V2",
+	"category": "qrolic",
+	"icon": "awards",
+	"description": "This block is a Testimonials section block, this blog get data qrolic service to client best satisfaction and happy to our team with work.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "testimonials-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"attributes": {
+		"title": {
+			"type": "string"
+		},
+		"subtitle": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		},
+		"SectionPadding": {
+            "type": "string",
+            "default": ""
+        },
+		"selectedPostIds": {
+		  	"type": "array",
+        	"default": []
+		}
+	}
+}

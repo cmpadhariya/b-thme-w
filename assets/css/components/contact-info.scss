@@ -1,0 +1,132 @@
+.contact-info {
+  .wpcf7 {
+    .wpcf7-form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      .contact-form__box {
+        margin-bottom: 10px;
+        position: relative;
+      }
+      p {
+        width: 100%;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      br {
+        display: none;
+      }
+      label {
+        display: block;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
+        font-family: "OpenSans-Regular", sans-serif;
+        color: #000;
+      }
+      .wpcf7-form-control {
+        display: block;
+        width: 100%;
+        width: 100%;
+        -webkit-appearance: none;
+        //background: rgba(128, 128, 128, 0);
+        padding: 7px;
+        padding-left: 15px;
+        border-radius: 6px;
+        border: 1px solid gray;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: "OpenSans-Regular", sans-serif;
+        color: #585858;
+        font-weight: 400;
+        &::placeholder {
+          font-size: 16px;
+          line-height: 24px;
+          font-family: $primary-family;
+          font-weight: 400;
+        }
+      }
+      .wpcf7-form-control::placeholder {
+        color: #585858;
+      }
+      .wpcf7-form-control::-ms-input-placeholder {
+        color: #585858;
+      }
+      span {
+        display: block;
+        select.wpcf7-select {
+          cursor: pointer;
+          select option:checked,
+          option:hover {
+            color: white !important;
+            background-color: #555 !important;
+          }
+        }
+        textarea.wpcf7-textarea {
+          height: 110px;
+        }
+        span {
+          display: block;
+          font-size: 14px;
+          line-height: 28px;
+          font-weight: 400;
+          font-family: "OpenSans-Regular", sans-serif;
+        }
+      }
+      .wpcf7-submit {
+        width: 100%;
+        color: #fff;
+        background-color: #000;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: opensans-regular, sans-serif;
+        font-weight: 500;
+        padding: 7px 0;
+        margin-top: 10px;
+        cursor: pointer;
+
+        &:hover {
+          transition: all 500ms;
+          background-color: #555;
+        }
+      }
+      .select__icon {
+        position: absolute;
+        right: 0px;
+        top: 30px;
+        padding: 11px 13px;
+        border-left: 1px solid $color-gray;
+        z-index: -1;
+
+        &::before {
+          margin: 0;
+          padding: 0;
+          color: $color-gray;
+        }
+      }
+      .wpcf7-spinner {
+        top: 18px;
+        right: 30px;
+        background-color: $color-white;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+      }
+      .wpcf7-spinner::before {
+        background-color: $color-black;
+      }
+      .wpcf7-response-output {
+        width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+        font-family: "OpenSans-Regular", sans-serif;
+        color: $color-black;
+        margin: 0;
+        padding: 0px 5px;
+        border-radius: 4px;
+      }
+    }
+  }
+}

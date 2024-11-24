@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/timeline-section",
+	"version": "0.1.0",
+	"title": "Timeline Section",
+	"category": "qrolic",
+	"icon": "  dashicons-screenoptions",
+	"description": "This section year wise timeline for company. Year, title and description are defined in this section.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "timeline-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"year": {
+            "type": "string",
+            "default": "Year"
+        },
+		"title": {
+            "type": "string",
+            "default": "Title"
+        },
+		"description":{
+            "type": "string",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+		"alignment": {
+			"type": "string",
+			"default": "left"
+		}
+	}
+}

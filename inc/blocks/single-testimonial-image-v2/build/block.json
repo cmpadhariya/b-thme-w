@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/single-testimonial-image-v2",
+  "version": "0.1.0",
+  "title": "Single Testimonial Image V2",
+  "category": "qrolic",
+  "icon": "  dashicons-format-image",
+  "description": "This block is a Single testimonial image block, It's a simple section that highlights the testimonial.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "single-testimonial-image-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "displayExcerpt": {
+      "type": "boolean",
+      "default": true
+    },
+    "selectedCategory": {
+      "type": "string",
+      "default": ""
+    },
+    "selectedTestimonialId": {
+      "type": "string",
+      "default": ""
+    },
+    "selectedPostId": {
+      "type": "string",
+      "default": ""
+    },
+    "positionIcon": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/single-testimonials-image-editable-v2",
+	"version": "0.1.0",
+	"title": "Single Testimonials Image Editable V2",
+	"category": "qrolic",
+	"icon": "   dashicons-format-image",
+	"description": "This block is a Single testimonial image editable block, It's a simple section that highlights the editable testimonial.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "single-testimonials-image-editable-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"positiondescription": {
+		    "type": "string",
+			"selector": "p",
+			"default": ""
+		},
+		"imageId": {
+			"type": "number",
+			"default": ""
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"heading": {
+			"type": "string",
+			"default": "Mian Heading"
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"position": {
+			"type": "string",
+			"default": ""
+		},
+		"positionIcon": {
+			"type": "string",
+			"default": ""
+		},
+		"imgWidth":{
+			"type": "string",
+			"default": ""
+		},
+		"imgHeight":{
+			"type": "string",
+			"default": ""
+		},
+		"mediaID": {
+			"type": "number",
+			"default": null
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": null
+		},
+		"altText" :{
+			"type": "string",
+			"default": ""
+		}
+	}
+}

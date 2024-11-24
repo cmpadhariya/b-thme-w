@@ -1,0 +1,84 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable.scss';
+
+.process{
+    &__heading{
+        padding: 0px 0px 40px 0px;
+    }
+    .text-center{
+        text-align: center;
+    }
+    &__box{
+        padding: 30px 17px 20px 17px;
+        background: $color-white;
+        border-radius: 10%;
+        min-height: 320px;
+        .block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                color: $color-white;
+                font-size: 40px;
+                background: $color-black;
+                width: 80px;
+                height: 80px;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                margin: 20px 0px 15px 0px;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                font-size: 15px;
+                line-height: 26px;
+            }
+        }
+    }
+    @include max-991{
+        &__box{
+            margin-bottom: 30px;
+            min-height: 300px;
+        }
+    }
+    @include max-767{
+        &__box{
+            min-height: 325px;
+        }
+    }
+    @include max-575{
+        &__box{
+            min-height: auto;
+            width: 350px;
+            margin: 0 auto 30px auto;
+            padding: 30px 20px 30px 20px;
+        }
+    }
+    @include max-425{
+        &__box{
+            width: 100%;
+            .content{
+                p{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

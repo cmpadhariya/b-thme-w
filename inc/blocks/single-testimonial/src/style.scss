@@ -1,0 +1,91 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import "../../../../assets/css/variable/variable";
+
+.testimonial_single {
+  background-color: rgba(128, 128, 128, 0.1);
+
+  .testimonial_single_inner__heading {
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      padding: 15px 0;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      color: $color-black;
+      font-family: $primary-family;
+      padding: 0;
+      margin: 0;
+
+      @include max-991 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      @include max-767 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include max-575 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      @include max-425 {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .testimonial_single_inner__title {
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      color: #585858;
+      font-family: $secondary-family;
+      padding-top: 20px;
+      margin: 0;
+
+      @include max-991 {
+        padding-top: 15px;
+      }
+
+      @include max-575 {
+        font-size: 18px;
+        line-height: 24px;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .testimonial_single_inner__location {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      color: #585858;
+      font-family: $secondary-family;
+      margin: 0;
+
+      @include max-991 {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}

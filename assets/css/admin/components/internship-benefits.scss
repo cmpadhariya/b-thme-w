@@ -1,0 +1,59 @@
+// *** Internship benefits patterns CSS *** //
+.internship-benefits{
+    &__top{
+        padding: 0px 0px 25px 0px;
+        h3{
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 600;
+            color: $color-black;
+        }
+    }
+    &__list{
+        li{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #696969;
+            display: flex;
+            padding-bottom: 5px;
+            &::before{
+                content: '\e01a';
+                font-family: 'fontello';
+                font-size: 17px;
+                margin-right: 10px;
+            }
+        }
+    }
+    @include max-991{
+        &__list{
+            li{
+                font-size: 15px;
+            }
+        }
+    }
+    @include max-767{
+        &__top{
+            h3{
+                font-size: 26px;
+                line-height: 32px;
+            }
+        }
+    }
+    @include max-575{
+        &__list{
+            li{
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+    @include max-425{
+        &__top{
+            h3{
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+}

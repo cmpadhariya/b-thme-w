@@ -1,0 +1,172 @@
+//import variable scss file.
+@import "../../../../assets/css/variable/variable-v2";
+
+.why-choose-section-v2 {
+	&__inner {
+		&_heading {
+			display: flex;
+			margin-bottom: 8px;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+
+			.main-heading {
+				padding: 15px 0 15px 0;
+			}
+
+			p {
+				font-weight: 400;
+				color: $description-text-color;
+
+				@include min-1400 {
+					font-size: 22px;
+					line-height: 32px;
+				}
+
+				@include max-767 {
+					br {
+						display: none;
+					}
+				}
+			}
+
+			&-subheading {
+				border: 1px solid #a1a1aa;
+				border-radius: 50px;
+				padding: 5px 8px;
+				display: flex;
+				align-items: baseline;
+				box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+
+				p {
+					font-size: 16px;
+					line-height: 24px;
+					padding-left: 5px;
+					font-weight: 600;
+
+					@include min-1400 {
+						font-size: 17px;
+						line-height: 24px;
+					}
+
+					@include max-767 {
+						font-size: 14px;
+						line-height: 20px;
+					}
+
+					@include max-425 {
+						font-size: 12px;
+						line-height: 18px;
+					}
+				}
+
+				i {
+					font-size: 18px;
+
+					@include max-767 {
+						font-size: 16px;
+						line-height: 20px;
+					}
+
+					@include max-425 {
+						font-size: 14px;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+
+		&_item {
+			&-box {
+				display: flex;
+				position: relative;
+				height: 100%;
+				padding-top: 40px;
+
+				@include max-767 {
+					padding-top: 30px;
+				}
+
+				.icon {
+					display: flex;
+					justify-content: center;
+					align-items: start;
+					background-color: $color-white ;
+
+					i {
+						font-size: 24px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 60px;
+						height: 60px;
+						box-shadow: 0px 15px 30px 0px #D2D9E059;
+						border-radius: 50px;
+
+						@include max-767 {
+							width: 55px;
+							height: 55px;
+							font-size: 22px;
+						}
+
+						@include max-425 {
+							width: 50px;
+							height: 50px;
+							font-size: 20px;
+						}
+					}
+
+				}
+
+				.heading {
+					padding-left: 20px;
+
+					@include max-767 {
+						font-size: 20px;
+						line-height: 26px;
+					}
+
+					h3 {
+						font-size: 24px;
+						line-height: 30px;
+						font-weight: 600;
+						padding-bottom: 15px;
+
+						@include min-1400 {
+							font-size: 26px;
+							line-height: 32px;
+						}
+
+						@include max-991 {
+							font-size: 22px;
+							line-height: 28px;
+						}
+
+						@include max-767 {
+							font-size: 20px;
+							line-height: 26px;
+							padding-bottom: 10px;
+						}
+
+						@include max-425 {
+							font-size: 18px;
+							line-height: 24px;
+							padding-bottom: 5px;
+						}
+					}
+
+					p {
+						padding: 0;
+						color: #6D6D6D;
+						font-weight: 500;
+
+						strong {
+							font-weight: 500;
+							color: $color-black;
+						}
+					}
+				}
+			}
+		}
+	}
+}

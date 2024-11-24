@@ -1,0 +1,58 @@
+// ***Career Single Page*** //
+.cs-post {
+  @include max-767 {
+    padding: 0px 20px;
+  }
+}
+.cs-post__banner {
+  padding: 50px 0px;
+  border-bottom: 1px solid $color-gray;
+  @include max-991 {
+    padding: 40px 0px;
+  }
+  &_inner {
+    h1 {
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 54px;
+      color: $color-black;
+      font-family: $heading-family;
+      margin-bottom: 30px;
+      @include max-767 {
+        font-size: 36px;
+        line-height: 48px;
+        margin-bottom: 20px;
+      }
+      @include max-425 {
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.cs-post__content {
+  padding: 60px 10px 30px 10px;
+  border-bottom: 1px solid #808080;
+  @include max-991 {
+    padding: 50px 10px 20px 10px;
+  }
+  @include max-575 {
+    padding: 40px 10px 15px 10px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+    color: $color-gray;
+    font-family: $primary-family;
+    font-weight: 400;
+    @include max-991 {
+      font-size: 14px;
+      line-height: 28px;
+    }
+    @include max-425 {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+}

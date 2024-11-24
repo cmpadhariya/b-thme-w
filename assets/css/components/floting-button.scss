@@ -1,0 +1,46 @@
+.floating-button {
+  bottom: 50px;
+  position: fixed;
+  right: 20px;
+  z-index: 999;
+  width: fit-content;
+  cursor: pointer;
+  background: $color-black;
+
+  @include max-767 {
+    bottom: 30px;
+  }
+
+  p {
+    a {
+      display: block;
+      padding: 12px 28px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.125rem;
+
+      &:hover {
+        transition: all 500ms;
+        background-color: #555;
+        color: $color-white;
+      }
+
+      @include max-767 {
+        font-size: 12px;
+        padding: 10px 24px;
+      }
+
+      @include max-425 {
+        font-size: 10px;
+        letter-spacing: 0.150rem;
+      }
+    }
+  }
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/icon-text-section",
+  "version": "0.1.0",
+  "title": "Icon Text Section",
+  "category": "qrolic",
+  "icon": "  dashicons-embed-photo",
+  "description": "This section is used for information on company services and what the company provides, this section includes image and title.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "icon-text-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": []
+    }
+  }
+}

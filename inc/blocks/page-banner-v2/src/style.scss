@@ -1,0 +1,249 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable-v2.scss';
+
+.page-banner{
+	&__inner{
+		&--content{
+			padding-right: 10px;
+			p.subtitle-heading{
+                color: $subheading-text-color;
+				font-weight: 600;
+				border: 1px solid #a1a1aa;
+                width: fit-content;
+                padding: 4px 12px;
+                border-radius: 12px;
+			}
+			.career-breadcrumbs{
+				.rank-math-breadcrumb{
+					margin: 0px;	
+					a{
+						font-size: 14px;
+						line-height: 22px;
+						font-weight: 400;
+						color: $subheading-text-color;
+						font-family: $global-family;
+					}
+					.separator{
+						color: $subheading-text-color;
+					}
+					span{
+						@extend a;
+						color: $description-text-color;
+					}
+				}
+			}
+			&-mainTitle{
+				-webkit-text-fill-color: #18181b;
+				padding: 12px 0px 12px 0px;
+				position: relative;
+				span.clipped{
+					position: absolute;
+					top: 1px;
+    				left: 182px;
+    				width: 300px;
+    				height: 87px;
+					background-color: transparent;
+					clip-path: polygon(-70% -20%, 75% -300%, 104% 100%, 25% 98%);
+					border: solid 5px #E4E7EC;
+					border-radius: 100%;
+					display: block;
+					z-index: 1;
+				}
+			}
+			p.description-secondary{
+				font-family: $global-family;
+				padding-left: 0px;
+				font-weight: 400;
+				color: $subheading-text-color;
+				b, strong, span{
+					color: $color-black;
+					font-weight: 500;
+				}
+			}
+			.banner-buttons{
+				display: flex;
+				align-items: center;
+				gap: 0px 24px;
+				margin-top: 24px;
+				a.hero-black-button{
+					background-color: #292929;
+					text-decoration: none;
+					&:hover{
+						transition: all 500ms;
+						background-color: $color-black;
+					}
+				}
+				a.hero-gray-button{
+					background-color: $color-light-gray;
+					color: $color-black;
+					border: 1px solid #C9C9C9;
+					text-decoration: none;
+					&:hover{
+						transition: all 500ms;
+						background-color: #292929;
+						color: $color-white;
+					}
+				}
+			}
+		}
+		&--image{
+			img{
+				height: 100%;
+				width: 100%;
+			}
+			span.add-items{
+				visibility: hidden;
+				text-align: center;
+				position: absolute;
+				top: -20px;
+				left: -8px;
+				z-index: 1;
+				color: $color-black;
+			}
+			button.icon-doc-add{
+				position: relative;
+				&:hover{
+					span.add-items{
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	@include min-1400{
+		&__inner{
+			&--content{
+				.career-breadcrumbs{
+					.rank-math-breadcrumb{
+						a{
+							font-size: 16px;
+							line-height: 24px;
+						}
+					}
+				}
+				&-mainTitle{
+					font-size: 56px;
+    				line-height: 70px;
+					span.clipped{
+						top: 3px;
+        				left: 212px;
+        				width: 345px;
+        				height: 94px;
+					}
+				}
+				p{
+					font-size: 20px;
+    				line-height: 32px;
+				}
+			}
+			&--image{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-1199{
+		&__inner{
+			&--content{
+				&-mainTitle{
+					span.clipped{
+						top: 2px;
+        				left: 160px;
+        				width: 260px;
+        				height: 78px;
+					}
+				}	
+			}
+		}
+	}
+
+	@include max-991{
+		&__inner{
+			&--content{
+				padding: 0px 0px 40px 0px;
+				&-mainTitle{
+					letter-spacing: 0.5px;
+					span.clipped{
+						top: 1px;
+        				left: 134px;
+        				width: 220px;
+        				height: 74px;
+					}
+					br{
+						display: none;
+					}
+				}
+			}
+			&--image{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-767{
+		&__inner{
+			&--content{
+				&-mainTitle{
+					span.clipped{
+						top: 8px;
+						left: 125px;
+						width: 210px;
+						height: 58px;
+						border: solid 4px #e4e7ec;
+					}
+				}	
+			}
+		}
+	}
+
+	@include max-575{
+		&__inner{
+			&--content{
+				&-mainTitle{
+					span.clipped{
+						display: none;
+					}
+				}
+				.banner-buttons{
+					gap: 0px 20px;
+					a{
+						font-size: 14px;
+    					line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-425{
+		&__inner{
+			margin: 0px 0px 0px 0px;
+			&--content{
+				.career-breadcrumbs{
+					.rank-math-breadcrumb{
+						a{
+							font-size: 12px;
+							line-height: 20px;
+						}
+					}
+				}
+				.banner-buttons{
+					flex-direction: column-reverse;
+        			align-items: baseline;
+					gap: 10px 0px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

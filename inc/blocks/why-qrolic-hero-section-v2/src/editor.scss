@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import '../../../../assets/css/variable/_variable-v2.scss';
+ .why-qrolic-hero-section {
+    &__inner {
+        &--image{
+            button {
+                width: 100%;
+                height: 100%;
+            }
+            &-topcontent {
+                p.subtitle {
+                    padding-left: 0px;
+                }
+                @include max-575 {
+                    top: 30px;
+                    left: 30px;
+                }
+            }
+            &-buttomcontent {
+                bottom: 60px;
+                @include max-425 {
+                    bottom: 40px;
+                }
+            }
+        }
+    }
+ }

@@ -1,0 +1,64 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "create-block/careers-benefits-v2",
+    "version": "0.1.0",
+    "title": "Careers Benefits V2",
+    "category": "qrolic",
+    "icon": "admin-users",
+    "description": "This section shows the benefits you get as an employee of our company qrolic technology.This section includes benefits image, title and short description.",
+    "example": {},
+    "supports": {
+        "html": false
+    },
+    "textdomain": "careers-benefits-v2",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "attributes": {
+        "subtitle": {
+            "type": "string",
+            "source": "html",
+            "selector": ".benefits-subheading"
+        },
+        "h2heading": {
+            "type": "string",
+            "source": "html",
+            "selector": ".benefits-heading"
+        },
+        "description": {
+            "type": "string",
+            "source": "html",
+            "selector": ".description-primary"
+        },
+        "items": {
+            "type": "array",
+            "default": [],
+            "source": "query",
+            "selector": ".careers-benefits__inner_item .col-lg-4",
+            "query": {
+                "topicon": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": "i.first-boxicon"
+                },
+                "heading": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": ".icon h3"
+                },
+                "description": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": ".content .description-secondary"
+                },
+                "imageUrl": {
+                    "type": "string",
+                    "source": "attribute",
+                    "selector": "img.service-image",
+                    "attribute": "src"
+                }
+            }
+        }
+    }
+}

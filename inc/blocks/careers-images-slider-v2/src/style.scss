@@ -1,0 +1,192 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/variable-v2';
+
+.careers-slider {
+    &__inner {
+        .splide {
+            visibility: visible;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .editor-side-content{
+            margin: 0;
+            img{
+                width: 100%;
+            }
+        }
+        &--content {
+            margin: 78px 0px;
+            .splide__track{
+                overflow-y: visible;
+                overflow-x: clip;
+            }
+            .splide__list {
+                .splide__slide {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        transition: transform 400ms;
+                        max-width: 100%;
+                        transform: scale(1.1);
+                    }
+                }
+                .splide__slide.is-visible.is-active img {
+                    transform: scale(2.5);
+                    opacity: 1;
+                    z-index: 30;
+                }
+                .splide__slide.is-visible.is-prev img, .splide__slide.is-visible.is-next img {
+                    transform: scale(2);
+                    opacity: 0.8;
+                    z-index: 10;
+                }
+            }
+            .splide__arrows{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: -124px;
+                width: 100%;
+                gap: 0px 150px;
+                transform: translateY(4px);
+                .splide__arrow{
+                    position: unset;
+                    background: unset;
+                    height: unset;
+                    svg{
+                        display: none;
+                    }
+                }
+                .splide__arrow--prev{
+                    &::after{
+                        transform: rotate(180deg);
+                    }
+                }
+                button{
+                    position: relative;
+                    &::after{
+                        content: "\e01b";
+                        font-family: "fontello";
+                        font-size: 26px;
+                        line-height: 15px;
+                        color: #999999;
+                    }
+                }
+            }
+            .splide:not(.is-overflow) .splide__pagination{
+                display: flex;
+            }
+            .splide__pagination{
+                bottom: -124px;
+                li{
+                    .splide__pagination__page{
+                        background: #999999;
+                        height: 10px;
+                        width: 10px;
+                        opacity: 1;
+                        margin: 5px;
+                    }
+                    .is-active{
+                        transform: unset;
+                        height: 12px;
+                        width: 12px;
+                        background: #008AFF;
+                    }
+                }
+            }
+        }
+    }
+
+    @include min-1400{
+        &__inner {
+            &--content{
+                margin: 94px 0;
+                .splide__arrows{
+                    bottom: -138px;
+                }
+                .splide__pagination{
+                    bottom: -138px;
+                }
+            }
+        }
+    }
+
+    @include max-1199{
+        &__inner {
+            &--content{
+                margin: 69px 0;
+                .splide__arrows{
+                    bottom: -115px;
+                }
+                .splide__pagination{
+                    bottom: -115px;
+                }
+            }
+        }
+    }
+
+    @include max-991{
+        &__inner {
+            &--content{
+                margin: 50px 0;
+                .splide__arrows{
+                    bottom: -95px;
+                }
+                .splide__pagination{
+                    bottom: -95px;
+                }
+            }
+        }
+    }
+
+    @include max-767{
+        &__inner {
+            &--content{
+                margin: 65px 0;
+                .splide__arrows{
+                    bottom: -100px;
+                }
+                .splide__pagination{
+                    bottom: -100px;
+                }
+            }
+        }
+    }
+
+    @include max-425{
+        &__inner {
+            &--content{
+                margin: 50px 0;
+                .splide__arrows{
+                    bottom: -76px;
+                    gap: 0px 100px;
+                    button{
+                        &::after{
+                            font-size: 22px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+                .splide__pagination{
+                    bottom: -72px;
+                    li{
+                        .splide__pagination__page{
+                            height: 8px;
+                            width: 8px;
+                            margin: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

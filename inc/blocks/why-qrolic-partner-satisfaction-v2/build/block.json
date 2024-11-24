@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/why-qrolic-partner-satisfaction-v2",
+  "version": "0.1.0",
+  "title": "Why Qrolic Partner Satisfaction V2",
+  "category": "qrolic",
+  "icon": "  dashicons-performance",
+  "description": "A customizable block designed to highlight the value of partnering with Qrolic, focusing on quality, customer satisfaction, and proven results.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "why-qrolic-partner-satisfaction-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "subtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".qrolic-partner-satisfaction-subheading"
+    },
+    "icontop": {
+      "type": "string",
+      "default": ""
+    },
+    "h2heading": {
+      "type": "string",
+      "source": "html",
+      "selector": ".qrolic-partner-satisfaction-title"
+    },
+    "items": {
+      "type": "array",
+      "default": [],
+      "source": "query",
+      "selector": ".why-qrolic-partner-satisfaction__inner_item-box",
+      "query": {
+        "icon": {
+          "type": "string",
+          "source": "attribute",
+          "attribute": "class",
+          "selector": ".icon i"
+        },
+        "heading": {
+          "type": "string",
+          "source": "html",
+          "selector": ".box-heading h3"
+        },
+        "description": {
+          "type": "string",
+          "source": "html",
+          "selector": ".box-heading p"
+        }
+      }
+    }
+  }
+}

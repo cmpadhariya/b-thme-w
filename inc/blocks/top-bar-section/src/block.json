@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/top-bar-section",
+	"version": "0.1.0",
+	"title": "Top Bar Section",
+	"category": "qrolic",
+	"icon": "editor-alignleft",
+	"description": "this block top bar for the offers, and promotions. ",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"content1": {
+			"type": "string",
+			"default": "First paragraph content"
+		  },
+		  "content2": {
+			"type": "string",
+			"default": "Second paragraph content"
+		  },
+		  "buttonURL": {
+			"type": "string"
+		  }
+	  },
+	"textdomain": "top-bar-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

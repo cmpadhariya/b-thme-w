@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/subscribe-now-section",
+	"version": "0.1.0",
+	"title": "Subscribe Now Section",
+	"category": "qrolic",
+	"icon": "  dashicons-email",
+	"description": "This section is used to subscribe email to the user. Title, description and email input are added in this section.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "subscribe-now-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"mediaID": {
+			"type": "number"
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": null
+		},
+		"altText" :{
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+            "type": "string",
+            "default": ""
+        },
+		"description":{
+            "type": "string",
+            "default": ""
+        },
+		"subscribeform": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

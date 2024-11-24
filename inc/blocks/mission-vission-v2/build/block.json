@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/mission-vission-v2",
+  "version": "0.1.0",
+  "title": "Mission Vission v2",
+  "category": "qrolic",
+  "icon": "  dashicons-layout",
+  "description": "This block includes inner mission-vission in the company",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "mission-vission-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "boxes": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "icon": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/page-banner-v2",
+	"version": "0.1.0",
+	"title": "Page Banner V2",
+	"category": "qrolic",
+	"icon": "  dashicons-clipboard",
+	"description": "This section is a common banner section. We can use this section as banner in any pages. This section includes subtitle, title, description, buttons and image.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "page-banner-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"breadcrumbs": {
+            "type": "string"
+        },
+		"hideBreadcrumbs": {
+			"type": "boolean",
+			"default": false
+		},
+		"mediaID": {
+			"type": "number",
+			"default": null
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": null
+		},
+		"altText" :{
+			"type": "string",
+			"default": ""
+		},
+		"subtitle": {
+            "type": "string"
+        },
+		"hideSubtitle": {
+			"type": "boolean",
+			"default": false
+		},
+		"title":{
+            "type": "string"
+        },
+		"description":{
+            "type": "string"
+        },
+		"hideDescription": {
+			"type": "boolean",
+			"default": false
+		},
+		"blackBtnText": {
+            "type": "string",
+            "default": ""
+        },
+		"blackBtnUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"hideBlackBtn": {
+			"type": "boolean",
+			"default": false
+		},
+		"blackBtnTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"grayBtnText": {
+            "type": "string",
+            "default": ""
+        },
+		"hideGrayBtn": {
+			"type": "boolean",
+			"default": false
+		},
+		"grayBtnUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"grayBtnTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"height":{
+            "type": "string"
+        },
+		"width":{
+            "type": "string"
+        }
+	}
+}

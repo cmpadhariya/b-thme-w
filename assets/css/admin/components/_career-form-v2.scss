@@ -1,0 +1,35 @@
+// ***** career form v2 css ***** //
+.career-form-v2 {
+    &__inner {
+        background-color: $color-light-gray;
+        padding: 70px 0px;
+
+        @include max-767 {
+            padding: 50px 20px;
+        }
+
+        @include max-575 {
+            padding: 50px 20px;
+            margin: 0px 20px;
+        }
+
+        @include max-425 {
+            padding: 40px 20px;
+        }
+
+        &_description {
+            p {
+                padding: 34px 0;
+
+                @include min-1400 {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+
+                @include max-767 {
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+}

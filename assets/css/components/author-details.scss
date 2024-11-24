@@ -1,0 +1,68 @@
+//This scss is used for the pattern named author-details of current author in author single page.
+
+.author{
+    &__inner{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 40px;
+        .wp-block-post-author{
+            align-items: center;
+            .wp-block-post-author__avatar{
+                img{
+                    border-radius: 100%;
+                }
+            }
+            .wp-block-post-author__content{
+                .wp-block-post-author__name{
+                    font-size: 20px;
+                    line-height: 26px;
+                    font-weight: 600;
+                    color: $color-black;
+                    font-family: $primary-family;
+                    a{
+                        color: $color-black;
+                    }
+                }
+                .wp-block-post-author__bio{
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: dimgray;
+                    font-family: $primary-family;
+                    margin: 10px 0px 0px 0px;
+                }
+            }
+        }
+        @include max-991{
+            .wp-block-post-author{
+                align-items: flex-start;
+            }
+        }
+        @include max-767{
+            .wp-block-post-author{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .wp-block-post-author__avatar{
+                    margin: 0px 0px 10px 0px;
+                }
+                .wp-block-post-author__content{
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        @include max-575{
+            padding: 40px 20px;
+        }
+        @include max-425{
+            .wp-block-post-author{
+                .wp-block-post-author__content{
+                    .wp-block-post-author__bio{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

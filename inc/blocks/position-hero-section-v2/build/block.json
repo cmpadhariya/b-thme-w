@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/position-hero-section-v2",
+  "version": "0.1.0",
+  "title": "Position Hero Section V2",
+  "category": "qrolic",
+  "icon": "  dashicons-clipboard",
+  "description": "This section is displayed in our career related pages. This section includes title, description,two buttons and subtitle.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "position-hero-section-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mediaID": {
+      "type": "number",
+      "default": null
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": null
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "subTitleUrl": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "descriptionSecondary": {
+      "type": "string"
+    },
+    "blackBtnText": {
+      "type": "string",
+      "default": ""
+    },
+    "blackBtnUrl": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    },
+    "grayBtnText": {
+      "type": "string",
+      "default": ""
+    },
+    "grayBtnUrl": {
+      "type": "string",
+      "selector": "a",
+      "source": "attribute",
+      "attribute": "href"
+    },
+    "height": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    },
+    "SectionStyle": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

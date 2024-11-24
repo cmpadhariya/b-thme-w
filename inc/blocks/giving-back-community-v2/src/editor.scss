@@ -1,0 +1,19 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.giving-back-v2{
+ &__inner_box {
+ .components-button {
+    height: 100%;
+    align-items: baseline;
+    padding: 0;
+    box-shadow:unset !important;
+}
+h3 {
+    margin-top: 25px;
+}
+ }
+}

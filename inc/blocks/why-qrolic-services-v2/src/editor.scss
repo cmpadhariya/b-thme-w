@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ @import "../../../../assets/css/variable/variable-v2";
+
+.why-qt-services__inner_item--icon{
+	span{
+		padding: 5px;
+		border: 1px solid $color-black;
+		border-radius: 5px;
+		margin-bottom: 5px;
+	}
+}

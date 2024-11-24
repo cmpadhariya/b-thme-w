@@ -1,0 +1,282 @@
+// ***** career form v2 css ***** //
+.career-form-v2 {
+    &__inner {
+        background-color: $color-light-gray;
+        padding: 70px 0px;
+
+        @include max-767 {
+            padding: 50px 20px;
+        }
+
+        @include max-575 {
+            padding: 50px 20px;
+            margin: 0px 20px;
+        }
+
+        @include max-425 {
+            padding: 40px 20px;
+        }
+
+        &_description {
+            p {
+                padding: 34px 0;
+
+                @include min-1400 {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+
+                @include max-767 {
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        &_form {
+            border: 1px solid #3f3f46;
+            box-shadow: 0px 34px 33px -23px #161c2d21;
+            padding: 28px 60px;
+            background-color: $color-white;
+            border-radius: 10px;
+            margin: 0 10px;
+
+            @include max-1199 {
+                padding: 28px 50px;
+            }
+
+            @include max-575 {
+                margin: 0 0;
+                padding: 20px 20px;
+            }
+
+            .screen-reader-response {
+                display: none;
+            }
+
+            .wpcf7 {
+                form.wpcf7-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .wpcf7-spinner {
+                        position: absolute !important;
+                    }
+
+                    .col-sm-12 {
+                        position: relative;
+                        z-index: 99;
+
+                        label {
+                            font-size: 15px;
+                            line-height: 21px;
+                            font-weight: 700;
+                            color: #161c2d;
+                            margin: 6px 0px 10px 0px;
+                            display: inline-block;
+
+                            @include min-1400 {
+                                font-size: 17px;
+                                line-height: 23px;
+                            }
+
+                            @include max-425 {
+                                font-size: 12px;
+                                line-height: 18px;
+                                margin: 4px 0px 8px 0px;
+                            }
+                        }
+
+                        span {
+                            display: block;
+
+                            input,
+                            select,
+                            textarea {
+                                width: 100%;
+                                font-size: 15px;
+                                line-height: 26px;
+                                font-weight: 400;
+                                color: #161c2d;
+                                padding: 12px 18px;
+                                border-radius: 8px;
+                                border: 1px solid #e7e9ed;
+
+                                @include min-1400 {
+                                    font-size: 17px;
+                                    line-height: 28px;
+                                }
+
+                                @include max-425 {
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                    padding: 8px 18px;
+                                }
+                            }
+
+                            textarea {
+                                resize: none;
+                                font-family: $global-family;
+                                color: #161c2d;
+                                font-size: 15px;
+                                line-height: 26px;
+
+                                @include min-1400 {
+                                    font-size: 17px;
+                                    line-height: 28px;
+                                }
+
+                                @include max-425 {
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                }
+                            }
+
+                            .wpcf7-form-control::placeholder {
+                                color: #161c2d;
+                                opacity: 0.7;
+                                font-size: 15px;
+                                line-height: 26px;
+
+                                @include min-1400 {
+                                    font-size: 17px;
+                                    line-height: 28px;
+                                }
+
+                                @include max-425 {
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                }
+                            }
+
+                            .wpcf7-form-control::-ms-input-placeholder {
+                                color: #161c2d;
+                                opacity: 0.7;
+                                font-size: 15px;
+                                line-height: 26px;
+
+                                @include min-1400 {
+                                    font-size: 17px;
+                                    line-height: 28px;
+                                }
+
+                                @include max-425 {
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                }
+                            }
+
+                            select {
+                                -webkit-appearance: none;
+                                cursor: pointer;
+                            }
+
+                            .wpcf7-not-valid-tip {
+                                font-size: 14px;
+                                line-height: 20px;
+                                font-weight: 500;
+                                padding: 8px 0px 0px 0px;
+                                letter-spacing: 0.9px;
+                            }
+                        }
+
+                        .select__icon {
+                            position: absolute;
+                            right: 18px;
+                            top: 56%;
+                            color: #161c2d;
+                            font-size: 22px;
+                            cursor: pointer;
+                            margin: 0;
+
+                            &::before {
+                                width: fit-content;
+                                margin: 0;
+                            }
+                        }
+
+                        .wpcf7-submit {
+                            width: 100%;
+                            font-size: 17px;
+                            line-height: 32px;
+                            font-weight: 700;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $color-white;
+                            background-color: #3f3f46;
+                            padding: 8px 20px;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            border: none;
+                            outline: none;
+                            margin-top: 10px;
+
+                            &:hover {
+                                transition: all 500ms;
+                                color: $color-white;
+                                background: $color-black;
+                            }
+
+                            @include max-575 {
+                                font-size: 15px;
+                                line-height: 30px;
+                                padding: 6px 20px;
+                            }
+                        }
+                    }
+
+                    .br-none {
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+
+                .invalid {
+                    .wpcf7-response-output {
+                        border-color: #dc3232;
+                        margin: 0;
+                        border-radius: 8px;
+                    }
+                }
+
+                @include max-425 {
+                    form {
+                        .col-sm-12 {
+                            span {
+                                .wpcf7-not-valid-tip {
+                                    font-size: 13px;
+                                    line-height: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wpcf7-spinner {
+                    top: 40%;
+                    left: 15%;
+                    background-color: $color-white;
+                    opacity: 1;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .wpcf7-spinner::before {
+                    background-color: $color-black;
+                }
+
+                .wpcf7 form .wpcf7-response-output {
+                    font-size: 14px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    color: $color-black;
+                    margin: 0;
+                    padding: 0px 0px;
+                    letter-spacing: 0.9px;
+                }
+            }
+        }
+    }
+}

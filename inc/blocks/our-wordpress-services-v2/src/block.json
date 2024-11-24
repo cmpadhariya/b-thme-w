@@ -1,0 +1,73 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "create-block/our-wordpress-services-v2",
+    "version": "0.1.0",
+    "title": "Our Wordpress Services V2",
+    "category": "qrolic",
+    "icon": "  dashicons-excerpt-view",
+    "description": "This block is the our wordpress services section which provides services information related to the including title, description and services.",
+    "example": {},
+    "supports": {
+        "html": false
+    },
+    "textdomain": "our-wordpress-services-v2",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "attributes": {
+        "subtitle": {
+            "type": "string",
+            "source": "html",
+            "selector": ".top-subheading"
+        },
+        "icontop": {
+            "type": "string",
+            "default": ""
+        },
+        "h2heading": {
+            "type": "string",
+            "source": "html",
+            "selector": ".main-heading"
+        },
+        "description": {
+            "type": "string",
+            "source": "html",
+            "selector": ".description-primary"
+        },
+        "items": {
+            "type": "array",
+            "default": [],
+            "source": "query",
+            "selector": ".our-wordpress-services__inner_item .col-lg-4",
+            "query": {
+                "topicon": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": "i.first-boxicon"
+                },
+                "heading": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": ".icon h3"
+                },
+                "url": {
+                    "type": "string",
+                    "source": "attribute",
+                    "attribute": "href",
+                    "selector": "a.anchor"
+                },
+                "description": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": ".description-secondary"
+                },
+                "pricing": {
+                    "type": "string",
+                    "source": "html",
+                    "selector": ".price"
+                }
+            }
+        }
+    }
+}

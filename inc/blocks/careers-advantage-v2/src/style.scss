@@ -1,0 +1,125 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import '../../../../assets/css/variable/variable-v2';
+
+.careers-advantage {
+	&__inner {
+		&_heading {
+			text-align: center;
+
+			p {
+				font-weight: 400;
+				padding: 16px 0 40px 0;
+
+				@include min-1400 {
+					font-size: 22px;
+					line-height: 32px;
+				}
+				@include max-575 {
+					padding: 15px 0 30px 0;
+				}
+			}
+		}
+
+		&_box {
+			padding: 16px;
+			border-radius: 15px;
+			height: 100%;
+			background-color: #fff;
+
+			@include max-425 {
+				padding: 24px;
+			}
+
+			&-content {
+				display: flex;
+				flex-direction: column;
+
+				@include max-575 {
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+				}
+
+				&--img {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					img {
+						@include min-1400 {
+							width: 100%;
+							height: 100%;
+						}
+
+						@include max-1199 {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				p {
+					@include min-1400 {
+						font-size: 20px;
+						line-height: 30px;
+					}
+
+					@include max-991 {
+						font-size: 15px;
+						line-height: 24px;
+					}
+
+					@include max-575 {
+						font-size: 14px;
+						line-height: 22px;
+					}
+				}
+
+				h3.careers-advantage-textsize {
+					font-size: 22px;
+					line-height: 30px;
+					color: $color-black;
+					padding: 24px 0 16px 0;
+
+					@include min-1400 {
+						font-size: 24px;
+						line-height: 32px;
+					}
+
+					@include max-1199 {
+						font-size: 21px;
+					}
+
+					@include max-991 {
+						font-size: 19px;
+						line-height: 28px;
+						padding: 20px 0 10px 0;
+					}
+
+					@include max-767 {
+						font-size: 18px;
+						line-height: 26px;
+						padding: 16px 0 10px 0;
+					}
+				}
+			}
+		}
+
+		.row {
+			--bs-gutter-y: 1.5rem;
+			.col-12 {
+				@include max-575 {
+					width: 50%;
+				}
+				@include max-425 {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

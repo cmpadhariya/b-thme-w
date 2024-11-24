@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "create-block/blog-categories-v2",
+    "version": "0.1.0",
+    "title": "Blog Categories V2",
+    "category": "qrolic",
+    "icon": " dashicons-list-view",
+    "description": "This block displays qrolic's blog category list which is shown on the blog archive and blog categories page.",
+    "example": {},
+    "supports": {
+        "html": false
+    },
+    "textdomain": "blog-categories-v2",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "render": "file:./render.php",
+    "attributes": {
+        "selectedCategories": {
+            "type": "array",
+            "default": []
+        },
+        "orderedCategories": {
+            "type": "array",
+            "default": []
+        },
+        "buttonText": {
+            "type": "string",
+            "default": ""
+        },
+        "categoriesToShow": {
+            "type": "number",
+            "default": 4
+        },
+        "blogpostClass": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

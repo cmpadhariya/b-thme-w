@@ -1,0 +1,30 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+
+
+.follow-us *{
+     margin: 0;
+     padding: 0;
+
+    .follow-us__inner_social-icon{
+        ul{
+            list-style: none;
+            li{
+                a{
+                    &::before{
+                        margin: 0;
+                        height: 40px;
+                        width: 40px;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+ 

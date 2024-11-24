@@ -1,0 +1,41 @@
+// This CSS for Services single page.
+.services-content {
+    .services-content__inner_text {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        @include max-575 {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      h4 {
+        padding: 20px 0px;
+        display: block;
+      }
+      ul {
+        list-style: disc;
+        list-style-position: inside;
+        li {
+          font-weight: 400;
+          color: $color-gray;
+          font-family: $primary-family;
+          font-size: 14px;
+          line-height: 22px;
+          div{
+            display: inline-block;
+          }
+          @include max-575 {
+            font-size: 13px;
+            line-height: 21px;
+          }
+          ul {
+            list-style: circle;
+            padding: 10px 20px;
+            list-style-position: inside;
+          }
+        }
+      }
+    }
+  }
+  

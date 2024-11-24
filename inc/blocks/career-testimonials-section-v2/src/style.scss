@@ -1,0 +1,171 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable-v2.scss';
+
+.career_testimonials {
+	background-color: $bg-color;
+
+	&__top {
+		text-align: center;
+
+		p {
+			padding: 20px 0 40px 0;
+		}
+	}
+
+	&__inner {
+		.row {
+			--bs-gutter-x: 2.65rem;
+		}
+
+		&_box {
+			display: flex;
+			border-radius: 41.25px 12px 12px 50px;
+			box-shadow: 14px 23.7px 0px 0px #5D5D5D;
+			height: 100%;
+
+			&--image {
+				display: flex;
+				align-items: end;
+				width: 45px;
+
+				img {
+					max-width: 113px;
+					height: 113px;
+					transform: translate(-3px, 3px);
+				}
+			}
+
+			&--content {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				background-color: $color-white;
+				padding: 28px 24px 28px 82px;
+				border-radius: 41.25px 10px 12px 0px;
+
+				&-text {
+					margin-top: auto;
+					margin-bottom: auto;
+					color: #000;
+					font-size: 16px;
+					line-height: 24px;
+
+					@include max-1199 {
+						font-size: 14px;
+					}
+
+					@include max-767 {
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+
+				ul {
+					display: flex;
+
+					li {
+						color: #344054;
+
+						&::before {
+							width: unset;
+							font-size: 15px;
+							margin: 0 1px;
+						}
+					}
+				}
+
+				&-bottom-heading {
+					font-size: 14px;
+					line-height: 28px;
+					font-weight: 700;
+					display: flex;
+					align-items: center;
+                    gap: 7px;
+					@include max-767 {
+						font-size: 12px;
+						line-height: 20px;
+					}
+					i {
+						width: 20px;
+						height: 20px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;					
+						background-color: #344054;
+						border-radius: 100%;
+						color: #fff;
+						font-size: 10px;
+						@include max-767 {
+							width: 17px;
+							height: 17px;
+						}
+					}
+				}
+
+				&-position {
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 14px;
+					color: #505050;
+					padding: 5px 0 10px 0;
+
+					@include max-575 {
+						font-size: 10px;
+					}
+				}
+
+				h3 {
+					font-size: 14px;
+					line-height: 22px;
+					font-weight: 800;
+					color: #000;
+				}
+
+				p.client-position {
+					font-size: 10px;
+					line-height: 22px;
+					font-weight: 400;
+					color: #000;
+				}
+			}
+		}
+
+	}
+
+	@include max-991 {
+		&__inner {
+			div.m-bottom:not(:last-child) {
+				margin-bottom: 70px;
+			}
+		}
+	}
+
+	@include max-767 {
+
+		&__inner {
+			&--content {
+				p.description-secondary {
+					padding: 20px 0px 20px 0px;
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		&__inner {
+			&--content {
+				p.description-secondary {
+					font-size: 13px;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}

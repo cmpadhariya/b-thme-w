@@ -1,0 +1,28 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ div.casestudy-related__list_readmore {
+            display: block;
+            color: #27272a;
+            font-weight: 600;
+
+            span{
+                position: relative;
+                padding: 0;
+                &::after {
+                    content: "\E01B";
+                    font-family: fontello;
+                    font-size: 22px;
+                    font-weight: 500;
+                    position: absolute;
+                    right: -22px;
+                    top: -1px;
+                    transition: all 0.5s;
+                    vertical-align: middle;
+                }
+            }
+
+        }

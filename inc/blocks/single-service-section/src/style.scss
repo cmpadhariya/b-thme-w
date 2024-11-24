@@ -1,0 +1,169 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+//variable add
+@import "../../../../assets/css/variable/variable";
+
+//service-single section start
+.service-single {
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+    font-family: "iconsmind";
+  }
+  padding: 70px 0 70px 0;
+  @include max-767 {
+    padding: 70px 20px 70px 20px;
+  }
+  @include max-425 {
+    padding: 60px 20px 60px 20px;
+  }
+  * {
+    margin: 0;
+  }
+  background-color: rgba(128, 128, 128, 0.1);
+
+  .service-single__inner {
+    @include max-991 {
+      div.col-lg-3:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .service-single__inner_heading {
+    padding-bottom: 50px;
+    font-size: 42px;
+    line-height: 56px;
+    color: #222;
+    @include max-1199 {
+      font-size: 40px;
+    line-height: 54px;
+    }
+    @include max-991 {
+      font-size: 33px;
+      line-height: 43px;
+      padding-bottom: 45px;
+    }
+    
+    @include max-767 {
+      font-size: 26px;
+      line-height: 32px;
+      padding-bottom: 35px;
+    }
+    @include max-575 {
+      padding-bottom: 30px;
+    }
+    @include max-425 {
+      font-size: 24px;
+      line-height: 30px;
+      padding-bottom: 25px;
+    }
+   }
+  .service-single__inner_box {
+    &--details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-image {
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          margin-bottom: 20px;
+          padding: 0;
+
+          @include max-991 {
+            padding-bottom: 15px;
+          }
+
+          @include max-767 {
+            padding: 0 20px 15px 20px;
+          }
+
+          @include max-767 {
+            padding: 0 15px 15px 15px;
+          }
+        }
+      }
+    }
+  }
+  .service-single__inner_box--details-title {
+    display: flex;
+    justify-content: center;
+    h2 {
+      text-transform: capitalize;
+      line-height: 26px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 10px;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+      color: $color-black;
+      @include max-991 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      @include max-575 {
+        padding-bottom: 5px;
+      }
+      @include max-425 {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+  .service-single__inner_box--details-details {
+    p {
+      text-align: center;
+      letter-spacing: 0.03em;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+
+      @include max-991 {
+        font-size: 15px;
+      }
+
+      @include max-575 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.service-single__inner_box--details-icon {
+  span {
+    font-size: 12px;
+    text-transform: capitalize;
+    display: flex;
+    padding: 10px 0px;
+    font-family: $primary-family;
+    @include max-767 {
+      font-size: 10px;
+    }
+  }
+  .components-text-control__input {
+    padding-bottom: 10px;
+  }
+  i {
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    color: $color-gray;
+    font-family: "iconsmind" !important;
+    @include max-1199 {
+      font-size: 75px;
+    }
+
+    @include max-767 {
+      font-size: 70px;
+    }
+  }
+}

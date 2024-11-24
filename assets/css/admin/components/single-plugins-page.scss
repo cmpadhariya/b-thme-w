@@ -1,0 +1,232 @@
+//Plugins Post type single page css start
+
+.single-post{
+    ul {
+        list-style: disc;
+        margin-left: 20px;
+    }
+
+    &__inner{
+        h1,h2,h3,h4,h5,h6{
+            color: #333;
+        }
+        .wp-block-post-title{
+            color: $color-black;
+        }
+        &_content{
+            .wp-block-post-featured-image{
+                margin: 10px 0px 30px 0px;
+                img{
+                    border-radius: 5px;
+                }
+            }
+            .wp-block-post-content{
+                p{
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 400;
+                    color: #696969;
+                    font-family: $primary-family;
+                    letter-spacing: .5px;
+                    padding: 0px 0px 10px 0px;
+                    a{
+                        color: $color-black;
+                        text-decoration: underline;
+                    }
+                }
+                h2{
+                    font-size: 30px;
+                    line-height: 36px;
+                    font-weight: 500;
+                    padding: 20px 0px 10px 0px;
+                    font-family: $heading-family;
+                    a{
+                        color: $color-black;
+                    }
+                    strong{
+                        display: block;
+                        color: #333;
+                    }
+                }
+                h3{
+                    font-size: 26px;
+                    line-height: 32px;
+                    font-weight: 400;
+                    padding: 10px 0px 10px 0px;
+                    font-family: $heading-family;
+                    a{
+                        color: #494F55;
+                    } 
+                }
+                ul,ol{
+                    padding: 10px 0 0px 0px;
+                    li{
+                        font-size: 17px;
+                        line-height: 22px;
+                        font-weight: 400;
+                        color: $color-gray;
+                        font-family: $primary-family;
+                        ul,ol{
+                            padding: 5px 0px 5px 0px;
+                        }
+                    }
+                    li:not(:last-child){
+                        padding: 0px 0px 5px 0px;
+                    }
+                }
+            }
+        }
+        @include max-991{
+            &_content{
+                .wp-block-post-content{
+                    p{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    h2{
+                        font-size: 26px;
+                        line-height: 34px;
+                    }
+                }
+            }
+        }
+        @include max-767{
+            &_content{
+                .wp-block-post-content{
+                    p{
+                        font-size: 17px;
+                        line-height: 26px;
+                    }
+                    h2{
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+                    h3{
+                        font-size: 23px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        @include max-575{
+            &_content{
+                padding-top: 30px;
+                .wp-block-post-featured-image{
+                    margin: 0px 0 30px;
+                }
+            }
+        }
+        @include max-425{
+            &_content{
+                .wp-block-post-content{
+                    p{
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                    h2{
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    h3{
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    ul,ol{
+                        li{
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Plugins Post type single page editor side css start
+.post-type-plugins{
+    .is-root-container{
+        p{
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: .5px;
+            padding: 0px 0px 10px 0px;
+        }
+        h2{
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 500;
+            color: #333;
+            padding: 20px 0px 10px 0px;
+        }
+        h3{
+            font-size: 26px;
+            line-height: 32px;
+            font-weight: 400;
+            color: #333;
+            padding: 10px 0px 10px 0px;
+        }
+        h4,h5,h6{
+            color: #333;
+        }
+        ul,ol{
+            padding-bottom: 20px;
+            li{
+                font-size: 17px;
+                line-height: 22px;
+                font-weight: 400;
+                color: $color-gray;
+                padding: 0px 0px 5px 0px;
+                font-family: $primary-family;
+            }
+        }
+    }
+    @include max-991{
+        .is-root-container{
+            p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+    @include max-767{
+        .is-root-container{
+            padding: 0px 20px;
+            h2{
+                font-size: 24px;
+                line-height: 30px;
+            }
+            h3{
+                font-size: 23px;
+                line-height: 30px;
+            }
+            p{
+                font-size: 17px;
+                line-height: 26px;
+            }
+        }
+    }
+    @include max-425{
+        .is-root-container{
+            h2{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 22px;
+            }
+            h3{
+                font-size: 18px;
+                line-height: 24px;
+            }
+            ul,ol{
+                li{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}

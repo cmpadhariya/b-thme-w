@@ -1,0 +1,390 @@
+@import '../variable/_variable-v2.scss';
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../fonts/google/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../fonts/google/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../../fonts/google/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../fonts/google/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../../fonts/google/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../../fonts/google/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/************************************/
+/*****        01. General css         ****/
+/************************************/
+.editor-styles-wrapper {
+  overflow-x: visible !important;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $global-family;
+}
+
+body.scrolled {
+  overflow-x: visible;
+}
+
+html.has-modal-open {
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover, a {
+  text-decoration: none;
+  outline: 0;
+  font-family: $global-family;
+}
+
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+*,
+::after, ::before {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+button:focus, input:focus, img:focus, .slick-slide:focus, textarea:focus, input:focus {
+  outline: none;
+}
+
+body h1 {
+  font-size: 48px;
+  line-height: 62px;
+  font-style: normal;
+  font-weight: 600;
+  background: linear-gradient(to right, #434343, #18181b, #18181b);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  @include max-1199 {
+    font-size: 42px;
+    line-height: 56px;
+  }
+
+  @include max-991 {
+    font-size: 35px;
+    line-height: 52px;
+  }
+
+  @include max-767 {
+    font-size: 33px;
+    line-height: 50px;
+  }
+
+  @include max-575 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include max-425 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 600;
+  background: linear-gradient(to right, #434343, #18181b, #18181b);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  @include min-1400 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @include max-991 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  @include max-575 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  @include max-425 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: $description-text-color;
+
+  @include max-991 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @include max-575 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $description-text-color;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  padding-left:0px;
+
+  @include min-1400 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include max-991 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  @include max-425 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: $description-text-color;
+  font-family: $global-family;
+}
+
+.description-primary {
+  font-size: 20px;
+  line-height: 30px;
+
+  @include max-991 {
+    font-size: 18px;
+  }
+
+  @include max-575 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.description-secondary {
+  font-size: 16px;
+  line-height: 24px;
+
+  @include min-1400 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @include max-991 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include max-425 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.button-general {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $color-white;
+  background: rgba(0, 0, 0, 0.83);
+  display: block;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 8px;
+
+  &:hover {
+    transition: all 500ms;
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  @include max-767 {
+    padding: 10px 18px;
+  }
+}
+
+.qt-color-red {
+  background-color: $text-bg-red;
+  color: $text-color-red;
+}
+
+.qt-color-green {
+  background-color: $text-bg-green;
+  color: $text-color-green;
+}
+
+.page-header-section__inner--subtitle .qt-subtitle-with-icon {
+  border: 1px solid #a1a1aa;
+  border-radius: 50px;
+  padding: 5px 12px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
+  width: fit-content;
+}
+.page-header-section__inner--subtitle .qt-subtitle-without-icon {
+  border: 1px solid #a1a1aa;
+  border-radius: 12px;
+  padding: 5px 12px;
+  background-color: $color-white;
+  width: fit-content;
+}
+
+.section-padding {
+  padding: 70px 0px;
+
+  @include max-767 {
+    padding: 50px 20px;
+  }
+
+  @include max-425 {
+    padding: 40px 20px;
+  }
+}
+
+.common-padding {
+  padding: 40px 0px;
+
+  @include max-767 {
+    padding: 40px 20px;
+  }
+}
+
+.qt-padding-30 {
+  padding: 30px 0px;
+
+  @include max-767 {
+    padding: 30px 20px;
+  }
+}
+
+.qt-padding-20 {
+  padding: 20px 0px;
+
+  @include max-767 {
+    padding: 20px 20px;
+  }
+}
+
+.section-padding-rl-0 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.section-pt-0 {
+  padding-top: 0;
+}
+
+.section-pb-0 {
+  padding-bottom: 0;
+}
+
+.section-bg {
+  background-color: $bg-color;
+}
+
+.page-banner-bg {
+  background-color: $color-light-gray;
+}
+
+.position-hero-bg {
+  background-color: $black-bg-color;
+}
+
+.top-left-right-radius {
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+
+.blog-icon {
+  &::after {
+    content: "";
+    font-family: "fontello";
+    vertical-align: middle;
+    margin-left: 7px;
+  }
+}

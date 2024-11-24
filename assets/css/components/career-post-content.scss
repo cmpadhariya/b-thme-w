@@ -1,0 +1,28 @@
+.career__post-content_inner {
+    p,
+    ul li {
+      list-style: disc;
+      font-weight: 400;
+      color: #696969;
+      font-family: $primary-family;
+      font-size: 16px;
+      line-height: 24px;
+      @include max-575 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    p,
+    ul {
+      margin-bottom: 30px;
+      @include max-991 {
+        margin-bottom: 20px;
+      }
+      @include max-425 {
+        margin-bottom: 10px;
+      }
+    }
+    ul {
+      padding-left: 17px;
+    }
+  }

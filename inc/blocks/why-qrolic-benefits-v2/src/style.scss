@@ -1,0 +1,300 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import "../../../../assets/css/variable/variable-v2";
+
+.qt-benefits-color-blue {
+    background-color: #1e293b;
+}
+
+.qt-benefits-color-lightblue {
+    background-color: #075985;
+}
+
+.qt-benefits-color-darkgreen {
+    background-color: #164e63;
+}
+
+.qt-benefits-color-green {
+    background-color: #064e3b;
+}
+
+.why-qt-benefits {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        position: relative;
+
+        &_box {
+            border-radius: 24px;
+            overflow: hidden;
+            position: sticky;
+            top: 100px;
+
+            @include max-991 {
+                padding: 40px 40px;
+                top: 80px;
+                height: 100%;
+                min-height: 435px;
+            }
+
+            @include max-767 {
+                min-height: 515px;
+            }
+
+            @include max-575 {
+                padding: 20px 20px;
+                min-height: 395px;
+            }
+
+            @include max-425 {
+                min-height: 405px;
+            }
+
+            .row {
+                height: 522px;
+
+                @include max-991 {
+                    gap: 40px 0px;
+                    height: unset;
+                }
+
+                @include max-575 {
+                    gap: 30px;
+                }
+
+                .col-lg-4 {
+                    @include max-991 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.why-qt-benefits__inner_text {
+    padding: 64px 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include max-1199 {
+        padding: 40px 0 40px 40px;
+    }
+
+    @include max-991 {
+        padding: 0px 0px 0px 0px;
+    }
+
+    h2, p, li, span, strong, a {
+        color: $color-white;
+        background: unset;
+        -webkit-text-fill-color: unset;
+        -webkit-background-clip: unset;
+    }
+
+    &--heading {
+        margin-left: 64px;
+
+        @include max-575 {
+            margin-left: 56px;
+        }
+
+        h2 {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -56px;
+                width: 42px;
+                height: 42px;
+                background: #ffffff1f;
+                border: 6px solid $color-white;
+                border-radius: 50%;
+            }
+        }
+
+        p {
+            position: relative;
+            padding: 36px 0px 20px 0px;
+
+            @include min-1400 {
+                font-size: 22px;
+                line-height: 32px;
+            }
+
+            @include max-991 {
+                padding: 30px 0px 15px 0px;
+            }
+
+            @include max-575 {
+                padding: 20px 0px 10px 0px;
+            }
+
+            @include max-425 {
+                padding: 15px 0px 5px 0px;
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -38px;
+                width: 1px;
+                height: 100%;
+                background: $color-white;
+            }
+        }
+    }
+
+    &--list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        @include max-425 {
+            gap: 5px;
+        }
+
+        li {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 28px;
+            text-align: left;
+            border: 1px solid #ffffff1f;
+            border-radius: 24px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            @include min-1400 {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            @include max-991 {
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            @include max-575 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            @include max-425 {
+                font-size: 16px;
+                line-height: 22px;
+                padding: 10px;
+            }
+
+            i {
+                background: #ffffff33;
+                border: 1px solid #ffffff33;
+                border-radius: 12px;
+                min-width: 40px;
+                min-height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    margin: 0;
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    }
+
+    &--button {
+        display: flex;
+        align-items: center;
+        gap: 10px 36px;
+        flex-wrap: wrap;
+
+        a {
+            font-size: 18px;
+            line-height: 26px;
+            display: block;
+
+            @include min-1400 {
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            @include max-991 {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        a.why-qt-benefits__btnwhite {
+            padding: 16px 32px 16px 32px;
+            border-radius: 12px;
+            background: #f6f6f6;
+            color: $color-black;
+            font-weight: 700;
+
+            @include max-575 {
+                padding: 11px 20px 10px 20px;
+            }
+
+            &::after {
+                content: "\E01B";
+                font-family: "fontello";
+                margin-left: 20px;
+                vertical-align: middle;
+                font-size: 24px;
+                display: inline-block;
+                margin-bottom: -1px;
+                font-weight: 100;
+
+                @include max-425 {
+                    margin-left: 15px;
+                    font-size: 22px;
+                    margin-bottom: 1px;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    transition: all 500ms;
+                    transform: translateX(5px);
+                }
+            }
+        }
+
+        a.why-qt-benefits__btnlink {
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+}
+
+.why-qt-benefits__inner_image {
+    height: 100%;
+    display: flex;
+    align-items: end;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 24px 0 0 0px;
+        transform: translate(10px, 10px);
+
+        @include max-991 {
+            border-radius: 24px;
+            transform: translate(0px, 0px);
+        }
+    }
+}

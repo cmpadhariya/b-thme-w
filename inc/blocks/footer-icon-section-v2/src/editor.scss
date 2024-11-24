@@ -1,0 +1,26 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import "../../../../assets/css/variable/variable-v2";
+ .foot-icon-text__inner_box--img {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	
+	.foot-icon-text__buttons {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 10px 0px;
+	}
+	img {
+		width: auto !important;
+	}
+    span{
+        display: block;
+        font-family: $global-family;
+    }
+ }

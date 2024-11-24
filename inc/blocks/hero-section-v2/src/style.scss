@@ -1,0 +1,220 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable-v2.scss';
+
+.hero-section{
+	&__inner{
+		margin: 0px 0px 30px 0px;
+		&--content{
+			padding-right: 10px;
+			p.subtitle-heading{
+                color: $subheading-text-color;
+				border: 1px solid #a1a1aa;
+				font-weight: 600;
+                width: fit-content;
+                padding: 4px 12px;
+                border-radius: 12px;
+			}
+			.main-title{
+				-webkit-text-fill-color: #18181b;
+				padding: 16px 0px 24px 0px;
+				position: relative;
+				span.clipped{
+					position: absolute;
+					top: 72px;
+					right: 64px;
+					width: 328px;
+					height: 78px;
+					background-color: transparent;
+					clip-path: polygon(-70% -20%, 75% -300%, 104% 100%, 25% 98%);
+					border: solid 5px #E4E7EC;
+					border-radius: 100%;
+					display: block;
+					z-index: -1;
+				}
+			}
+			p.main-description{
+				font-family: $global-family;
+				padding-left: 0px;
+				font-weight: 400;
+			}
+			.hero-buttons{
+				display: flex;
+				align-items: center;
+				gap: 0px 24px;
+				margin-top: 48px;
+				a.hero-black-button{
+					background-color: #292929;
+					border: 1px solid #292929;
+					text-decoration: none;
+					&:hover{
+						transition: all 500ms;
+						background-color: $color-black;
+					}
+				}
+				a.hero-gray-button{
+					background-color: $color-light-gray;
+					color: $color-black;
+					border: 1px solid #C9C9C9;
+					text-decoration: none;
+					&:hover{
+						transition: all 500ms;
+						background-color: #292929;
+						color: $color-white;
+					}
+				}
+			}
+		}
+		&--image{
+			video{
+				width: 100%;
+				height: 100%;
+				border-radius: 29px;
+			}
+			img{
+				height: 100%;
+				border-radius: 29px;
+			}
+			span.add-items{
+				visibility: hidden;
+				text-align: center;
+				position: absolute;
+				top: -20px;
+				left: -8px;
+				z-index: 1;
+				color: $color-black;
+			}
+			button.icon-doc-add{
+				position: relative;
+				&:hover{
+					span.add-items{
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	@include min-1400{
+		&__inner{
+			&--content{
+				.main-title{
+					font-size: 56px;
+    				line-height: 70px;
+					span.clipped{
+						top: 76px;
+						right: 80px;
+						width: 370px;
+						height: 90px;
+					}
+				}
+				p{
+					font-size: 20px;
+    				line-height: 32px;
+				}
+			}
+			&--image{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-1199{
+		&__inner{
+			&--content{
+				.main-title{
+					span.clipped{
+						top: 68px;
+						right: 28px;
+						width: 290px;
+						height: 70px;
+					}
+				}
+				.hero-buttons{
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	@include max-991{
+		&__inner{
+			&--content{
+				padding: 0px 0px 40px 0px;
+				.main-title{
+					span.clipped{
+						top: 66px;
+						right: unset;
+						left: -10px;
+						width: 240px;
+						height: 60px;
+					}
+				}
+			}
+			&--image{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-767{
+		&__inner{
+			margin: 0px 0px 10px 0px;
+			&--content{
+				.main-title{
+					span.clipped{
+						top: 62px;
+						right: unset;
+						left: -12px;
+						width: 230px;
+						height: 59px;
+					}
+				}
+				.hero-buttons{
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	@include max-575{
+		&__inner{
+			&--content{
+				.main-title{
+					span.clipped{
+						display: none;
+					}
+				}
+				.hero-buttons{
+					gap: 0px 20px;
+					a{
+						font-size: 14px;
+    					line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-425{
+		&__inner{
+			margin: 0px 0px 0px 0px;
+			&--content{
+				.hero-buttons{
+					flex-direction: column-reverse;
+        			align-items: baseline;
+					gap: 10px 0px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

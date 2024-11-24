@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/why-choose-section-v2",
+  "version": "0.1.0",
+  "title": "Why Choose Section V2",
+  "category": "qrolic",
+  "icon": "dashicons-buddicons-buddypress-logo",
+  "description": "This block is used in services single page. This section shows the advantage of choosing our company qrolic. Which includes icon, title and short description.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "subtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".top-subheading"
+    },
+    "icontop": {
+      "type": "string",
+      "default": ""
+    },
+    "h2heading": {
+      "type": "string",
+      "source": "html",
+      "selector": ".main-heading"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".description-primary"
+    },
+    "items": {
+      "type": "array",
+      "default": [],
+      "source": "query",
+      "selector": ".why-choose-section-v2__inner_item-box",
+      "query": {
+        "icon": {
+          "type": "string",
+          "source": "attribute",
+          "attribute": "class",
+          "selector": ".icon i"
+        },
+        "heading": {
+          "type": "string",
+          "source": "html",
+          "selector": ".heading h3"
+        },
+        "description": {
+          "type": "string",
+          "source": "html",
+          "selector": ".heading p"
+        }
+      }
+    }
+  },
+  "textdomain": "why-choose-section-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

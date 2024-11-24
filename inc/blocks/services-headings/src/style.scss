@@ -1,0 +1,130 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable.scss';
+
+.services-headings{
+	&__inner{
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		h1,p{
+			margin: 0;
+		}
+		h1{
+			text-align: center;
+		}
+		p{
+			font-size: 16px;
+  			line-height: 24px;
+			padding: 30px 0px 20px 0;
+			text-align: center;
+		}
+		ul{
+			li{
+				display: flex;
+    			align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 400;
+				color: $color-gray;
+				font-family: $primary-family;
+				a{
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: 500;
+					color: $color-black;
+					padding-left: 5px;
+					cursor: pointer;
+					text-decoration: none;
+					&:hover{
+						transition: all 500ms;
+						text-decoration: underline;
+					}
+				}
+				p{
+					padding: 0;
+					color: #585858;
+				}
+			}
+			li:first-child{
+				padding: 0px 0px 20px 0px;
+				font-style: italic;
+			}
+		}
+		.sub-menu{
+			display: flex;
+			align-items: center;
+			li:first-child{
+				padding: 0px 0px 0px 0px;
+				font-style: inherit;
+			}
+			li{
+				padding: 0px 0px 0px 0px;
+			}
+		}
+		@include max-991{
+			ul{
+				li{
+					font-size: 15px;
+					a{
+						font-size: 15px;
+					}
+				}
+			}
+			p{
+				font-size: 15px;
+			}
+		}
+
+		@include max-575{
+			.sub-menu{
+				flex-wrap: wrap;
+			}
+			ul{
+				li{
+					font-size: 14px;
+					line-height: 22px;
+					a{
+						font-size: 14px;
+						line-height: 22px;
+					}
+				}
+				li:first-child{
+					flex-wrap: wrap;
+				}
+			}
+			p{
+				font-size: 14px;
+    			line-height: 22px;
+			}
+		}
+		@include max-425{
+			ul{
+				li{
+					a{
+						font-size: 13px;
+    					line-height: 20px;
+					}
+				}
+			}
+		}
+		@include max-360{
+			ul{
+				li{
+					flex-wrap: wrap;
+					.sub-menu{
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}

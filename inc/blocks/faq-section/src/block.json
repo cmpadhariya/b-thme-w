@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/faq-section",
+	"version": "0.1.0",
+	"title": "Faq Section",
+	"category": "qrolic",
+	"icon": "  dashicons-lightbulb ",
+	"description": "This is a FAQ section block. Two simple texts are used in this block, one for the question and one for the answer.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "faq-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"question": {
+            "type": "string",
+            "default": "Add New Question"
+        },
+		"answer":{
+            "type": "string",
+            "default": "Add New Answer"
+        }
+	}
+}

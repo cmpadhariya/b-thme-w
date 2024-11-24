@@ -1,0 +1,67 @@
+//This scss is used for the pattern named author-details-section-v2-pattern of current author in author single page.
+
+.author-v2 {
+    &__inner {
+        .wp-block-post-author{
+            @include max-767{
+                flex-direction: column;
+            }
+        }
+        .wp-block-post-author__avatar {
+            padding-right: 20px;
+            margin: 0;
+            @include max-767{
+                padding-right: 0px;
+                padding-bottom: 20px;
+            }
+
+            img {
+                border-radius: 10px;
+                border: 1px solid;
+                border-image-source: linear-gradient(104.31deg, #D4D4D8 0%, #F4F4F5 50%, #D4D4D8 100%);
+            }
+
+        }
+
+        .wp-block-post-author__content {
+            .wp-block-post-author__name {
+                position: relative;
+                padding: 0 0 10px 0;
+                font-size: 26px;
+                line-height: 32px;
+                font-weight: 600;
+                color: $color-black;
+
+                @include min-1400 {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+
+                @include max-425 {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+
+                a {
+                    color: $color-black;
+                }
+            }
+
+            .wp-block-post-author__bio {
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 400;
+
+                @include min-1400 {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+
+                @include max-767 {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

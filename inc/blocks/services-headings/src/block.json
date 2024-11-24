@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/services-headings",
+	"version": "0.1.0",
+	"title": "Services Headings",
+	"category": "qrolic",
+	"icon": "buddicons-pm",
+	"description": "This block is a services headings block, this block display services title,description and other service related information.",
+	"supports": {
+		"html": false,
+		"color":{
+			"text": true,
+			"link": true,
+			"background": true
+		}
+	},
+	"textdomain": "services-headings",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"keywords": ["list", "ul", "unordered list"],
+	"attributes": {
+		"heading": {
+            "type": "string",
+            "default": "Heading",
+			"selector": "h1"
+        },
+		"subheading":{
+            "type": "string",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+		"description":{
+			"type": "string",
+            "default": ""
+		},
+		"descriptiontext":{
+			"type": "string",
+            "default": "web design"
+		},
+		"descriptionlink":{
+			"type": "string",
+            "default": "Add service link"
+		},
+		"relatedservice":{
+			"type": "string",
+            "default": "",
+			"selector": "p"
+		},
+		"relatedservicetextone":{
+			"type": "string",
+            "default": ""
+		},
+		"relatedservicelinkone":{
+			"type": "string",
+            "default": ""
+		},
+		"relatedservicetexttwo":{
+			"type": "string",
+            "default": ""
+		},
+		"relatedservicelinktwo":{
+			"type": "string",
+            "default": ""
+		},
+		"items": {
+			"type": "array",
+			"default": []
+		}
+	}
+}

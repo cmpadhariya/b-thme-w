@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/why-qrolic-benefits-v2",
+  "version": "0.1.0",
+  "title": "Why Qrolic Benefits V2",
+  "category": "qrolic",
+  "icon": "admin-users",
+  "description": "This section showcases the key benefits of partnering with Qrolic, emphasizing our commitment to quality, transparency, and continuous support. And A block to display benefits with a title, description, list, and buttons.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "items": {
+      "type": "array",
+      "default": [ { "text": "" } ]
+    },
+    "buttonText1": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonURL1": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText2": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonURL2": {
+      "type": "string",
+      "default": ""
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "showButtons": {
+      "type": "boolean",
+      "default": true
+    },
+    "showList": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "why-qrolic-benefits-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

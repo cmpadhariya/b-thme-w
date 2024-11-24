@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/partner-hero-section",
+  "version": "0.1.0",
+  "title": "Partner Hero Section",
+  "category": "qrolic",
+  "icon": "  dashicons-money",
+  "description": "This section is used as hero section in partner page. This page consists of a heading, description and a partner request form.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "partner-hero-section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Heading"
+    },
+    "description": {
+      "type": "string",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "partnerform": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

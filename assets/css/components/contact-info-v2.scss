@@ -1,0 +1,175 @@
+.contact-info-v2 {
+    .wpcf7 {
+      .wpcf7-form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        .contact-form__box {
+          margin-bottom: 10px;
+          position: relative;
+          p {
+            i {
+              position: absolute;
+              left: 130px;
+              font-weight: 100;
+              top: 9px;
+              cursor: pointer;
+              color: white;
+              font-size: 26px;
+              &::before{
+                vertical-align: middle;
+              }
+              @include min-1400 {
+                left: 140px;
+                top: 10px;
+                font-size: 28px;
+              }
+            }
+          }
+        }
+        p {
+          width: 100%;
+          margin-bottom: 10px;
+          position: relative;
+        }
+        br {
+          display: none;
+        }
+        label {
+          display: block;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          color: #061C3D;
+          padding-bottom: 6px;
+          @include min-1400 {
+            font-size: 17px;
+            line-height: 22px;
+          }
+        }
+        .wpcf7-form-control {
+          display: block;
+          width: 100%;
+          -webkit-appearance: none;
+          padding: 7px 7px 7px 15px;
+          border-radius: 6px;
+          border: 1px solid rgba(230, 232, 236, 1);
+          font-size: 15px;
+          line-height: 23px;
+          color: #686868;
+          font-weight: 400;
+          @include min-1400 {
+            font-size: 17px;
+            line-height: 24px;
+          }
+          @include max-767 {
+            font-size: 14px;
+            line-height: 22px;
+          }
+          &::placeholder {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #686868;
+            @include min-1400 {
+              font-size: 17px;
+              line-height: 26px;
+            }
+            @include max-767 {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+        .wpcf7-form-control::placeholder {
+          color: #686868;
+        }
+        .wpcf7-form-control::-ms-input-placeholder {
+          color: #686868;
+        }
+        span {
+          display: block;
+          select.wpcf7-select {
+            cursor: pointer;
+            select option:checked,
+            option:hover {
+              color: white !important;
+              background-color: #555 !important;
+            }
+          }
+          textarea.wpcf7-textarea {
+            height: 110px;
+            resize: none;
+            font-family: $global-family;
+          }
+          span {
+            display: block;
+            font-size: 14px;
+            line-height: 28px;
+            font-weight: 400;
+          }
+        }
+        input.wpcf7-submit {
+          width: fit-content;
+          border-radius: 8px;
+          color: #fff;
+          background-color: rgba(39, 39, 42, 1);
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 600;
+          padding: 10px 40px 10px 20px;
+          margin-top: 10px;
+          cursor: pointer;
+          position: relative;
+          @include min-1400 {
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 500;
+          }
+          
+          &:hover {
+            transition: all 500ms;
+            background-color: #000;
+          }
+        }
+        
+        .select__icon {
+          position: absolute;
+          right: 0px;
+          top: 30px;
+          padding: 11px 13px;
+          border-left: 1px solid $color-gray;
+          z-index: -1;
+  
+          &::before {
+            margin: 0;
+            padding: 0;
+            color: $color-gray;
+          }
+        }
+        .wpcf7-spinner {
+          top: 18px;
+          right: 30px;
+          background-color: $color-white;
+          opacity: 1;
+          margin: 0;
+          padding: 0;
+        }
+        .wpcf7-spinner::before {
+          background-color: $color-black;
+        }
+        .wpcf7-response-output {
+          width: 100%;
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: 400;
+          color: $color-black;
+          margin: 0;
+          padding: 0px 5px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+  

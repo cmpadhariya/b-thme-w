@@ -1,0 +1,458 @@
+//This file is used to design the list of blogs in the blog archive (list) page in the editor side.
+
+.blog-list {
+    &__inner {
+        h3 {
+            font-size: 24px;
+            line-height: 30px;
+            color: $black-bg-color;
+        }
+
+        ul.wp-block-post-template {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px 39px;
+            margin: 26px 0px 48px 0px;
+
+            li {
+                width: 31%;
+                display: flex;
+                flex-direction: column;
+
+                figure.wp-block-post-featured-image {
+                    margin: 0;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 12px;
+
+                    img {
+                        border-radius: 12px;
+                        object-fit: cover;
+                        transition: 0.4s;
+                    }
+                }
+
+                div.blog-list__inner--meta-top {
+                    padding: 16px 0px 6px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 0px 23px;
+
+                    time {
+                        font-size: 12px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        color: $black-bg-color;
+                        display: block;
+                    }
+
+                    div.wp-block-post-author-name {
+                        a {
+                            font-size: 15px;
+                            line-height: 23px;
+                            color: #707070;
+                            font-weight: 400;
+                            display: block;
+                        }
+                    }
+                }
+
+                h3.wp-block-post-title {
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-bottom: auto;
+
+                    &::after {
+                        content: "\E80E";
+                        font-family: "fontello";
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        font-size: 26px;
+                        opacity: 0;
+                        transform: rotate(390deg);
+                        transition: 0.4s;
+                    }
+
+                    a {
+                        color: $black-bg-color;
+                        width: 93%;
+                        text-decoration: none;
+                    }
+                }
+
+                p.wp-block-post-excerpt__excerpt {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $subheading-text-color;
+                    padding: 6px 0px 12px 0px;
+                }
+
+                div.blog-list__inner--meta {
+                    display: flex;
+                    align-items: baseline;
+                    gap: 10px 23px;
+                    padding-top: 12px;
+
+                    div.taxonomy-blog-category {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px 10px;
+                        flex-wrap: wrap;
+
+                        .wp-block-post-terms__separator {
+                            display: none;
+                        }
+
+                        a {
+                            color: #707070;
+                            padding: 6px 15px;
+                            border: 1px solid #c9c9c9;
+                            border-radius: 29px;
+                            text-decoration: none;
+                            text-align: center;
+                            display: none;
+
+                            &:nth-child(1) {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    div.wp-block-shortcode {
+                        width: fit-content;
+                        padding: 0;
+                        border: unset;
+
+                        textarea {
+                            width: auto;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 500;
+                        color: $btn-bg-dark;
+                        position: relative;
+                        padding-left: 15px;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 8px;
+                            left: 0;
+                            width: 8px;
+                            height: 8px;
+                            background-color: $color-gray;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    figure.wp-block-post-featured-image {
+                        img {
+                            transform: scale(1.15);
+                        }
+                    }
+
+                    h3.wp-block-post-title {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        nav.wp-block-query-pagination {
+            justify-content: center;
+
+            .wp-block-query-pagination-numbers {
+                display: flex;
+                margin: 0;
+
+                .page-numbers {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 500;
+                    color: $subheading-text-color;
+                    border-radius: 2px;
+                }
+
+                .current {
+                    color: $color-black;
+                    background-color: #e7e7e7;
+                }
+            }
+
+            a.wp-block-query-pagination-next,
+            a.wp-block-query-pagination-previous {
+                margin: 0;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                color: $subheading-text-color;
+                text-decoration: none;
+            }
+
+            a.wp-block-query-pagination-next::after,
+            a.wp-block-query-pagination-previous::before {
+                position: absolute;
+                font-family: "fontello";
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            a.wp-block-query-pagination-next {
+                &::after {
+                    content: "\E01B";
+                    padding-left: 8px;
+                }
+            }
+
+            a.wp-block-query-pagination-previous {
+                position: relative;
+
+                &::before {
+                    content: "\E01B";
+                    top: -1px;
+                    left: -22px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    @include min-1400 {
+        &__inner {
+            h3 {
+                font-size: 26px;
+                line-height: 32px;
+            }
+
+            ul.wp-block-post-template {
+                gap: 48px 45px;
+
+                li {
+
+                    div.blog-list__inner--meta-top {
+                        time {
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+
+                        .author-name {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+
+                    h3.wp-block-post-title {
+                        font-size: 23px;
+                        line-height: 34px;
+                    }
+
+                    p.wp-block-post-excerpt__excerpt {
+                        font-size: 16px;
+                        line-height: 22px;
+                        padding: 8px 0 14px;
+                    }
+
+                    div.blog-list__inner--meta {
+                        p {
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+                    }
+                }
+            }
+
+            nav.wp-block-query-pagination {
+                .wp-block-query-pagination-numbers {
+                    .page-numbers {
+                        width: 45px;
+                        height: 45px;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+
+                a.wp-block-query-pagination-next,
+                a.wp-block-query-pagination-previous {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+                a.wp-block-query-pagination-next::after,
+                a.wp-block-query-pagination-previous::before {
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+
+                a.wp-block-query-pagination-previous {
+                    &::before {
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-1199 {
+        &__inner {
+            ul.wp-block-post-template {
+                gap: 38px 33px;
+
+                li {
+                    h3.wp-block-post-title {
+                        font-size: 20px;
+                        line-height: 28px;
+
+                        a {
+                            width: 90%;
+                        }
+                    }
+
+                    div.blog-list__inner--meta {
+                        div.taxonomy-blog-category {
+                            font-size: 15px;
+
+                            a {
+                                padding: 6px 10px;
+                            }
+                        }
+
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-991 {
+        &__inner {
+            ul.wp-block-post-template {
+                li {
+                    width: 47.7%;
+
+                    h3.wp-block-post-title {
+                        a {
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-767 {
+        &__inner {
+            ul.wp-block-post-template {
+                gap: 30px 0px;
+                margin: 26px 0 40px;
+
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include max-575 {
+        &__inner {
+            nav.wp-block-query-pagination {
+                .wp-block-query-pagination-numbers {
+                    .page-numbers {
+                        width: 30px;
+                        height: 30px;
+                        font-size: 13px;
+                        line-height: 19px;
+                    }
+                }
+
+                a.wp-block-query-pagination-next,
+                a.wp-block-query-pagination-previous {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+                a.wp-block-query-pagination-next::after,
+                a.wp-block-query-pagination-previous::before {
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+
+                a.wp-block-query-pagination-previous {
+                    &::before {
+                        top: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-425 {
+        &__inner {
+            h3 {
+                font-size: 22px;
+                line-height: 28px;
+            }
+
+            ul.wp-block-post-template {
+                margin: 26px 0 30px;
+
+                li {
+                    h3.wp-block-post-title {
+                        font-size: 19px;
+                    }
+
+                    div.blog-list__inner--meta {
+                        p {
+                            padding-left: 10px;
+
+                            &::before {
+                                top: 9px;
+                                width: 6px;
+                                height: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            nav.wp-block-query-pagination {
+                .wp-block-query-pagination-numbers {
+                    .page-numbers {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-360 {
+        &__inner {
+            ul.wp-block-post-template {
+                li {
+                    div.blog-list__inner--meta {
+                        flex-wrap: wrap;
+                        gap: 8px 0px;
+                    }
+                }
+            }
+        }
+    }
+}

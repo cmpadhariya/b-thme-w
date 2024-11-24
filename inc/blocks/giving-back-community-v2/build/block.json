@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/giving-back-community-v2",
+  "version": "0.1.0",
+  "title": "Giving Back Community v2",
+  "category": "qrolic",
+  "icon": "  dashicons-buddicons-buddypress-logo",
+  "description": "This block includes inner Giving Back to the Community in the company.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "giving-back-community-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mainHeading": {
+      "type": "string",
+      "source": "html",
+      "selector": ".main-heading"
+    },
+    "mainDescription": {
+      "type": "string",
+      "source": "html",
+      "selector": ".main-description"
+    },
+    "headingicon": {
+      "type": "string"
+    },
+    "iconclass": {
+      "type": "string"
+    },
+    "boxes": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "imageUrl": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "linkText": {
+            "type": "string"
+          },
+          "linkUrl": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

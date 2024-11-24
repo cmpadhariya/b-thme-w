@@ -1,0 +1,208 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.we-are-hiring {
+	background-color: $bg-color;
+
+	&__subtitle {
+		display: flex;
+		justify-content: center;
+
+		&_content {
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 18px;
+			padding: 7px 15px 5px 15px;
+			border-radius: 36px;
+
+			@include min-1400 {
+				font-size: 14px;
+				line-height: 18px;
+				padding: 3px 10px 3px 10px;
+			}
+
+			@include max-575 {
+				font-size: 10px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		padding: 16px 0;
+
+		@include max-575 {
+			padding: 12px 0;
+		}
+
+		h2 {
+			font-weight: 700;
+		}
+	}
+
+	&__description {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		flex-wrap: wrap;
+		padding-bottom: 57px;
+
+		@include max-991 {
+			padding-bottom: 50px;
+		}
+
+		@include max-575 {
+			padding-bottom: 30px;
+		}
+
+		p {
+			font-weight: 500;
+			@include min-1400 {
+				font-size: 22px;
+				line-height: 32px;
+			}
+		}
+	}
+
+	&__inner {
+
+		.g-5,
+		.gx-5,
+		.g-5,
+		.gy-5 {
+			--bs-gutter-y: 2rem;
+			--bs-gutter-x: 2rem;
+		}
+
+		.row {
+			padding: 0;
+		}
+	}
+
+	&__item {
+		height: 100%;
+		padding: 40px;
+		background-color: $color-white;
+		box-shadow: 0px 1px 2px 0px rgba(85, 105, 135, 0.10);
+		border-radius: 6px;
+
+		@include max-1199 {
+			padding: 35px;
+		}
+
+		@include max-575 {
+			padding: 30px;
+		}
+
+		&_text {
+			max-height: 100%;
+			margin: auto;
+
+			h3.description-primary {
+				padding-bottom: 12px;
+				@include min-1400 {
+					font-size: 22px
+				}
+				@include max-575 {
+					font-size: 18px;
+				}
+				a{
+					color: $description-text-color;
+				}
+			}
+			p.description-secondary{
+				line-height: 26px;
+				@include max-991 {
+					font-size: 16px;
+					line-height: 24px;
+				}
+				@include max-425 {
+					font-size: 14px;
+        			line-height: 22px;
+				}
+			}
+			p {
+				color: #556987;
+			}
+		}
+
+		&_button {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			@include max-575 {
+				justify-content: start;
+				padding-top: 12px;
+			}
+
+			a.button-view-post-service {
+				display: inline-flex;
+				align-items: center;
+				color: $text-color-green;
+				font-weight: 500;
+				text-decoration: none;
+				transition: color 0.3s ease;
+
+				@include max-991 {
+					font-size: 16px;
+    				line-height: 24px;
+				}
+
+				@include max-425{
+					font-size: 14px;
+        			line-height: 22px;
+				}
+
+				&:hover {
+					color: $color-black;
+
+					.icon {
+						border-color: $color-black;
+						transition: border-color 0.3s ease;
+					}
+				}
+
+				.icon {
+					border: 2px solid $text-color-green;
+					margin-left: 8px;
+					border-radius: 100%;
+					display: flex;
+					width: 23px;
+					align-items: center;
+					justify-content: center;
+					transition: border-color 0.3s ease;
+					height: 23px;
+
+					&::before {
+						font-size: 15px;
+					}
+
+					@include max-1199 {
+						margin-left: 5px;
+						font-size: 14px;
+					}
+
+					@include max-991 {
+						margin-left: 10px;
+					}
+
+					@include max-575 {
+						margin-left: 5px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/single-service-block",
+	"version": "0.1.0",
+	"title": "Single Service Block",
+	"category": "qrolic",
+	"icon": "  dashicons-networking",
+	"description": "This block is used to display services related to the page top service in a single service page and the image, title and description are shown in this block.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "single-service-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"mediaID": {
+			"type": "number"
+		},
+		"image": {
+			"type": "object",
+			"selector": "js-book-details-image"
+		},
+		"url": {
+			"type": "string"
+		},
+		"title": {
+            "type": "string",
+            "default": ""
+        },
+		"description":{
+            "type": "string",
+            "default": ""
+        },
+		"Heading":{
+            "type": "string",
+            "default": ""
+        },
+		"items": {
+            "type": "array",
+            "default": [],
+			"query":{
+				"altText": {
+                	"type": "string",
+                	"default": ""
+            	}	
+			}
+        },
+		"iconclass": {
+			"type": "string",
+			"default": []
+		}
+	}
+}

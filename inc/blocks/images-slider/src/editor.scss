@@ -1,0 +1,21 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable.scss';
+
+.images-slider{
+	&__inner{
+		.splide{
+			visibility: visible !important;
+			&__list{
+				display: block !important;
+				.splide__slide{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

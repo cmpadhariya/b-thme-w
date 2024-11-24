@@ -1,0 +1,99 @@
+// Import your custom variables
+@import "../../../../assets/css/variable/_variable.scss";
+
+.services-home {
+  &__heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 0px 40px 0;
+
+    h2 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__inner {
+    &_content {
+      padding: 20px 0px 10px 0px;
+
+      h3 {
+        padding: 0 0px 10px 0px;
+        margin: 0;
+        display: inline-block;
+      }
+
+      p {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    // Media Queries
+    @include max-991 {
+      &_content {
+        p {
+          min-height: 60px;
+        }
+      }
+    }
+
+    @include max-575 {
+      &_content {
+        padding: 0px 0px 20px 0px;
+      }
+    }
+
+    @include max-425 {
+      padding: 0;
+
+      &_content {
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none !important;
+      cursor: pointer;
+    }
+  }
+}
+
+// Styles for subheading and arrow
+.services-home__inner_content {
+  &:hover {
+    .services-home__inner_text--arrow {
+      transform: translate(10px, 0px);
+    }
+  }
+}
+
+.services-home__inner_text--arrow {
+  font-size: 15px;
+  display: inline-block;
+  padding-left: 10px;
+  transition: all 400ms;
+}
+
+.services-home__inner_text--subheading .services-home__inner_text--arrow {
+  font-size: 15px;
+  display: inline-block;
+  padding-left: 5px;
+  color: $color-black;
+
+  // Media Queries
+  @include max-767 {
+    font-size: 13px;
+  }
+
+  @include max-425 {
+    font-size: 12px;
+  }
+}

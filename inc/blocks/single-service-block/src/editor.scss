@@ -1,0 +1,45 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable.scss';
+
+.single-service__inner{
+    &_content{
+        height: 400px;
+        @include max-1199{
+            height: 420px;
+        }
+        @include max-991{
+            height: 380px;
+        }
+        @include max-767{
+            height: 435px;
+        }
+        @include max-575{
+            height: auto;
+        }
+        .image{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            button{
+                padding: 6px 0px;
+            }
+            &-inner{
+                button:first-child{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .remove-button{
+        @include max-575{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}

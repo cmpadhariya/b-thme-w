@@ -1,0 +1,209 @@
+//import variable scss file.
+@import "../../../../assets/css/variable/variable-v2";
+
+.single-service-section-v2 {
+	&__inner {
+		&_heading {
+			display: flex;
+			margin-bottom: 48px;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+
+			@include max-767 {
+				margin-bottom: 30px;
+			}
+
+			@include max-575 {
+				margin-bottom: 30px;
+			}
+
+			.main-heading {
+				padding: 10px 0 10px 0;
+			}
+
+			p {
+				font-weight: 400;
+				color: $description-text-color;
+
+				@include min-1400 {
+					font-size: 22px;
+					line-height: 32px;
+				}
+
+				@include max-767 {
+					br {
+						display: none;
+					}
+				}
+			}
+
+			&-subheading {
+				border: 1px solid #a1a1aa;
+				border-radius: 50px;
+				padding: 5px 8px;
+				display: flex;
+				align-items: baseline;
+				box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+
+				p {
+					font-size: 16px;
+					line-height: 22px;
+					padding-left: 5px;
+					font-weight: 600;
+
+					@include min-1400 {
+						font-size: 17px;
+						line-height: 24px;
+					}
+
+					@include max-767 {
+						font-size: 14px;
+						line-height: 20px;
+					}
+
+					@include max-425 {
+						font-size: 12px;
+						line-height: 18px;
+					}
+				}
+
+				i {
+					font-size: 18px;
+
+					@include max-767 {
+						font-size: 16px;
+						line-height: 20px;
+					}
+
+					@include max-425 {
+						font-size: 14px;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+
+		&_item {
+			.editor-styles-wrapper .row {
+				--bs-gutter-x: 1.5rem;
+				--bs-gutter-y: 2.5rem;
+			}
+
+			.m-left {
+				gap: 30px 40px;
+
+				@include max-1199 {
+					gap: 30px 34px;
+				}
+
+				@include max-991 {
+					gap: 30px 22px;
+				}
+
+				@include max-575 {
+					gap: 25px 15px;
+				}
+
+				@include max-425 {
+					gap: 25px 0;
+				}
+			}
+
+			.content-width {
+				width: 31%;
+
+				@include max-767 {
+					width: 47%;
+				}
+
+				@include max-425 {
+					width: 100%;
+				}
+			}
+
+			&-box {
+				position: relative;
+				padding: 18px;
+				border-radius: 12px;
+				border: 1px solid #d1d1d1;
+				height: 100%;
+				overflow: hidden;
+				box-shadow: 0 256px 102px 0 rgba(0, 0, 0, 0.01);
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					width: 0;
+					height: 2px;
+					background: #000;
+					transition:
+						width 0.3s ease-in-out,
+						left 0.3s ease-in-out;
+				}
+
+				&:hover::after {
+					width: 100%;
+					left: 0;
+				}
+
+				.icon {
+					display: flex;
+					justify-content: center;
+					align-items: baseline;
+
+					i {
+						color: #e7e7e7;
+						font-size: 50px;
+
+						@include max-767 {
+							font-size: 35px;
+						}
+
+						@include max-425 {
+							font-size: 30px;
+						}
+					}
+				}
+
+				.heading {
+					display: flex;
+					justify-content: center;
+					text-align: center;
+					padding: 12px 0 8px 0;
+
+					h3 {
+						@include min-1400 {
+							font-size: 22px;
+							line-height: 26px;
+						}
+					}
+				}
+
+				.content {
+					display: flex;
+					justify-content: center;
+					text-align: center;
+
+					p {
+						font-size: 14px;
+						line-height: 28px;
+						color: #3d3d3d;
+
+						@include min-1400 {
+							font-size: 16px;
+							line-height: 22px;
+						}
+
+						@include max-767 {
+							font-size: 12px;
+							line-height: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

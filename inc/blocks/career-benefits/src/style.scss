@@ -1,0 +1,125 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+
+.career-benefits {
+	background: rgba(128, 128, 128, 0.1);
+	padding: 70px 0 45px 0;
+	@include max-991 {
+		padding: 60px 0 35px 0;
+	}
+	@include max-767 {
+		padding: 60px 20px 35px 20px;
+	}
+}
+.career-benefits__inner_text {
+	min-height: 340px;
+	background-color: $color-white;
+	position: relative;
+	padding: 30px 25px;
+	margin-bottom: 25px;
+	border-radius: 5px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 4px;
+		background: $color-black;
+		opacity: 0;
+		visibility: hidden;
+		bottom: 0;
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
+		left: 0;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 4px;
+		background: $color-black;
+		opacity: 0;
+		visibility: hidden;
+		bottom: 0;
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
+		right: 0;
+	}
+	&:hover {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+		-webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+		box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+	}
+	&:hover::before {
+		opacity: 1;
+		visibility: visible;
+		width: 50%;
+	}
+	&:hover::after {
+		opacity: 1;
+		visibility: visible;
+		width: 50%;
+	}
+	@include max-1199
+	 {
+		min-height: 358px;
+	}
+	@include max-991 {
+		min-height: 275px;
+	}
+	@include max-767 {
+		min-height: 330px;
+	}
+	@include max-575 {
+		min-height: auto;
+	}
+	&--img {
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
+		
+		img {
+			
+			width: 100px;
+			height: 85px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&--icon {
+		i {
+			display: flex;
+			width: 100px;
+			height: 85px;
+			border-radius: 50%;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			background: $color-gray;
+		}
+	}
+	&--subheading {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		h3 {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+	&--discription{
+		p{
+			text-align: center;
+		}
+	}
+}

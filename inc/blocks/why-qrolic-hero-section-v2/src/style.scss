@@ -1,0 +1,387 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable-v2.scss';
+
+.why-qrolic-hero-section {
+	&__inner {
+		margin: 0px 0px 30px 0px;
+
+		&--content {
+			padding-right: 10px;
+
+			p.subtitle-heading {
+				color: rgba(255, 255, 255, 1);
+				background-color: rgba(0, 0, 0, 1);
+				border: 1px solid #a1a1aa;
+				font-weight: 500;
+				width: fit-content;
+				padding: 8px 14px;
+				border-radius: 12px;
+				gap: 10px;
+				display: flex;
+				align-items: center;
+
+				span {
+					background-color: $color-white;
+					color: $color-black;
+					border-radius: 6px;
+					padding: 3px 6px;
+					font-weight: 700;
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+
+			.why-qrolic-hero-title {
+				-webkit-text-fill-color: #18181b;
+				padding: 16px 0px 24px 0px;
+				position: relative;
+				font-size: 38px;
+				line-height: 52px;
+
+			}
+
+			p.why-qrolic-hero-description {
+				font-family: $global-family;
+				padding-left: 0px;
+				font-weight: 500;
+				line-height: 32px;
+
+				span {
+					font-weight: 600;
+				}
+			}
+
+			.hero-buttons {
+				display: flex;
+				align-items: center;
+				gap: 0px 56px;
+				margin-top: 48px;
+
+				a.hero-black-button {
+					background-color: #292929;
+					border: 1px solid #292929;
+					text-decoration: none;
+					gap: 0 17px;
+					display: flex;
+					align-items: center;
+
+					&::after {
+						content: "\E01B";
+						font-family: "fontello";
+						font-size: 30px;
+						font-weight: 100;
+						font-size: 25px;
+					}
+
+					&:hover {
+						transition: all 500ms;
+						background-color: $color-black;
+						&::after {
+							transition: all 500ms;
+							transform: translateX(5px);
+						}
+					}
+				}
+
+				a.hero-gray-button {
+					color: $color-black;
+					text-decoration: underline;
+					padding: 0;
+					font-size: 16px;
+					line-height: 28px;
+					font-weight: 600;
+					background-color: unset;
+					border: unset;
+					&:hover {
+						background-color: unset;
+						color: unset;
+					}
+				}
+			}
+		}
+
+		&--image {
+			position: relative;
+
+			video {
+				width: 100%;
+				height: 100%;
+				border-radius: 29px;
+			}
+
+			&-topcontent {
+				position: absolute;
+				top: 33px;
+				left: 37px;
+				z-index: 1;
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				padding: 10px 16px;
+				background-color: rgba(246, 246, 246, 1);
+				border-radius: 12px;
+				gap: 0 10px;
+
+				p {
+					font-weight: 400;
+					color: $color-black;
+				}
+
+				i {
+					font-size: 20px;
+				}
+			}
+
+			&-buttomcontent {
+				position: absolute;
+				bottom: 30px;
+				right: 40px;
+				display: flex;
+				align-items: center;
+				gap: 0 10px;
+
+				a {
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: 600;
+					line-height: 27px;
+					color: $color-black;
+					padding: 16px 50px 16px 24px;
+					border-radius: 12px;
+					position: relative;
+					background-color: #F6F6F6;
+				}
+
+				i {
+					position: absolute;
+					font-size: 40px;
+					right: 0;
+					padding: 0 2px 0 0;
+					cursor: pointer;
+				}
+			}
+
+			img {
+				height: 100%;
+				width: 100%;
+				border-radius: 29px;
+			}
+
+			span.add-items {
+				visibility: hidden;
+				text-align: center;
+				position: absolute;
+				top: -20px;
+				left: -8px;
+				z-index: 1;
+				color: $color-black;
+			}
+
+			button.icon-doc-add {
+				position: relative;
+
+				&:hover {
+					span.add-items {
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	@include min-1400 {
+		&__inner {
+			&--content {
+				p.subtitle-heading {
+					span {
+						font-size: 12px;
+						line-height: 18px;
+					}
+				}
+
+				.why-qrolic-hero-title {
+					font-size: 44px;
+					line-height: 58px;
+				}
+
+				.hero-buttons {
+
+					a.hero-black-button,
+					a.hero-gray-button {
+						font-size: 18px;
+						line-height: 26px;
+
+						&::after {
+							font-size: 27px;
+						}
+					}
+				}
+			}
+
+			&--image {
+				&-topcontent {
+					i {
+						font-size: 22px;
+					}
+				}
+
+				&-buttomcontent {
+					padding: 10px 16px;
+
+					a {
+						font-size: 18px;
+						line-height: 26px;
+					}
+
+					i {
+						font-size: 45px;
+						padding: 2px 15px 0 0;
+					}
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-1199 {
+		&__inner {
+			&--content {
+				.why-qrolic-hero-title {
+					br {
+						display: none;
+					}
+				}
+
+				.hero-buttons {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	@include max-991 {
+		&__inner {
+			&--content {
+				padding: 0px 0px 40px 0px;
+
+				.why-qrolic-hero-title {
+					font-size: 34px;
+					line-height: 46px;
+				}
+			}
+
+			&--image {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-767 {
+		&__inner {
+			margin: 0px 0px 10px 0px;
+
+			&--content {
+				.why-qrolic-hero-title {
+					font-size: 32px;
+					line-height: 46px;
+				}
+
+				.hero-buttons {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	@include max-575 {
+		&__inner {
+			&--content {
+				.why-qrolic-hero-title {
+					font-size: 30px;
+					line-height: 42px;
+					padding: 16px 0px 20px 0px;
+				}
+				p.subtitle-heading {
+					span{
+					font-size: 10px;
+					padding: 1px 4px;
+					}
+				}
+				p.why-qrolic-hero-description {
+					line-height: 28px;
+				}
+
+				.hero-buttons {
+					gap: 0px 20px;
+
+					a {
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+
+				.hero-gray-button {
+					a {
+						padding: 10px 16px;
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+			}
+
+			&--image {
+				&-topcontent {
+					top: 20px;
+					left: 20px;
+
+					i {
+						font-size: 18px;
+					}
+				}
+
+				&-buttomcontent {
+					padding: 10px 16px;
+					bottom: 20px;
+					right: 20px;
+
+					a {
+						font-size: 14px;
+						line-height: 20px;
+						padding: 12px 45px 12px 20px;
+					}
+
+					i {
+						font-size: 33px;
+						padding: 0px 20px 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		&__inner {
+			margin: 0px 0px 0px 0px;
+
+			&--content {
+				.hero-buttons {
+					flex-direction: column;
+					align-items: baseline;
+					gap: 20px 0px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

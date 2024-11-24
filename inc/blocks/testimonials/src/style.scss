@@ -1,0 +1,151 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ 
+@import'../../../../assets/css/variable/variable';
+*{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.testimonial {
+    .splide__pagination__page.is-active {
+        background: black !important;
+        transform: scale(1.2) !important;
+    }
+    .splide__pagination{
+        position:unset;
+    }
+
+    .splide__pagination__page {
+        background: gray !important;
+    }
+    &___heading {
+        text-align: center;
+        padding: 0px 0 40px 0;
+
+        @include max-425 {
+            padding: 0px 0px 30px 0px;
+        }
+    }
+}
+ 
+ .testimonial__inner {
+
+	&_heading {
+		text-align: center;
+
+		@include max-767 {
+			font-size: 15px !important;
+		}
+
+		@include max-575 {
+			font-size: 14px !important;
+		}
+
+		@include max-425 {
+			padding: 0;
+		}
+	}
+ 
+	 &_name {
+		 font-weight: 600;
+		 padding: 10px 0;
+		 justify-content: center;
+		 display: flex;
+		 text-align: center;
+	 }
+	 
+	&_location {
+		color: $color-black;
+		justify-content: center;
+		display: flex;
+		text-align: center;
+		padding-bottom: 40px;
+
+		@include max-425 {
+			padding-bottom: 30px;
+		}
+	}
+ }
+  .testimonial {
+     .splide__pagination__page.is-active {
+         background: black !important;
+         transform: scale(1.2) !important;
+     }
+ 
+     .splide__pagination__page {
+         background: gray !important;
+     }
+      &___heading {
+          text-align: center;
+          padding: 0px 0 40px 0;
+ 
+          @include max-425 {
+              padding: 0px 0px 30px 0px;
+          }
+      }
+  }
+ 
+  .testimonial__inner {
+ 
+      &_heading {
+          color: #696969;
+          font-weight: 400;
+          font-size: 16px;
+          font-family: $primary-family;
+          line-height: 32px;
+ 
+          @include max-1199 {
+              font-size: 14px;
+              line-height: 28px;
+          }
+ 
+          @include max-767 {
+              font-size: 13px;
+              line-height: 22px;
+          }
+ 
+          @include max-575 {
+              font-size: 12px;
+              line-height: 20px;
+          }
+ 
+          @include max-425 {
+              font-size: 11px;
+              line-height: 18px;
+              padding: 0;
+          }
+      }
+ 
+      &_name {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 26px;
+          padding: 10px 0;
+          justify-content: center;
+          display: flex;
+          font-weight: 600;
+          text-align: center;
+          color: $color-black;
+          font-family: $secondary-family;
+ 
+          @include max-1199 {
+              font-size: 20px;
+              line-height: 28px;
+              padding: 12px 0;
+          }
+ 
+          @include max-767 {
+              font-size: 18px;
+              line-height: 24px;
+          }
+ 
+          @include max-575 {
+              font-size: 16px;
+              line-height: 21px;
+          }
+      }
+  }

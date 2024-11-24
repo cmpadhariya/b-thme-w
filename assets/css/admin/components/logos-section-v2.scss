@@ -1,0 +1,44 @@
+.logos-section {
+  .logos-section__inner_discription {
+    margin-bottom: 32px;
+    @include max-425 {
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      @include min-1400 {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+  .logos-section__inner_img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 48px;
+    align-items: center;
+    justify-content: center;
+    @include max-425 {
+      gap: 24px 0px;
+      flex-direction: column;
+    }
+
+    .wp-block-image {
+      margin: 0 0 0 0;
+    }
+  }
+}
+
+//gray logo image css
+.gray-logos-section {
+  .logos-section__inner_img {
+    figure{
+      img{
+        -webkit-filter: opacity(.5) drop-shadow(0 0 0 red);
+        filter: opacity(.7) drop-shadow(0 0 0 gray);
+      }
+    }
+  }
+}

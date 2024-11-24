@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/images-slider",
+  "version": "0.1.0",
+  "title": "Images Slider",
+  "category": "qrolic",
+  "icon": "slides",
+  "description": "This block is used for display company team image with slider.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "keywords": [
+    "Slider",
+    "gutenslider",
+    "Image",
+    "gutenslider",
+    "Carousel",
+    "gutenslider"
+  ],
+  "textdomain": "images-slider",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "slides": {
+      "type": "array",
+      "default": []
+    }
+  }
+}

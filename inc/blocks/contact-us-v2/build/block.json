@@ -1,0 +1,127 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/contact-us-v2",
+  "version": "0.1.0",
+  "title": "Contact Us V2",
+  "category": "qrolic",
+  "icon": "  dashicons-phone ",
+  "description": "This block displays comprehensive contact details on the contact page, including phone numbers, email addresses, office locations, and social media links, allowing users to easily get in touch or find more information.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "contact-us-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "contactform": {
+      "type": "string",
+      "default": "Add Your Shortcode"
+    },
+    "heading": {
+      "type": "string",
+      "default": "Contact info"
+    },
+    "mainheading": {
+      "type": "string",
+      "default": ""
+    },
+    "secondheading": {
+      "type": "string",
+      "default": ""
+    },
+    "topdescription": {
+      "type": "string",
+      "default": ""
+    },
+    "centertext": {
+      "type": "string",
+      "default": ""
+    },
+    "email": {
+      "type": "string",
+      "default": "Email:"
+    },
+    "emailtext": {
+      "type": "string",
+      "default": "Email Text"
+    },
+    "emaillink": {
+      "type": "string",
+      "default": "Email link"
+    },
+    "number": {
+      "type": "string",
+      "default": "Number:"
+    },
+    "numbertext": {
+      "type": "string",
+      "default": "Number Text"
+    },
+    "numberlink": {
+      "type": "string",
+      "default": "Number link"
+    },
+    "socialtext": {
+      "type": "string",
+      "default": "Social Media"
+    },
+    "twitter": {
+      "type": "string",
+      "default": "Twitter"
+    },
+    "facebook": {
+      "type": "string",
+      "default": "Facebook"
+    },
+    "instagram": {
+      "type": "string",
+      "default": "Instagram"
+    },
+    "linkedin": {
+      "type": "string",
+      "default": "Linkedin"
+    },
+    "whatsapp": {
+      "type": "string",
+      "default": "Whatsapp"
+    },
+    "addresstext": {
+      "type": "string",
+      "default": " 912, Wings Business Bay, Nr. Umiya Chowk, 150 Feet Ring Road, Rajkot (360002) – Gujarat"
+    },
+    "callheading": {
+      "type": "string",
+      "default": ""
+    },
+    "calldescription": {
+      "type": "string",
+      "default": ""
+    },
+    "callbutton": {
+      "type": "string",
+      "default": ""
+    },
+    "callbuttonlink": {
+      "type": "string",
+      "default": ""
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "imgwidth": {
+      "type": "string",
+      "default": ""
+    },
+    "imgheight": {
+      "type": "string",
+      "default": ""
+    },
+    "iconclass": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

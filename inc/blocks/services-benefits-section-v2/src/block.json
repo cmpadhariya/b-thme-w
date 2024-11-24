@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/services-benefits-section-v2",
+	"version": "0.1.0",
+	"title": "Services Benefits Section V2",
+	"category": "qrolic",
+	"icon": "buddicons-pm",
+	"description": "This block is used to show the services benefits in the services single page and the services benefits icon, title and description are shown in this block.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "services-benefits-section-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"sectionTitle": {
+            "type": "string",
+            "default": "title"
+        },
+		"sectionDescription": {
+            "type": "string",
+            "default": ""
+        },
+		"benefitsItems": {
+            "type": "array",
+            "default": []
+        }
+	}
+}

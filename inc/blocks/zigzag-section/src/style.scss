@@ -1,0 +1,121 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/_variable.scss";
+
+.zigzag {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    .alignright {
+      margin-left: auto;
+      order: 2;
+    }
+    &_image {
+      width: 49%;
+      img {
+        width: 100%;
+      }
+    }
+    &_text {
+      width: 49%;
+      .zigzag-buttons{
+        display: flex;
+        align-items: center;
+        &__two{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+      h2 {
+        margin: 0;
+      }
+      p {
+        padding: 20px 0 20px;
+      }
+      a {
+        text-decoration: none !important;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #fff;
+        background: #000;
+        display: block;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 12px 28px;
+        &:hover {
+          transition: all 500ms;
+          background-color: #555;
+          color: #fff;
+        }
+      }
+    }
+    @include max-1199 {
+      &_text {
+        h2 {
+          font-size: 38px !important;
+          line-height: 50px !important;
+        }
+      }
+      &_image{
+        img{
+          height: 314px;
+        }
+      }
+    }
+    @include max-991 {
+      flex-direction: column;
+      &_image {
+        width: 100%;
+        padding: 0;
+        order: 2;
+        img{
+          height: 100%;
+        }
+      }
+      &_text {
+        width: 100%;
+        padding: 0px 0px 20px 0px;
+        h2 {
+          font-size: 28px !important;
+          line-height: 38px !important;
+        }
+        p {
+          font-size: 14px;
+          line-height: 22px;
+          padding: 15px 0 15px;
+        }
+      }
+    }
+    @include max-767 {
+      &_text {
+        a {
+          padding: 10px 24px;
+        }
+      }
+    }
+    @include max-425 {
+      &_text {
+        h2 {
+          font-size: 26px !important;
+          line-height: 36px !important;
+        }
+        .zigzag-buttons{
+          &__two{
+            a{
+              padding: 8px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

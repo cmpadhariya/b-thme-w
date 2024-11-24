@@ -1,0 +1,638 @@
+// Header css start
+body.header-sticky-on {
+  padding-top: 75px;
+}
+
+.wp-site-blocks {
+  overflow: clip;
+}
+
+.header {
+  background-color: $color-white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+
+  .container {
+    padding: 0px 0px;
+
+    @include max-991 {
+      padding: 15px 0px;
+    }
+
+    @include max-575 {
+      padding: 15px 20px;
+    }
+  }
+
+  .is-layout-flex {
+    display: unset;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $color-white;
+    width: 100%;
+    background: $color-white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 999;
+    animation: stickySlideDown 1s forwards;
+  }
+}
+
+.qt-empty-div {
+  height: 78px;
+
+  @include max-991 {
+    height: 67px;
+  }
+}
+
+.qt-header-fix {
+  position: absolute;
+  width: 100%;
+}
+
+.header__inner_logo {
+  a {
+    .custom-logo {
+      max-width: 100%;
+      width: 150px;
+      height: 40px;
+
+      @include max-991 {
+        width: 138px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+  margin: -50px 0 0;
+  position: absolute;
+  right: -15px !important;
+  width: auto;
+  top: -60%;
+  visibility: hidden;
+  transform: translate(105%, 0px);
+  -webkit-transform: translate(105%, 0px);
+  transition: ease all 0.8s;
+  -ms-transition: ease all 0.8s;
+  -webkit-transition: ease all 0.8s;
+  opacity: 0;
+}
+
+#modal-1-content {
+  ul li {
+    ul.wp-block-navigation__submenu-container {
+      li:first-child {
+        display: none;
+      }
+    }
+  }
+
+  li.open-on-hover-click {
+    &:hover {
+      .wp-block-navigation__submenu-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  li.open-on-hover-click {
+    &:hover {
+      @include max-991 {
+        .wp-block-navigation__submenu-container {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.header__inner_menu {
+  @include max-991 {
+    display: none !important;
+  }
+
+  .menu-expand {
+    ul.wp-block-navigation__container {
+      li {
+        transform: translateX(-124%);
+        -webkit-transform: translateX(-124%);
+
+        ul.wp-block-navigation__submenu-container {
+          li {
+            transform: unset;
+            -webkit-transform: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .wp-block-navigation__container {
+    gap: 30px;
+
+    @include max-1199 {
+      gap: 20px;
+    }
+
+    @include max-991 {
+      display: none !important;
+    }
+
+    .selected {
+      &:hover {
+        .wp-block-navigation__submenu-icon {
+          transform: rotate(180deg) !important;
+        }
+      }
+
+      @include max-991 {
+        ul.wp-block-navigation__submenu-container {
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+      }
+    }
+
+    li.open-on-hover-click {
+      .wp-block-navigation__submenu-container {
+        display: none;
+
+        @include max-991 {
+          display: block;
+        }
+      }
+
+      &:hover {
+        .wp-block-navigation__submenu-container {
+          display: block;
+        }
+
+        .services-sub-menu {
+          display: none;
+          width: 550px;
+
+          @include max-1199 {
+            width: 510px;
+          }
+
+          @include max-991 {
+            width: auto;
+            display: block;
+          }
+        }
+
+        .our-work-submenu {
+          width: 205px;
+
+          @include max-991 {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    li.menu-item {
+      padding: 0px;
+    }
+
+    li.menu-items-contactus {
+      @include max-991 {
+        padding: 13px 0px;
+      }
+    }
+
+    li {
+      gap: 5px;
+      padding: 27px 0px;
+
+      @include max-991 {
+        padding: 13px 0px;
+        width: 100%;
+        transition: ease all 0.8s;
+        -webkit-transition: ease all 0.8s;
+      }
+
+      .wp-block-navigation-item__content {
+        color: $description-text-color;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        background-image: linear-gradient($color-black, $color-black);
+        background-size: 0% 1px;
+        background-repeat: no-repeat;
+        transition: background-size 0.5s;
+        background-position: 0 100%;
+
+        &:hover {
+          color: $color-black;
+          background-size: 100% 1px;
+          background-image: linear-gradient($color-black, $color-black);
+        }
+
+        @include min-1400 {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+
+      @include max-1199 {
+        ul.wp-block-navigation__submenu-container {
+          li {
+            a {
+              font-size: 15px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-items-contactus {
+      @include max-991 {
+        margin-top: auto;
+      }
+
+      a {
+        &:hover {
+          background-size: 0% 0px !important;
+        }
+
+        span {
+          display: block;
+          background-color: rgba(0, 0, 0, 0.83);
+          padding: 12px 24px;
+          color: $color-white;
+          border-radius: 8px;
+
+          &:hover {
+            transition: all 500ms;
+            background-color: $color-black;
+            color: $color-white;
+            background-size: 0% 0px;
+          }
+
+          @include max-991 {
+            padding: 12px 16px;
+          }
+        }
+
+        @include max-991 {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    li.wp-block-navigation-item .wp-block-navigation__submenu-container {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      padding-top: 0rem;
+      padding: 15px 20px;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+
+      li.wp-block-navigation-item {
+        margin-left: 0px;
+        padding: 0px 0px;
+      }
+    }
+
+    li.wp-block-navigation-item .wp-block-navigation__submenu-icon {
+      display: flex;
+      align-items: flex-end;
+      height: unset;
+      width: unset;
+      margin-left: 0px;
+      margin-bottom: -2px;
+      transition: transform 0.3s ease;
+
+      @include max-991 {
+        position: absolute;
+        top: 19px;
+        right: 0px;
+        transform: rotate(270deg);
+      }
+
+      svg {
+        width: 14px;
+        height: 14px;
+        color: $color-black;
+        margin-top: 0;
+      }
+    }
+
+    li.our-work-submenu .wp-block-navigation__submenu-icon {
+      left: 76px;
+
+      @include max-991 {
+        right: 0;
+        left: unset;
+        transform: rotate(270deg);
+      }
+    }
+  }
+}
+
+.header__inner_menu li.wp-block-navigation-item ul.wp-block-navigation__submenu-container {
+  position: absolute;
+  top: 78px;
+  width: 250px;
+  border: none;
+  box-shadow:
+    rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  li {
+    display: inline-block;
+    vertical-align: text-top;
+  }
+
+  li.wp-block-navigation-item a.wp-block-navigation-item__content {
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+    padding: 6px 0px;
+    color: $description-text-color;
+
+    &:hover {
+      background-size: 0% 1px;
+      text-decoration-line: underline;
+      transition: width 0.3s ease;
+    }
+
+    @include max-991 {
+      padding: 8px 0px 0px 0px;
+    }
+  }
+
+  li.child-toggle {
+    &::before {
+      content: "\E75E";
+      font-family: "fontello";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      transform: rotate(180deg);
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0px 0px 5px 0px;
+    }
+
+    a span {
+      padding-left: 15px;
+    }
+  }
+}
+
+.header__inner_menu li.wp-block-navigation-item ul.services-sub-menu {
+  width: 550px;
+
+  @include max-1199 {
+    width: 522px;
+  }
+
+  li {
+    width: 255px;
+
+    @include max-1199 {
+      width: 235px;
+    }
+  }
+}
+
+.header__inner_menu li.wp-block-navigation-item ul.careers-sub-menu {
+  width: 250px;
+}
+
+.header__inner_menu li.wp-block-navigation-item ul.our-work-submenu {
+  width: 205px;
+
+  @include max-991 {
+    margin: -100px 0 0 !important;
+  }
+}
+
+ul.qt-careers-sub-menu {
+  @include max-991 {
+    margin: -150px 0 0 !important;
+  }
+}
+
+.header__inner_menu .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  border: 1px solid transparent;
+}
+
+// Header css end
+
+// Sidebar CSS
+// Sidebar opening breakpoint 991
+@media screen and (max-width: 991px) {
+  .wp-block-navigation__responsive-container-open {
+    display: block !important;
+  }
+
+  .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+    display: block !important;
+    z-index: 99;
+  }
+}
+
+html[amp] {
+  .sidebar__menu {
+    .wp-block-navigation__responsive-container {
+      &-content {
+        overflow: scroll;
+        height: 100vh;
+
+        @include max-991 {
+          padding-bottom: 20px;
+        }
+
+        @include max-575 {
+          padding-bottom: 100px;
+        }
+      }
+    }
+
+    ul.wp-block-navigation__container {
+      @include max-991 {
+        height: unset;
+      }
+
+      @include max-575 {
+        height: 100vh;
+      }
+
+      li {
+        ul.wp-block-navigation-submenu {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .desctop__menu {
+    .wp-block-navigation__responsive-close {
+      .wp-block-navigation__responsive-container-content {
+        ul {
+          align-items: unset;
+
+          li {
+            ul.wp-block-navigation-submenu {
+              top: 100%;
+            }
+          }
+
+          li:hover>ul.wp-block-navigation-submenu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            min-width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.logged-in {
+  .sidebar__menu {
+    .wp-block-navigation__container {
+      padding: 120px 0px 30px 0px;
+    }
+
+    .wp-block-navigation__responsive-dialog {
+      .wp-block-navigation__responsive-container-close {
+        top: 70px;
+      }
+    }
+  }
+}
+
+.sidebar__menu {
+  display: none !important;
+
+  @include max-991 {
+    display: block !important;
+  }
+
+  .wp-block-navigation__responsive-close {
+    background: $color-white;
+  }
+
+  .wp-block-navigation__responsive-dialog {
+    .wp-block-navigation__responsive-container-close {
+      right: 30px;
+      top: 30px;
+    }
+  }
+
+  .wp-block-navigation__responsive-container-content {
+    background: $color-white;
+    display: list-item !important;
+    overflow: unset;
+    padding-top: 0 !important;
+    box-shadow:
+      rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+
+  .wp-block-navigation__container {
+    display: block !important;
+    margin: 0px auto;
+    padding: 90px 0px 30px 0px;
+    width: 80%;
+    height: 100vh;
+    border-top: 1px solid #c9c9c9;
+  }
+
+  li.wp-block-navigation-item ul.wp-block-navigation__submenu-container {
+    position: unset;
+    top: 0;
+    width: auto;
+    box-shadow: none;
+  }
+
+  .wp-block-navigation__responsive-container {
+    padding: 0;
+    width: 350px !important;
+    animation: none !important;
+    transform: translateX(-400px);
+    transition: all 500ms;
+    position: fixed !important;
+    overflow: visible;
+    height: 100vh;
+    z-index: 99;
+
+    @include max-575 {
+      width: 300px !important;
+    }
+
+    @include max-360 {
+      width: 100% !important;
+    }
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open {
+    transform: translateX(00px);
+    flex-direction: unset;
+  }
+}
+
+.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
+  margin-top: 0px;
+}
+
+.header-close-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9;
+}
+
+//This code is used to animate the header when it is sticky.
+@keyframes stickySlideDown {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-150%);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes stickySlideUp {
+  from {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

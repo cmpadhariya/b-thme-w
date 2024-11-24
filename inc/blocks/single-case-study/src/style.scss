@@ -1,0 +1,102 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+
+  .casestudy-single__inner_block{
+    &:hover > h3 a::after {
+      width: 100%;
+    }
+    h3 {
+      a {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        color: $color-black;
+        position: relative;
+        width: fit-content;
+        font-family: $heading-family;
+        text-decoration: none;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          left: 0;
+          bottom: 0;
+          background: #000;
+          -webkit-transition: all ease 200ms;
+          transition: all ease 200ms;
+        }
+        &::before {
+          content: "";
+        }
+        @include max-991{
+          font-size: 18px;
+          line-height: 28px;
+        }
+        @include max-425{
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px 0px;
+      @include max-991{
+        font-size: 15px;
+        line-height: 23px;
+      }
+      @include max-575{
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    a {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #000;
+      position: relative;
+      display: block;
+      width: fit-content;
+      text-decoration: none;
+      @include max-991{
+        font-size: 15px;
+        line-height: 23px;
+      }
+      @include max-575{
+        font-size: 14px;
+        line-height: 22px;
+      }
+      &:hover::before {
+        right: -25px;
+      }
+      &::before {
+        font-family: "fontello";
+        text-rendering: auto;
+        content: "\e01a";
+        color: $color-black;
+        -webkit-transition: all ease 200ms;
+        transition: all ease 200ms;
+        right: -20px;
+        position: absolute;
+        font-weight: 100;
+      }
+    }
+  }
+
+.casestudy-single__inner_block.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}

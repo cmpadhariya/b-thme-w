@@ -1,0 +1,67 @@
+<!-- wp:template-part {"slug":"header","theme":"qrolic","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"className":"single-heading ","layout":{"type":"default"}} -->
+<div class="wp-block-group single-heading">
+  <!-- wp:group {"className":"container p-0","layout":{"type":"default"}} -->
+  <div class="wp-block-group container p-0">
+    <!-- wp:group {"className":"single-heading__banner ","layout":{"type":"default"}} -->
+    <div class="wp-block-group single-heading__banner">
+      <!-- wp:group {"className":"single-heading__banner_inner","layout":{"type":"default"}} -->
+      <div class="wp-block-group single-heading__banner_inner">
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">Portfolio</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:shortcode -->
+        [breadcrumb]
+        <!-- /wp:shortcode -->
+      </div>
+      <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:create-block/category-portfolio /-->
+
+<!-- wp:group {"className":"portfolio-post section-padding","layout":{"type":"default"}} -->
+<div class="wp-block-group portfolio-post section-padding">
+  <!-- wp:group {"className":"container p-0","layout":{"type":"default"}} -->
+  <div class="wp-block-group container p-0">
+    <!-- wp:group {"className":"portfolio-post__inner","layout":{"type":"default"}} -->
+    <div class="wp-block-group portfolio-post__inner">
+      <!-- wp:query {"queryId":16,"query":{"perPage":3,"pages":0,"offset":0,"postType":"portfolio","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"parents":[]},"displayLayout":{"type":"list","columns":3}} -->
+      <div class="wp-block-query">
+        <!-- wp:post-template {"className":"portfolio-post__inner_box"} -->
+        <!-- wp:group {"className":"portfolio-post__inner_box\u002d\u002dimg","layout":{"type":"default"}} -->
+        <div class="wp-block-group portfolio-post__inner_box--img">
+          <!-- wp:post-featured-image {"isLink":true} /-->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"portfolio-post__inner_box\u002d\u002dcontent","layout":{"type":"default"}} -->
+        <div class="wp-block-group portfolio-post__inner_box--content">
+          <!-- wp:post-title {"level":4,"isLink":true} /-->
+        </div>
+        <!-- /wp:group -->
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-pagination {"className":"post-pagination"} -->
+        <!-- wp:query-pagination-previous /-->
+
+        <!-- wp:query-pagination-numbers /-->
+
+        <!-- wp:query-pagination-next /-->
+        <!-- /wp:query-pagination -->
+      </div>
+      <!-- /wp:query -->
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"qrolic","tagName":"footer","className":"site-footer"} /-->

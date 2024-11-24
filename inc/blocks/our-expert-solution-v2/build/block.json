@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/our-expert-solution-v2",
+  "version": "0.1.0",
+  "title": "Our Expert Solution V2",
+  "category": "qrolic",
+  "icon": "dashicons-superhero",
+  "description": "This block is used in the page named Type of website, this block section shows what kind of support and expert solutions we provide for high traffic website.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "textdomain": "our-expert-solution-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

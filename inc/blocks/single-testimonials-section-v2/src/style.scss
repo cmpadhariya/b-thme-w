@@ -1,0 +1,147 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.testimonial_single-section {
+	background-color: #27272A;
+
+	&_inner {
+		&__heading {
+			display: flex;
+			position: relative;
+			justify-content: center;
+			position: relative;
+			padding: 20px 0;
+			margin: 0 70px;
+
+			p {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 30px;
+				padding: 15px 0;
+				font-style: italic;
+				justify-content: center;
+				z-index: 1;
+				display: flex;
+				text-align: center;
+				color: $color-white;
+				padding: 0;
+				margin: 0;
+
+				@include max-767 {
+					font-size: 16px;
+					line-height: 24px;
+				}
+
+				@include max-575 {
+					font-size: 14px;
+					line-height: 22px;
+				}
+
+				@include max-425 {
+					font-size: 12px;
+					line-height: 20px;
+				}
+			}
+		}
+
+		&__title {
+			h4 {
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 32px;
+				justify-content: center;
+				display: flex;
+				text-align: center;
+				color: $color-white;
+				font-family: $global-family;
+				padding-top: 20px;
+				margin: 0;
+
+				@include max-991 {
+					padding-top: 15px;
+					font-size: 22px;
+				}
+
+				@include max-575 {
+					font-size: 20px;
+					line-height: 24px;
+					padding-top: 10px;
+				}
+			}
+		}
+
+		&__location {
+			margin-top: 10px;
+			p {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 28px;
+				justify-content: center;
+				display: flex;
+				text-align: center;
+				color: #E4E4E7;
+				font-family: $global-family;
+				margin: 0;
+
+				@include max-991 {
+					font-size: 16px;
+					line-height: 24px;
+				}
+
+				@include max-575 {
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+		}
+		.single-testimonial-textColor, .single-testimonial-textColor p{
+			color: $color-white;
+		}
+	}
+}
+
+
+.testimonial_single-section_inner__heading::after {
+	content: '';
+	position: absolute;
+	width: 95px;
+	height: 66px;
+	background-image: url('//demo.qrolic.com/qrolic/wp-content/themes/qrolic/inc/blocks/single-testimonials-section-v2/build/images/quotes.a6e5f78c.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 12px;
+	left: -62px;
+	order: 1;
+}
+
+.testimonial_single-section_inner__heading::before {
+	content: '';
+	position: absolute;
+	width: 95px;
+	height: 66px;
+	transform: rotate(177deg);
+	background-image: url('//demo.qrolic.com/qrolic/wp-content/themes/qrolic/inc/blocks/single-testimonials-section-v2/build/images/quotes.a6e5f78c.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 17px;
+	right: -66px;
+
+	@include max-1199 {
+		top: 23px;
+		right: -60px;
+	}
+
+	@include max-991 {
+		top: 30px;
+		right: -65px;
+	}
+	@include max-425 {
+		top: 45px;
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/our-review-section-v2",
+	"version": "0.1.0",
+	"title": "Our Review Section V2",
+	"category": "qrolic",
+	"icon": "awards",
+	"description": "This block is a Our Review section block, this blog get data qrolic service to client best satisfaction and happy to our team with work.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "our-review-section-v2",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+		"attributes": {
+			"title": {
+				"type": "string"
+			},
+			"SectionPadding": {
+				"type": "string",
+				"default": ""
+			},
+			"selectedReviewIds": {
+		  		"type": "array",
+        		"default": []
+			}
+		}
+}

@@ -1,0 +1,61 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+.services-list__inner_text {
+  margin-bottom: 20px;
+  &--subheading {
+    display: flex;
+    align-items: center;
+    @include max-575 {
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+      color: $color-black;
+      font-family: $heading-family;
+      div {
+        display: inline-block;
+      }
+    }
+  }
+  @include max-991 {
+    &--subheading {
+      a {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+  @include max-425 {
+    &--subheading {
+      a {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+.services-list__inner_text--arrow {
+  padding: 0px 10px;
+  transition: all 400ms;
+}
+.services-list .icon-right-1 {
+  &::before {
+    font-size: 15px;
+    line-height: 23px !important;
+  }
+}
+.services-list__inner_text:hover .services-list__inner_text--arrow {
+  transform: translate(10px, 0px);
+}

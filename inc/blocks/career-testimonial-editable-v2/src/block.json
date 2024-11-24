@@ -1,0 +1,56 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "create-block/career-testimonial-editable-v2",
+    "version": "0.1.0",
+    "title": "Career Testimonial Editable V2",
+    "category": "qrolic",
+    "icon": "awards",
+    "description": "This block features employee reviews about their experience working at our company, highlighting their satisfaction and happiness with our team and the quality of our services.",
+    "example": {},
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "SectionPadding": {
+            "type": "string",
+            "default": ""
+        },
+        "testimonials": {
+            "type": "array",
+            "default": [
+                {
+                    "image": "",
+                    "review": "",
+                    "name": "",
+                    "position": "",
+                    "reviewImage": ""
+                },
+                {
+                    "image": "",
+                    "review": "",
+                    "name": "",
+                    "position": "",
+                    "reviewImage": ""
+                },
+                {
+                    "image": "",
+                    "review": "",
+                    "name": "",
+                    "position": "",
+                    "reviewImage": ""
+                }
+            ]
+        }
+    },
+    "textdomain": "career-testimonial-editable-v2",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

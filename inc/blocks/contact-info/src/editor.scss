@@ -1,0 +1,53 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable";
+
+.contact-info {
+    .contact-info__address{
+        margin: 0;
+        li{
+            p{
+                margin: 7px 0;
+            }
+        }
+    }
+    .contact-info__inner_information {
+       
+        h2 {
+            margin: 0 0 15px 0; 
+
+        }
+
+        ul {
+            margin: 4px 0px;
+
+            li {
+                p {
+                    margin: 0 0 0 4px;
+                }
+            }
+        }
+
+        .contact-info__inner_information--message {
+            padding: 10px 0px;
+            margin: 0;
+        }
+
+        div.contact-info__inner_information--icons {
+            h3{
+                margin: 10px 0;
+            }
+            ul {
+                margin-top: 5px;
+
+                li {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+//variable add
+@import "../../../../assets/css/variable/_variable.scss";
+
+.call-to-action__inner_text{
+	p{
+		margin: 0;
+		@include max-575{
+			margin: 0px 25px;
+		}
+	}
+}
+.call-to-action__inner_heading{
+	h3{
+		margin: 0;
+		@include max-575{
+			margin: 0px 25px;
+			font-size: 20px;
+		}
+		@include max-425{
+			margin: 0px 25px;
+			font-size: 16px;
+		}
+		
+	}
+}

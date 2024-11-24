@@ -1,0 +1,215 @@
+//This file is used to design the list of casestudy in the casestudy archive (list) page in the editor side.
+
+.casestudy-list{
+    &__inner{
+        &--heading{
+            font-size: 24px;
+            line-height: 30px;
+            color: $black-bg-color;
+        }
+        ul.wp-block-post-template{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px 58px;
+            margin: 36px 0px 36px 0px;
+            li{
+                width: 47.4%;
+                padding: 24px 26px;
+                box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+                border-radius: 12px;
+                background: $color-white;
+
+                figure{
+                    margin: 0;
+                    overflow: hidden;
+                    position: relative;
+                    img{
+                        transition: all 500ms;
+                    }
+                }
+
+                h3.wp-block-post-title{
+                    padding: 26px 0px 16px 0px;
+                    a{
+                        color: $black-bg-color;
+                        text-decoration: none;
+                    }
+                }
+
+                div.taxonomy-case-studies_category{
+                    padding-bottom: 26px;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap; 
+                    gap: 16px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    .wp-block-post-terms__separator{
+                        display: none;
+                    } 
+                    a{
+                        font-size: 15px;
+                        line-height: 19px;
+                        color: #707070;
+                        width: fit-content;
+                        padding: 6px 15px;
+                        display: block;
+                        border: 1px solid #c9c9c9;
+                        border-radius: 29px;
+                        text-decoration: none;
+                    }
+                }
+
+                a.wp-block-read-more{
+                    font-size: 18px;
+                    line-height: 23px;
+                    font-weight: 600;
+                    color: $black-bg-color;
+                    position: relative;
+                    &::after{
+                        content: '\E01B';
+                        position: absolute;
+                        font-family: fontello;
+                        right: -22px;
+                        top: 1px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        transition: all 500ms;
+                    }
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    figure{
+                        a{
+                            img{
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                    a.wp-block-read-more {
+                        &::after{
+                            transform: translateX(6px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include min-1400 {
+        &__inner {
+            h3{
+                font-size: 22px;
+                line-height: 30px;
+            }
+            ul.wp-block-post-template {
+                li {
+                    width: 47.7%;
+                    h3.wp-block-post-title {
+                        font-size: 24px;
+                        line-height: 34px;
+                    }
+                    div.taxonomy-case-studies_category{
+                        a{
+                            padding: 7px 14px;
+                        }
+                    }
+                    a.wp-block-read-more {
+                        font-size: 20px;
+                        line-height: 26px;
+                        &::after{
+                            right: -26px;
+                            top: 2px;
+                            font-size: 26px;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+
+    @include max-1199 {
+        &__inner {
+            ul.wp-block-post-template {
+                gap: 36px 49px;
+                li {
+                    h3.wp-block-post-title {
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-991 {
+        &__inner {
+            ul.wp-block-post-template {
+                gap: 36px 37px;
+                li {
+                    div.taxonomy-case-studies_category {
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin-bottom: 20px;
+                    }
+                    div.taxonomy-case-studies_category{
+                        a{
+                            font-size: 12px;
+                            line-height: 17px;
+                            padding: 5px 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-767 {
+        &__inner {
+            ul.wp-block-post-template {
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include max-575 {
+        &__inner {
+            ul.wp-block-post-template {
+                gap: 30px 0px;
+                margin: 25px 0 30px 0px;
+                li{
+                    h3.wp-block-post-title {
+                        line-height: 28px;
+                    }
+                    a.wp-block-read-more {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-425 {
+        &__inner{
+            &--heading{
+                font-size: 22px;
+                line-height: 28px;
+            }
+            ul.wp-block-post-template {
+                li{
+                    h3.wp-block-post-title {
+                        font-size: 18px;
+                        line-height: 26px;
+                        padding: 20px 0 16px;
+                    }
+                    a.wp-block-read-more {
+                        font-size: 15px;
+                    }
+                }
+            }   
+        }
+    }
+}

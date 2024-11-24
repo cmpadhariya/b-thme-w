@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/our-partner-v2",
+  "version": "0.1.0",
+  "title": "Our Partner V2",
+  "category": "qrolic",
+  "icon": "  dashicons-buddicons-buddypress-logo",
+  "description": "Use this section to join our company qrolic technologies as a partner. Working with our dedicated team to further improve our success.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "our-partner-v2",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mediaID": {
+      "type": "number",
+      "default": null
+    },
+    "mediaURL": {
+      "type": "string",
+      "default": null
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "boxIconOne": {
+      "type": "string",
+      "default": ""
+    },
+    "boxTitleOne": {
+      "type": "string"
+    },
+    "boxDescriptionOne": {
+      "type": "string"
+    },
+    "boxIconTwo": {
+      "type": "string",
+      "default": ""
+    },
+    "boxTitleTwo": {
+      "type": "string"
+    },
+    "boxDescriptionTwo": {
+      "type": "string"
+    },
+    "imageHeight": {
+      "type": "string"
+    },
+    "imageWidth": {
+      "type": "string"
+    }
+  }
+}

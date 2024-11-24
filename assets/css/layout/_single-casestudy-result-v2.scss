@@ -1,0 +1,92 @@
+// This CSS For Single Case Study Result Pattern.
+.casestudy-result {
+    &__inner {
+        .row {
+            --bs-gutter-x: 3rem;
+            align-items: center;
+
+            @include max-1199 {
+                --bs-gutter-x: 1.5rem;
+            }
+
+            @include max-991 {
+                gap: 20px 0px;
+            }
+        }
+
+        &_content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            @include max-991 {
+                gap: 20px 0px;
+            }
+
+            @include max-575 {
+                gap: 15px 0px;
+            }
+
+            p {
+                font-weight: 500;
+                @include min-1400 {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                list-style: none;
+                padding-right: 40px;
+
+                @include max-991 {
+                    padding-right: 0px;
+                }
+
+                li {
+                    font-style: italic;
+                    font-weight: 300;
+                    margin-left: 27px;
+                    position: relative;
+                    color: $description-text-color;
+
+                    @include min-1400 {
+                        font-size: 22px;
+                        line-height: 32px;
+                    }
+
+                    &::before {
+                        content: "\f06d";
+                        position: absolute;
+                        top: 14px;
+                        left: -27px;
+                        vertical-align: baseline;
+                        color: #2bd9a0;
+                        font-family: fontello;
+                        font-size: 20px;
+                        line-height: 0;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+
+        &_video {
+            figure{
+                margin: 0;
+                padding: 0;
+                video {
+                    border-radius: 16px;
+                    width: 100%;
+                }
+                img{
+                    border-radius: 16px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

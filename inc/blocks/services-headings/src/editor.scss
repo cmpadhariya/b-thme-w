@@ -1,0 +1,51 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import '../../../../assets/css/variable/_variable.scss';
+
+.services-headings{
+	&__inner{
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.sub-menu{
+			li{
+				position: relative;
+				button{
+					position: absolute;
+					bottom: -30px;
+					&:hover{
+						transition: all 500ms;
+						color: gray;
+					}
+				}
+			}
+		}
+		h1,p{
+			margin: 0;
+		}
+		@include max-575{
+			.sub-menu{
+				flex-wrap: wrap;
+				li{
+					button{
+						position: unset;
+					}
+				}
+			}
+		}
+	}
+}
+.components-panel__body{
+	.components-panel__row{
+		padding-bottom: 10px;
+		button{
+			border: 1px solid #000;
+		}
+	}
+}

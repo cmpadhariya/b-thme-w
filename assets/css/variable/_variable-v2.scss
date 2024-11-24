@@ -1,0 +1,81 @@
+
+// colors 
+$text-bg-green:#DCFCE7;
+$text-color-green: #1A7422;
+$text-bg-red:#FFF0F0;
+$text-color-red: #D81313;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray: #808080;
+$color-light-gray: #F6F6F6;
+$heading-color: #000000;
+$bg-color: #F2F4F7; 
+$black-bg-color: #27272A;
+$subheading-text-color: #344054;
+$description-text-color: #101828;
+$btn-bg-dark:rgba(0, 0, 0, 0.83);
+
+// font family
+$global-family: 'Inter', sans-serif;
+
+@font-face {
+  font-family: "fontello";
+  src: '/assets/fonts/fontello/font/fontello.woff2' format('woff2');
+  font-display: swap;
+}
+
+// responsive breakpoints:
+@mixin min-1920 {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin min-1440 {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin min-1400 {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin max-1199 {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin max-991 {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin max-767 {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin max-575 {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin max-425 {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin max-375 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin max-360 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}

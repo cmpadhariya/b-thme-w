@@ -1,0 +1,67 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/variable-v2";
+
+.contact-info-v2 {
+
+	&__inner {
+
+		&_information {
+			padding: 72px 0 72px 72px;
+			background-color: rgba(39, 39, 42, 1);
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			@include max-767 {
+				margin-top: 30px;
+				padding: 25px;
+				border-radius: 0 0 24px 24px;
+			}
+			&-email {
+				display: flex;
+				p.rich-text {
+					opacity: .5;
+				}
+			}
+			&-phone {
+				display: flex;
+				p.changecolor {
+					opacity: .5;
+				}
+			}
+			&-address {
+				display: flex;
+			}
+		}
+	}
+	&__bookcall {
+		&_box {
+			button.components-button {
+				height: 100%;
+				color: $color-white;
+			}
+			&-heading {
+				p.contact-call-description {
+					font-size: 20px;
+					line-height: 30px;
+					@include max-767 {
+						font-size: 18px;
+						line-height: 28px;
+					}
+			}
+		}
+			@include max-991 {
+				gap: 40px;
+			}
+			@include max-991 {
+				gap: 0px;
+			}
+		}
+	}
+}

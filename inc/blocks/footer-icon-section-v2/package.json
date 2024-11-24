@@ -1,0 +1,21 @@
+{
+	"name": "footer-icon-section-v2",
+	"version": "0.1.1",
+	"description": "This section is used for information on company services and what the company provides, this section includes image and title.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.16.0",
+		"wp-scripts": "^0.0.1-security"
+	}
+}

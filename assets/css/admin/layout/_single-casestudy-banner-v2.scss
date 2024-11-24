@@ -1,0 +1,91 @@
+// This CSS For Single Case Study Banner Pattern.
+.qt-casestudy-banner {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include max-991 {
+      gap: 20px;
+    }
+
+    @include max-575 {
+      gap: 15px;
+    }
+
+    &_breadcrumb {
+      p {
+        display: none;
+      }
+
+      nav {
+        p {
+          display: flex;
+        }
+      }
+
+      nav p, .qt-breadcrumbs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 10px;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+
+        a, .separator {
+          color: $color-gray;
+        }
+
+        @include min-1400 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    &_title {
+      h1 {
+        font-size: 38px;
+        line-height: 52px;
+        font-style: normal;
+        font-weight: 600;
+        background: linear-gradient(to right, #434343, #18181b, #18181b);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+        @include min-1400 {
+          font-size: 48px;
+          line-height: 62px;
+        }
+
+        @include max-1199 {
+          font-size: 32px;
+          line-height: 46px;
+        }
+
+        @include max-991 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+
+        @include max-575 {
+          font-size: 26px;
+          line-height: 38px;
+        }
+      }
+    }
+
+    &_img {
+      figure {
+        margin: 0;
+        padding: 0;
+
+        img {
+          border-radius: 30px;
+          box-shadow: 3px 36px 50px 0px rgba(205, 205, 205, 0.25);
+          width: 100%;
+        }
+      }
+    }
+  }
+}

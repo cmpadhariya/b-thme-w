@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/services-list",
+	"version": "0.1.0",
+	"title": "Services List",
+	"category": "qrolic",
+	"icon": "buddicons-pm",
+	"description": "This block is a services list block, this block display services list title, sub title and description",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "services-list",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"subheading":{
+			"type": "string",
+            "default": "WordPress Migration"
+		},
+		"subheadinglink":{
+			"type": "string",
+            "default": "Add service link"
+		},
+		"discription": {
+            "type": "string",
+            "default": "– We are migration experts and can help with any type of migration, including Shopify to WordPress, custom-developed sites to WordPress, etc."
+        },
+		"hasLink": {
+            "type": "boolean",
+            "default": true
+        }
+	}
+}

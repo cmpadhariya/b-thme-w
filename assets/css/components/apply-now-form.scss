@@ -1,0 +1,150 @@
+// ***** Apply Now Form css ***** //
+.apply-form {
+  &__inner {
+    .screen-reader-response {
+      display: none;
+    }
+    .wpcf7 {
+      form.wpcf7-form {
+        .wpcf7-spinner {
+          position: absolute !important;
+        }
+        .col-sm-12 {
+          margin: 0px 0px 10px 0px;
+          position: relative;
+          z-index: 99;
+          label {
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: 400;
+            font-family: $primary-family;
+            color: $color-black;
+          }
+          span {
+            display: block;
+            input,
+            select,
+            textarea {
+              width: 100%;
+              font-size: 13px;
+              line-height: 15px;
+              font-weight: 400;
+              color: #585858;;
+              font-family: $primary-family;
+              padding: 12px 15px;
+              border: unset;
+              border-radius: 2px;
+              background: rgba(180, 180, 180, 0.2);
+              border-bottom: 1px solid gray;
+            }
+            .wpcf7-form-control::placeholder {
+              color: #585858;
+            }
+            .wpcf7-form-control::-ms-input-placeholder {
+              color: #585858;
+            }
+            select {
+              -webkit-appearance: none;
+            }
+            .wpcf7-not-valid-tip {
+              font-size: 14px;
+              line-height: 20px;
+              font-weight: 500;
+              padding: 8px 0px 0px 0px;
+              letter-spacing: 0.9px;
+              font-family: $primary-family;
+            }
+          }
+          .select__icon {
+            border-bottom: unset;
+            position: absolute;
+            right: 0px;
+            top: 31px;
+            color: $color-gray;
+            z-index: -1;
+            padding: 10px 13px;
+            border-left: 1px solid $color-gray;
+          }
+          .wpcf7-submit {
+            width: auto;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $color-white;
+            font-family: $secondary-family;
+            background: $color-black;
+            padding: 8px 20px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            &:hover {
+              transition: all 500ms;
+              color: $color-white;
+              background: #555;
+            }
+          }
+        }
+        .not-border {
+          span {
+            border-bottom: unset;
+            textarea {
+              border-bottom: 1px solid gray;
+            }
+          }
+        }
+        .br-none {
+          br {
+            display: none;
+          }
+        }
+      }
+      .invalid {
+        .wpcf7-response-output {
+          border-color: #dc3232 !important;
+        }
+      }
+      @include max-425 {
+        form {
+          .col-sm-12 {
+            label {
+              font-size: 12px;
+            }
+            span {
+              input,
+              select,
+              textarea {
+                font-size: 12px;
+                line-height: 13px;
+              }
+              .wpcf7-not-valid-tip {
+                font-size: 13px;
+                line-height: 18px;
+              }
+            }
+          }
+        }
+      }
+      .wpcf7-spinner {
+        top: 6px;
+        left: 120px;
+        background-color: $color-black;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+      }
+      .wpcf7-spinner::before {
+        background-color: $color-white;
+      }
+      .wpcf7 form .wpcf7-response-output {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+        font-family: $primary-family;
+        color: $color-black;
+        margin: 0;
+        padding: 0px 0px;
+        letter-spacing: 0.9px;
+      }
+    }
+  }
+}

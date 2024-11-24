@@ -1,0 +1,117 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../../assets/css/variable/_variable.scss";
+
+.home-hero {
+  padding: 111px 0px;
+  background-color: $color-black;
+  @include max-1199 {
+    padding: 90px 0px;
+  }
+  @include max-767 {
+    padding: 70px 20px;
+  }
+  @include max-575 {
+    padding: 50px 20px;
+  }
+  br {
+    @include max-991 {
+      display: none;
+    }
+  }
+  .home-hero__inner_heading {
+    h1 {
+      font-size: 44px;
+      line-height: 60px;
+      font-family: $heading-family;
+      font-style: normal;
+      font-weight: 600;
+      color: $color-white;
+      @include max-1199 {
+        font-size: 42px;
+      }
+      @include max-991 {
+        font-size: 35px;
+        line-height: 52px;
+      }
+      @include max-767 {
+        font-size: 28px;
+        line-height: 38px;
+      }
+      @include max-425{
+        font-size: 26px;
+        line-height: 36px;
+      }
+    }
+  }
+  .home-hero__inner_text {
+    padding: 10px 30px;
+    margin-bottom: 29px;
+    margin-top: 15px;
+    position: relative;
+    @include max-767 {
+      padding: 10px 20px;
+      margin-bottom: 27px;
+    }
+    &::after {
+      content: "";
+      background-color: #ffffff;
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    p {
+      font-size: 19px;
+      line-height: 30px;
+      color: $color-white;
+      @include max-991 {
+        font-size: 17px;
+        line-height: 25px;
+      }
+      @include max-767 {
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+  }
+  .home-hero__inner_button {
+    a {
+      background-color: $color-white;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 26px;
+      color: black;
+      text-decoration: none;
+      display: inline-block;
+      padding: 12px 28px;
+      font-family: $secondary-family;
+      border: 1px solid transparent;
+      transition: all 500ms;
+      position: relative;
+      @include max-767 {
+        font-size: 15px;
+        line-height: 28px;
+
+        padding: 10px 24px;
+      }
+      @include max-425 {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 7px 16px;
+      }
+
+      &:hover {
+        background-color: #555;
+        color: $color-white;
+      }
+    }
+  }
+}

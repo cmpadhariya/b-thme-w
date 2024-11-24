@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/related-blog-post",
+  "version": "0.1.0",
+  "title": "Related Blog Post",
+  "category": "qrolic",
+  "icon": "layout",
+  "description": "We use this block to display related blog posts in the sidebar of a single blog page.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "innerBlocks": true
+  },
+  "textdomain": "related-blog-post",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "numberOfItems": {
+      "type": "number",
+      "default": 2
+    },
+    "columns": {
+      "type": "number",
+      "default": 1
+    },
+    "displayDate": {
+      "type": "boolean",
+      "default": false
+    },
+    "displayExcerpt": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "showBio": {
+      "type": "boolean",
+      "default": true
+    },
+    "Title": {
+      "type": "string",
+      "default": ""
+    },
+    "selectedPostID": {
+      "type": "string",
+      "default": 0
+    }
+  }
+}

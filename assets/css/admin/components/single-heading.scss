@@ -1,0 +1,19 @@
+.single-heading {
+  &__banner {
+    @include max-575 {
+      padding: 0px 20px;
+    }
+    &_inner {
+      padding: 70px 0px 30px 0px;
+
+      @include max-575 {
+        padding: 50px 0px 0px 0px;
+      }
+
+      @include max-425 {
+        padding: 40px 0px 0px 0px;
+      }
+    }
+  }
+}
+
